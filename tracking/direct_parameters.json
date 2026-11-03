@@ -1,0 +1,15 @@
+{
+  "k": [
+    13.89485600120127,
+    0.6304698590332671,
+    1.9655468312451,
+    0.638391297516192,
+    0.04017781812642379,
+    0.05231244835642575,
+    0.00025543843785452193,
+    0.09051776760881154
+  ],
+  "units": "theta/omega/phi/velocity to normalized signed PWM; compensation in duty",
+  "Q": 262144,
+  "selection": "Final frozen candidate: 108 long-response local combinations, 35 promoted to64x60s floating scenes; actual RTL12+4+32+32+16 all passed; fresh16 independent after freeze."
+}

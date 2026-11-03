@@ -1,0 +1,149 @@
+{
+  "schema": "j280.output_contract.v1",
+  "build": "4A070257",
+  "units": {
+    "u": "signed logical PWM permille",
+    "applied": "signed motor-polarity PWM permille; not measured current or torque",
+    "limit": "nonnegative logical PWM permille",
+    "phi": "physical rad in public CSV",
+    "dphi": "physical rad/s in public CSV",
+    "internal_extra_fields": "legacy internal coordinates retained for per-build replay with the correct source, hidden states and causal input history"
+  },
+  "logical_u": {
+    "source": "j280_top.output_command; controller.command in control sessions",
+    "meaning": "actual committed logical command at the sample instant; never pending_command",
+    "automatic": "A result computed from frame n measurements is queued and submitted at frame n+1 tick, together with its limit. STOP, disarm and faults can force zero immediately. The first frame of a new session has no old pending result.",
+    "manual_local_capture": "Existing observer transaction-completion submission is retained; no fixed-frame pending stage. Checkpoint-seeded manual observer replay is supported only with all active hidden-state prerequisites satisfied; R36 automatic-only fast/platform gates are bypassed for manual capture.",
+    "previous_duty": "Control models read the actual committed controller.command, never an uncommitted pending result.",
+    "zero_output_reacquisition": "State7 COAST clears committed and pending logical PWM and disables output. It is an active armed session, not successful holding.32 consecutive actual non-gap samples may resume automatic swing;600ms timeout and cumulative12s budget remain.",
+    "seamless_ext2": "Session policy is retained: automatic sessions use previous-interval applied command in prediction and next-frame output commit; manual sessions keep transaction-completion commit. Entry/exit does not ARM/CAPTURE/reset origin or ordinary configuration."
+  },
+  "record_timing": {
+    "control_frame_us": 1000,
+    "passive_trigger": "controller.result_valid (computation done); passive_capture registers the write bundle before RAM write",
+    "passive_contents": "Measurements for the current calculation and command/limit already committed at that instant. In automatic sessions this command normally came from the previous frame calculation.",
+    "telemetry": "50 Hz snapshot derived from result_valid; u is the logical command at snapshot, not a newly calculated pending result.",
+    "automatic_same_row_observer_equivalence": false,
+    "cache_scope": "C831 176-bit x8192 actual1ms samples: fixed head4096 plus rolling tail4096. START/CAPTURE explicitly begin a session; STOP/fault freezes. Capacity does not STOP or freeze a normal full run: tail slots continue rolling. Longer runs have an explicit timestamp gap between head and tail, never interpolated into continuous1kHz. Full-session50Hz run/raw_RX continue.",
+    "observer_checkpoint": "Same50Hz64byte observer format also emitted in automatic BRAKE(state6), including before formal capture. It contains the legacy seven z states, integral/LP/age/anchor and does not contain all R35/R36 new hidden state. State must be aligned by tick with full telemetry; observer age is not a success flag. Existing async UART queue does not delay control. R39 explicit Extension2 adds type9/10 companions at25Hz, atomically cohort-locked with type4; C101 type6 and C831 type7/8 retain meanings. CP-b flags explicitly retain samples/ready/fault;20-field restore requires all three frames.",
+    "brake_reference": "In BRAKE, exported reference is the legacy fallback swing_ref. Mature observer uses current phi as provisional arm reference relative to its fixed anchor. During blend these are distinct; do not score BRAKE position error as settled tracking. On confirmed capture the current arm point becomes fixed target. State/tick/phi plus observer checkpoint reconstruct this distinction.",
+    "raw_theta": "C831 records actual estimator theta Q16 and dtheta Q16; no filtered_theta field is present. Do not substitute filtered_theta_q18>>2 or fill a zero filtered column.",
+    "r40_replay_scope": "C831/ordinary/CP retain recorded meanings. Debug word15 low8 holds profile transfer_ticks, bit8 holds ordinary r40_unwind_active; remaining bits must be zero. This observer CP still omits centered-reference center/exit envelope and other ordinary hidden state. Exact whole-R40 restart requires snapshot_seamless_state v2 plus complete controller/reference state and causal history. Reject old v1 snapshots for v2; do not fill missing fields with zero or claim full snapshot equivalence from CP alone."
+  },
+  "applied_driver": {
+    "motor_sign": -1,
+    "carrier_clock_hz": 50000000,
+    "carrier_period_clocks": 2500,
+    "carrier_period_us": 50,
+    "latch_rule": "motor_pwm latches bounded safe_drive multiplied by motor_sign at the carrier boundary; disable clears applied immediately on a clock edge.",
+    "reversal_rule": "Opposite polarity first causes one complete carrier period of zero output.",
+    "output_register_clocks": 1,
+    "relationship": "applied is the registered carrier-latched drive after guard, sign mapping and reversal coast. It is not universally equal to -u in the same row or the previous row.",
+    "tail_equality_audit": "not available from 1 kHz samples alone: carrier phase, enable changes and intervening command transitions are not recorded at 50 MHz. No guessed row-shift check is reported as a failure or PASS."
+  },
+  "hardware_sources": [
+    "fpga/src/controller.v",
+    "fpga/src/j280_top.v",
+    "fpga/src/passive_capture.v",
+    "fpga/src/drive_guard.v",
+    "fpga/src/io_frontend.v",
+    "fpga/src/j280_config.vh",
+    "fpga/src/r10_observer_core.v",
+    "fpga/src/calibrated_command.v",
+    "fpga/src/r01_reference.v",
+    "fpga/src/motion_link_watchdog.v"
+  ],
+  "identity_scope": "Only board build 4A070257. This describes source semantics and does not itself authorize motion or prove the full board bitstream.",
+  "coordinates": {
+    "profile": "calibration/encoder_calibration.json",
+    "schema": "C101",
+    "live": "type5: phi physical Q16; dphi/reference/ref_velocity/target legacy internal Q16, converted once by host",
+    "passive": "C831 raw type7/type8 carry176-bit actual samples, with phi derived once from encoder count and same-session encoder_zero by C101. Schema records derived-source attribution. Legacy type3/352-bit and D02 records are read-only compatible, not rewritten into fake raw fields.",
+    "observer": "type4 z/integral/origin remain legacy_internal; never relabel as physical",
+    "target": "opcode0x26 accepts physical Q16; board maps to internal; legacy opcode0x06 rejected",
+    "motion_config": "opcode0x36 original legacy packed bins; UI shows physical applied values; old opcode0x16 rejected",
+    "numeric_motion_speed": "opcode0x37 accepts physical positive rad/s Q16 (GUI1..60physical deg/s). calibrated_command converts once with J280_C_TARGET_K_Q24 into legacy internal rad/s Q16; controller passes motion_speed_limit<<<2 as Q18 to reference. Descriptor type6 bytes52..55 return the internal Q16 limit; bytes56..59 tag0x3601 identifies these fields. Applying opcode0x36 clears this numeric limit to zero and restores the original discrete-speed path, so the GUI prepares config then speed then INFO/readback.",
+    "arm": "new calibration contract token; old ARM token rejected",
+    "saturation": "flags bit15: exported physical Q16 overflow; host blocks further motion commands; STOP remains available",
+    "old_logs": "type1/build2F remain legacy_original; no automatic rewrite or calibration of old files"
+  },
+  "r35_state_replay": {
+    "scope": "Inherited R35/4A070237 state semantics; retained as historical provenance and still required where these paths remain active in R36. R36 additions are specified separately below.",
+    "observer_new_unrecorded_state": "Actual-encoder/reference stasis last_error32 and count8; legacy observer checkpoint fields unchanged. Establish201ms causal real input history or session reset before claiming exact affected gate replay.",
+    "controller_new_unrecorded_state": "Completed-guard active history, once-per-capture yield used, and real recaptured-default-home history. Sparse50Hz flags do not encode every1ms state.",
+    "default_local_home": "No explicit target/shuttle only; report displacement from original capture separately from new local tracking error. Explicit commands retain original targets.",
+    "notes": "R35状态与模型接续.md"
+  },
+  "r36_state_replay": {
+    "fast_good_count": "r36_fast_good is an8-bit saturating201 count of consecutive eligible accepted observer transactions. Qualification requires mature static automatic HOLD, no BRAKE, zero reference velocity, no latched motion or explicit motion-assist permission, current actual non-gap measurement and finite in-range measured_omega(+/-30rad/s). An ineligible accepted transaction resets the count; clear/reset resets count and transaction latches.",
+    "transaction_snapshot": "At accepted start&&!busy&&!fault, latch r36_omega_s=measured_omega(Q16)<<8 to Q24 and r36_fast_enabled_s=eligible&&(previous fast_good>=1). Thus the second consecutive qualified transaction may use the rate correction. Live input changes during busy do not replace the accepted transaction snapshot.",
+    "rate_correction": "Use the latched measured dtheta minus10*n1, where n1 is the updated observer normalized omega/10 state. Apply an engineering dead zone of0.8rad/s(Q24=13421773), retain only the excess with sign, divide by16 and clamp to+/-1048576 Q24, equivalent to+/-62.5 logical PWM permille before the retained downstream limits/slew. Measured dtheta is the estimator's current measurement-based estimate, not an independent true angular-speed sensor.",
+    "platform_feedback_limit": "Only while the inherited real same-encoder/reference stasis integral gate is true and fast_good>=201, clamp the velocity used for arm-velocity feedback and friction lookup to+/-50332 normalized(v/10)Q24, about+/-0.03 legacy rad/s. Do not clamp or reset z0..z6/n0..n6, replace sensor data, or assert that actual instantaneous velocity is bounded by this value.",
+    "checkpoint_limit": "Legacy checkpoint packets do not carry fast_good, fast_enabled_s, omega_s, R35 stasis history or every controller guard/reference state. Reconstruct them from the same-build true continuous1kHz inputs and a verified reset/session start, or causally establish the necessary eligibility/stasis history before the replay window. Do not initialize missing state arbitrarily, interpolate50Hz inputs, or claim exact arbitrary-tail replay from one checkpoint alone.",
+    "legal_reference_continuity": "Within the existing actual auto_observer_warm gate, tracking_initialized&&!pre_capture&&automatic_goal!=0 keeps automatic_hold true during legal goal1/2/3 reference motion. The old uninitialized/static hold paths remain. This is base observer continuity, not a new motion-assist grant or target-acceptance override: explicit goal1 and active goal2 waveform retain their original motion-assist schedule. Invalid measurement/domain, COAST, guard reblend, STOP, disarm and clear retain their original cancellation/clear behavior.",
+    "motion_stage_cap": "The original automatic motion_latched progression now advances only while motion_phase<3, automatic, non-BRAKE and observer age>=200, once per50 completed eligible transactions. It no longer advances to stages4..7. This is not an automatic reset policy: motion_latched, motion_phase, motion_watch and related history retain their original clear/reset lifetime and do not return to zero merely because the reference stops or a target arrives. An inherited artificial phase>=3 snapshot is not silently clipped by this rule. Exact replay needs the actual same-build reset/history.",
+    "motion_bypass_scope": "The sticky motion_latched state continues to bypass the R36 fast-current-measurement and platform-limiting gates, as well as inherited gates that explicitly require !motion_latched. Therefore a post-motion stationary sample is not automatically equivalent to mature never-moved HOLD, even when reference_velocity is zero. No automatic unlatch, observer-state reset or new re-entry policy has been added. Report the applicable gate and hidden-state history instead of resetting missing state to obtain a desired result.",
+    "reference_ready": "Telemetry flag bit7 follows controller.reference_ready: HOLD/TRACK, tracking initialized, reference stationary, no pending shuttle, and either no pending target or a quiet-gated internal return that has not begun moving(!automatic_quiet). An explicit command may replace that internal wait. An active moving reference, explicit pending target or pending shuttle remains busy. Reference-ready and reference-arrival are not proof of actual measured position arrival.",
+    "notes": "R36状态与模型接续.md"
+  },
+  "r36_session_and_review": {
+    "duration": "GUI defaults START/CAPTURE seconds=0: operator STOP without software total-duration timeout. Optional user timing remains available. The old controller120s total-session fault is removed and its17-bit session counter saturates instead of wrapping. Per-recovery swing timeout, measurement/control watchdog, output limits, finite cable/workspace limits, STOP and SW4 remain active.",
+    "communication_watchdog": "Once armed, only a CRC-valid host-to-board INFO opcode0x30 refreshes the independent3000ms link watchdog. Host worker emits explicit INFO about every300ms even when unsolicited board INFO keeps arriving. Expiry enters the existing STOP/cancellation path; reconnect/INFO does not re-arm or restart motion.",
+    "capture_timing": "In an automatic session, first entry into CAPTURE(state2) follows the unchanged30ms/observer-ready confirmation and is the capture-confirmation event. HOLD(state3) follows a further2s capture-settling interval; using HOLD alone adds2s incorrectly. First-startup time begins at that START ACK; exit-to-recapture uses the actual exit of a captured state. Also report disturbance-to-recapture separately when the disturbance time is known. Never borrow a later START success across STOP/clear boundaries.",
+    "timing_resolution": "Ordinary telemetry is about50Hz and its confirmation times carry sampling uncertainty. Only the actual continuous1kHz cached windows support1ms input/history reconstruction. Operator manual STOP is a valid end condition; no fixed30s duration or fixed15degree target is required for review.",
+    "review_tool": "tools/review_r36_session.py"
+  },
+  "r36_evidence": {
+    "index": "evidence/r36/FINAL_RECEIPT.json",
+    "observer": "evidence/r36/observer_contract.json",
+    "cpu": "evidence/r36/cpu_contract.json",
+    "features": "evidence/r36/features.json",
+    "host": "evidence/r36/host.json",
+    "full_rtl": "evidence/r36/full_rtl_summary.json",
+    "cycles": "evidence/r36/cycles.json",
+    "resource": "evidence/r36/resource.json",
+    "scope": "Read the final source-bound receipt and its limitations. Local resource estimates are not accepted Gowin STA, and component/closed-loop model results are not a physical three-second/no-oscillation guarantee. Historical receipts retain their own source and applicability."
+  },
+  "extension2": {
+    "config": "Ordinary configuration and numeric speed are retained; no fixed config write during entry/exit.",
+    "authorization_opcode": 56,
+    "entry": "Same automatic or manual captured session. Explicit opcode0x38 value1 starts after existing HOLD/TRACK and reference-ready admission; capture or position in progress may queue in host. No STOP/config swap/recapture or extra stillness window.",
+    "window_ms": null,
+    "board_window": "No test-duration timer or one-activation-per-capture limit. value0 requests2s smooth exit, then ordinary target or reentry is allowed. STOP/disarm/fault/recovery clear the active mode; no stale automatic restart.",
+    "checkpoint_types": [
+      4,
+      9,
+      10
+    ],
+    "checkpoint_tag": 57913,
+    "observer_units": "legacy internal Q24; never apply public coordinate conversion",
+    "physical_guarantee": false,
+    "host_operation": "One apply/start button writes amplitude and phase step, confirms board echo, exits ordinary shuttle if needed, then enters sine. Edit while running: smooth exit, new parameter echo, smooth reentry without STOP/recapture. Exit button returns to ordinary hold.",
+    "center": "Entry reference position plus/minus operator-configured amplitude; 2s quintic entry/exit. Mechanical workspace checked, no measured-stillness or arrived gate.",
+    "session_policy": "Automatic session retains next-frame commit; manual capture retains transaction-completion commit. Shared observer/MAC/reference, no second parallel control engine.",
+    "performance": "R41 active-sine feedback retained; existing position feedforward is scaled by (3.5 / configured_period)^2 using the shared reference serial multiplier. Exact coefficient1 at legacy3.5s. Current hard cap overrides any conflicting previous-output slew interval. Model results are not physical guarantees.",
+    "amplitude_command": {
+      "opcode": 57,
+      "unit": "physical rad Q16",
+      "editable": true,
+      "GUI_default_physical_deg": 90
+    },
+    "period_command": {
+      "opcode": 58,
+      "unit": "unsigned phase increment per 1ms, 2^32 per turn",
+      "editable": true,
+      "period_range_seconds": [
+        1,
+        3600
+      ]
+    },
+    "settings_readback_type": 11,
+    "checkpoint_sine_reference": "Frequency-weighted relative reference in internal Q24, not the unweighted target angle."
+  },
+  "r40_control_changes": {
+    "position_unwind": "Explicit automatic motion permission and current real measurement, non-BRAKE/non-A only. Opposed LP exceeds1218492 Q24 and |I|>=838861 starts a retained lease. While valid scope and I nonzero, same-sign LP pauses actual release without clearing the lease. Opposed LP resumes below the initial trigger. Step coefficient8389 with +/-16777 per tick; never cross zero through this release. Clear, fault, scope removal or A revoke. CP bit8 records the lease, not whether this particular tick releases.",
+    "ordinary_hold_narrow_ramp": "Only without explicit motion-assist permission, retained strong residual transition rises continuously from0.8 to0.83125rad/s. Explicit position motion and subsequent endpoint holding retain the original R38 strong correction; the narrow ramp is not applied to that domain. Same strong correction outside the short ramp.",
+    "swing_progress": "Limited envelope relaxation uses latest valid turning-amplitude cos(theta) progress, existing stagnation and current valid measurement. Ordinary gap disables current action and clears current coupling phase, while latest real gain/eligible may persist; COAST/exit SWING clears eligibility. Unchanged cumulative12s budget, hard35% output, hard workspace and STOP.",
+    "scope": "These source changes and simulations do not certify physical damping, exact endpoint arrival or new vendor timing."
+  }
+}

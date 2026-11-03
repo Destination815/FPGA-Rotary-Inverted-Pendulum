@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv*/
+**/.venv*/
+build/
+logs/
+r20_ui/logs/
+*_startup.log
+fpga/impl/
+R43_vendor_runs/
+*.zip
+*.rar

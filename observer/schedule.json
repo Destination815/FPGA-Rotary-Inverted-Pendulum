@@ -1,0 +1,9 @@
+{
+  "cycles": 417,
+  "multiply_statements": 1,
+  "operand_pipeline": true,
+  "coeff_max": 35277151,
+  "manual_cycles": 411,
+  "automatic_cycles": 417,
+  "source": "Measured by actual RTL test_driver; single shared multiplier, extra automatic blending stages"
+}

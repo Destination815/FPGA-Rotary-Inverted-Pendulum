@@ -1,0 +1,178 @@
+[
+  {
+    "model": "effective",
+    "sign": -1,
+    "behavior": "zero",
+    "passed": true,
+    "capture_s": 3.981,
+    "reason": "completed_2s_hold",
+    "max_gap_ms": 63,
+    "gap_samples": 206,
+    "max_gap_angle_error_deg": 5.258199744848663
+  },
+  {
+    "model": "effective",
+    "sign": -1,
+    "behavior": "max",
+    "passed": true,
+    "capture_s": 3.981,
+    "reason": "completed_2s_hold",
+    "max_gap_ms": 63,
+    "gap_samples": 206,
+    "max_gap_angle_error_deg": 5.258199744848663
+  },
+  {
+    "model": "effective",
+    "sign": -1,
+    "behavior": "hold",
+    "passed": true,
+    "capture_s": 3.981,
+    "reason": "completed_2s_hold",
+    "max_gap_ms": 63,
+    "gap_samples": 206,
+    "max_gap_angle_error_deg": 5.258199744848663
+  },
+  {
+    "model": "effective",
+    "sign": -1,
+    "behavior": "sweep",
+    "passed": true,
+    "capture_s": 3.981,
+    "reason": "completed_2s_hold",
+    "max_gap_ms": 63,
+    "gap_samples": 206,
+    "max_gap_angle_error_deg": 5.258199744848663
+  },
+  {
+    "model": "effective",
+    "sign": 1,
+    "behavior": "zero",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.463274987360688
+  },
+  {
+    "model": "effective",
+    "sign": 1,
+    "behavior": "max",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.463274987360688
+  },
+  {
+    "model": "effective",
+    "sign": 1,
+    "behavior": "hold",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.463274987360688
+  },
+  {
+    "model": "effective",
+    "sign": 1,
+    "behavior": "sweep",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.463274987360688
+  },
+  {
+    "model": "mass_matrix",
+    "sign": -1,
+    "behavior": "zero",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 9.492261744266415
+  },
+  {
+    "model": "mass_matrix",
+    "sign": -1,
+    "behavior": "max",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 9.492261744266415
+  },
+  {
+    "model": "mass_matrix",
+    "sign": -1,
+    "behavior": "hold",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 9.492261744266415
+  },
+  {
+    "model": "mass_matrix",
+    "sign": -1,
+    "behavior": "sweep",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 9.492261744266415
+  },
+  {
+    "model": "mass_matrix",
+    "sign": 1,
+    "behavior": "zero",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.385487406489094
+  },
+  {
+    "model": "mass_matrix",
+    "sign": 1,
+    "behavior": "max",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.385487406489094
+  },
+  {
+    "model": "mass_matrix",
+    "sign": 1,
+    "behavior": "hold",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.385487406489094
+  },
+  {
+    "model": "mass_matrix",
+    "sign": 1,
+    "behavior": "sweep",
+    "passed": false,
+    "capture_s": null,
+    "reason": "gap_timeout",
+    "max_gap_ms": 151,
+    "gap_samples": 151,
+    "max_gap_angle_error_deg": 10.385487406489094
+  }
+]

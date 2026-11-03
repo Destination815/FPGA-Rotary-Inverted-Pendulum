@@ -1,0 +1,63 @@
+{
+  "status": "supplementary_only_not_hardware_validated",
+  "train": "R15 B1 first 1300 real 1ms samples; known applied PWM",
+  "check": [
+    "B1 remaining samples",
+    "B2 full valid ADC samples",
+    "R13/R14 first 0.38s 50Hz conditional replay"
+  ],
+  "fits": [
+    {
+      "model": "effective",
+      "params": [
+        11.550149043526417,
+        11.916620233402151,
+        0.1010882665003875,
+        101.53522386146966,
+        1.8238719004361004,
+        1.1575163278331786
+      ],
+      "nfev": 16,
+      "cost": 0.8522941992521936,
+      "metrics": {
+        "B1": [
+          6.034349496620196,
+          7.955388792171708
+        ],
+        "B2": [
+          13.703579209357974,
+          6.81936345834732
+        ]
+      }
+    },
+    {
+      "model": "mass_matrix",
+      "params": [
+        16.520360254532218,
+        16.106357978055918,
+        0.13163208189727282,
+        99.22703115186563,
+        1.72136419622019,
+        0.619469372404447
+      ],
+      "nfev": 12,
+      "cost": 0.37106369425585223,
+      "metrics": {
+        "B1": [
+          3.7237998642717662,
+          5.934254912846527
+        ],
+        "B2": [
+          14.859256161691704,
+          4.721304671840115
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "conditional prediction error remains up to about 15 degrees",
+    "closed-loop R15 failure reason/timing not reproduced",
+    "historical nominal and S16/S20 files not overwritten",
+    "B2 has now been examined; not new unseen validation in future work"
+  ]
+}

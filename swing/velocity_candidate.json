@@ -1,0 +1,15 @@
+{
+  "energy": 106.903,
+  "energy_late": 106.903,
+  "center": 8.05702,
+  "damping": 1.78864,
+  "acceleration": 52.037,
+  "vmax": 4.55807,
+  "bound": 1.09756,
+  "ki": 1.1987,
+  "feed": 0.140296,
+  "kp": 0.267362,
+  "catch_deg": 30,
+  "release_deg": 45,
+  "late_vmax": 4.55807
+}

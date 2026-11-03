@@ -1,0 +1,81 @@
+{
+  "status": "offline_screening_model_not_hardware_validated",
+  "state_order": [
+    "theta_rad",
+    "theta_velocity_rad_s",
+    "phi_legacy_internal",
+    "phi_velocity_legacy_internal"
+  ],
+  "input": "normalized signed PWM duty; 0.15 = 15 percent = 150 permille",
+  "control_period_s": 0.001,
+  "nominal": {
+    "alpha": 94.50762226949593,
+    "kappa": 1.2716621956751746,
+    "damping": 0.15,
+    "coulomb": 0.0,
+    "gain_pos": 5.0,
+    "gain_neg": 5.0,
+    "tau_on": 0.008,
+    "tau_off": 0.017785185,
+    "deadzone": 0.0
+  },
+  "evidence": {
+    "alpha": "D01 fixed-arm period 0.646 s; model/identified_fixed_arm_20261001.json",
+    "local_directional_gain": "D03 local speed fit 4.053 / 6.126 rad/s per duty; analysis/c03_design_20261001/actuator_audit.json; not fixed into directional compensation",
+    "local_time_constants": "D03 effective fit 0.0023866 s on / 0.0177852 s off; interval broadened because resolution/load effects are not separated",
+    "coulomb": "D01 equivalent angle 0.00987 rad implies acceleration scale ~0.933 rad/s²; not independently measured friction torque",
+    "kappa": "CAD L型摆臂.STEP: motor axis to sensor mounting plane 0.132 m, checked against official assembly photographs; kappa=alpha*r/9.81. Effective pendulum plane mounting offset remains uncertain; sweeps r=.095..15 m.",
+    "cad_geometry_file": "../../analysis/cad_20261002/geometry.json"
+  },
+  "stress_intervals_not_confidence_intervals": {
+    "alpha": [
+      80,
+      110
+    ],
+    "kappa": [
+      0.8,
+      1.6
+    ],
+    "gain_per_duty": [
+      3.8,
+      6.4
+    ],
+    "tau_on_s": [
+      0.0024,
+      0.025
+    ],
+    "tau_off_s": [
+      0.012,
+      0.04
+    ],
+    "damping_s_inverse": [
+      0,
+      0.35
+    ],
+    "coulomb_rad_s2": [
+      0,
+      0.95
+    ],
+    "deadzone_duty": [
+      0,
+      0.05
+    ],
+    "extra_measurement_delay_ms": [
+      0,
+      4
+    ],
+    "adc_noise_peak_codes": [
+      0,
+      1
+    ],
+    "backlash_modelled": false
+  },
+  "limitations": [
+    "effective actuator ignores load-dependent torque, gear elasticity, backlash, electrical dynamics and supply sag",
+    "nonlinear angular coupling has not passed independent hardware validation",
+    "sensor observer is floating emulation, not bit-exact RTL; existing separate RTL equivalence tests remain necessary",
+    "no imported STEP mass/density/inertia unless separately supported",
+    "screening predicts models, not physical success probability"
+  ],
+  "arm_coordinate_basis": "legacy_internal_R31; physical boundary in physical_plant.py"
+}

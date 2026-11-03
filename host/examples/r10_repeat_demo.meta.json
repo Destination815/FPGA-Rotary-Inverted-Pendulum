@@ -1,0 +1,8 @@
+{
+  "is_simulation": true,
+  "source_label": "R10 r3 实际RTL＋有效模型，非实物",
+  "hardware_test": false,
+  "serial_capture": false,
+  "build": "4A070223",
+  "description": "同一会话内四次交替扰动；位置/角度为模型输出，PWM和限幅来自实际RTL，ADC等未记录字段为占位。"
+}

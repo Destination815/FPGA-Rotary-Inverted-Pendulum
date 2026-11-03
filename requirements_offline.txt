@@ -1,0 +1,5 @@
+numpy==2.4.1
+scipy==1.17.0
+matplotlib
+pyserial==3.5
+# Verilator + C++17 compiler required; GUI optional host/requirements_gui.txt.

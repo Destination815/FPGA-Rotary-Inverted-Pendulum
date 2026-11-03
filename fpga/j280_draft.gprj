@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+ <Template>FPGA</Template>
+ <Version>5</Version>
+ <Device name="GW2A-55C" pn="GW2A-LV55PG484C8/I7">gw2a55c-005</Device>
+ <FileList>
+  <File path="src/calibrated_position.v" type="file.verilog" enable="1"/>
+  <File path="src/calibrated_command.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_recovery_budget.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_motion_readiness.v" type="file.verilog" enable="1"/>
+  <File path="src/passive_capture.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_gap_bridge.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_swing_core.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_tracking_core.v" type="file.verilog" enable="1"/>
+  <File path="src/r01_reference.v" type="file.verilog" enable="1"/>
+
+  <File path="src/drive_guard.v" type="file.verilog" enable="1"/>
+  <File path="src/motion_link_watchdog.v" type="file.verilog" enable="1"/>
+  <File path="src/d02_capture.v" type="file.verilog" enable="1"/>
+  <File path="src/command_rx.v" type="file.verilog" enable="1"/>
+  <File path="src/r10_observer_core.v" type="file.verilog" enable="1"/>
+  <File path="src/r29_handoff_guard.v" type="file.verilog" enable="1"/>
+  <File path="src/r29_early_saturation.v" type="file.verilog" enable="1"/>
+  <File path="src/controller.v" type="file.verilog" enable="1"/>
+  <File path="src/io_frontend.v" type="file.verilog" enable="1"/>
+  <File path="src/j280_top.v" type="file.verilog" enable="1"/>
+  <File path="src/state_estimator.v" type="file.verilog" enable="1"/>
+  <File path="src/telemetry.v" type="file.verilog" enable="1"/>
+  <File path="src/trajectory.v" type="file.verilog" enable="1"/>
+  <File path="src/uart.v" type="file.verilog" enable="1"/>
+  <File path="constraints/j280.cst" type="file.cst" enable="1"/>
+  <File path="constraints/j280.sdc" type="file.sdc" enable="1"/>
+  <File path="src/s23_compute.v" type="file.verilog" enable="1"/>
+  <File path="src/s23_memory.v" type="file.verilog" enable="1"/>
+  <File path="src/s23_alu.v" type="file.verilog" enable="1"/>
+  <File path="src/s23_soft_mul24.v" type="file.verilog" enable="1"/>
+ </FileList>
+</Project>

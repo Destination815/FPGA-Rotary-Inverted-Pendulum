@@ -1,0 +1,20 @@
+{
+  "schema": "j280.manual-lowgain-r22.v1",
+  "name": "Observe_Kx1p25",
+  "gain": [
+    84921380,
+    48442349,
+    4460178,
+    37742839,
+    -335536,
+    -2631080,
+    -2685285
+  ],
+  "theta_fast_gain": 84921380,
+  "velocity_ff_q24": -3523830,
+  "velocity_ff": -0.21003663539886475,
+  "position_boost_retained": true,
+  "legacy_velocity_trim": false,
+  "observer_unchanged": true,
+  "hardware_tested": false
+}

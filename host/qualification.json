@@ -1,0 +1,36 @@
+{
+  "schema": "r01.motion-release.v1",
+  "build": "4A070257",
+  "motion_release": true,
+  "source_manifest_sha256": "60f50d92819267404226882be1c9c98097c154aa97134bca5ce51d56c41e278e",
+  "compiled_source_manifest_sha256": "c2118bc418c52ca8159cf81f0004397d69ca1df8406da64222a5913195db3ec3",
+  "sta_review_sha256": "aaf532fbf70ee6b3c42b5b750d8deca4544b18ca53e2d47a012dd2bd90c9128e",
+  "trial_scope": [
+    "All six R43 functions",
+    "Same four operator sequences at15/30/45/60: swing, CCW/CW disturbance, CCW/CW fall recovery, +90/-90/0 positioning and editable sine"
+  ],
+  "session_time_policy": "OPERATOR_STOP_OR_OPTIONAL_USER_TIMER",
+  "local_bitstream_required": false,
+  "bitstream_registration_required": false,
+  "control_source_unchanged": true,
+  "host_source_overlay": {
+    "status": "HOST_SEND_GATE_FIXED_FPGA_UNCHANGED",
+    "changed_source": "host/r01_gate.py",
+    "before_sha256": "0f7385446f880e6f5208bcf44e4f358ad249bc7e28525f6ec10ab92590e77fd6",
+    "after_sha256": "67df87a85fa40ed8e64e5583910f200c580714c83960efb840dd1b4c39ec1919",
+    "compiled_source_manifest_sha256": "c2118bc418c52ca8159cf81f0004397d69ca1df8406da64222a5913195db3ec3",
+    "runtime_source_manifest_sha256": "6ab92eefc0609d463768bb77a0d938d0a2e6a167d7aace28beaa10044273262a",
+    "compiled_FPGA_config_source_count": 37,
+    "compiled_FPGA_config_unchanged": true,
+    "source_inventory_count": 1189,
+    "original_source_files_unchanged": 1188,
+    "scope": "No controller change or recompilation. Remove duplicate host comparison of telemetry reference as retained sine center; board exact Q18 center, mechanical range, version, flags and STOP unchanged."
+  },
+  "accepted_compile": "R43_compile_20261030_225529_185004",
+  "note": "Use this accepted existing implementation; no recompilation or installer command. One host send-gate repair aligns the board-owned center. Physical performance remains pending new records.",
+  "source_package": {
+    "origin_runtime_source_manifest_sha256": "6ab92eefc0609d463768bb77a0d938d0a2e6a167d7aace28beaa10044273262a",
+    "control_sources_unchanged": true,
+    "inventory_rebound": true
+  }
+}

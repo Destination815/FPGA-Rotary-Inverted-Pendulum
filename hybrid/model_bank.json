@@ -1,0 +1,80 @@
+{
+  "models": [
+    {
+      "name": "legacy_effective",
+      "model": "effective",
+      "p": {
+        "alpha": 94.50762226949593,
+        "kappa": 1.2716621956751746,
+        "damping": 0.15,
+        "coulomb": 0.0,
+        "gain_pos": 5.0,
+        "gain_neg": 5.0,
+        "tau_on": 0.008,
+        "tau_off": 0.017785185,
+        "deadzone": 0.0
+      },
+      "role": "historical engineering model"
+    },
+    {
+      "name": "B1fit_effective",
+      "model": "effective",
+      "p": {
+        "alpha": 101.53522386146966,
+        "kappa": 1.8238719004361004,
+        "damping": 1.1575163278331786,
+        "coulomb": 0.0,
+        "gain_pos": 11.550149043526417,
+        "gain_neg": 11.916620233402151,
+        "tau_on": 0.1010882665003875,
+        "tau_off": 0.1010882665003875,
+        "deadzone": 0.0
+      },
+      "role": "supplement: B1 first1300ms fit; B1 later/B2 checked, not physical identification"
+    },
+    {
+      "name": "legacy_mass_matrix",
+      "model": "mass_matrix",
+      "p": {
+        "alpha": 94.50762226949593,
+        "kappa": 1.2716621956751746,
+        "damping": 0.15,
+        "coulomb": 0.0,
+        "gain_pos": 5.0,
+        "gain_neg": 5.0,
+        "tau_on": 0.008,
+        "tau_off": 0.017785185,
+        "deadzone": 0.0
+      },
+      "role": "historical engineering model"
+    },
+    {
+      "name": "B1fit_mass_matrix",
+      "model": "mass_matrix",
+      "p": {
+        "alpha": 99.22703115186563,
+        "kappa": 1.72136419622019,
+        "damping": 0.619469372404447,
+        "coulomb": 0.0,
+        "gain_pos": 16.520360254532218,
+        "gain_neg": 16.106357978055918,
+        "tau_on": 0.13163208189727282,
+        "tau_off": 0.13163208189727282,
+        "deadzone": 0.0
+      },
+      "role": "supplement: B1 first1300ms fit; B1 later/B2 checked, not physical identification"
+    }
+  ],
+  "keys": [
+    "alpha",
+    "kappa",
+    "damping",
+    "coulomb",
+    "gain_pos",
+    "gain_neg",
+    "tau_on",
+    "tau_off",
+    "deadzone"
+  ],
+  "provenance": "Unchanged S22 model bank; effective and mass-matrix alternatives. B1 fit is not an independent physical identification."
+}

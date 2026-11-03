@@ -1,0 +1,41 @@
+{
+  "schema": "j280.coordinate-contract.c101",
+  "counts_per_output_turn": 1078.2666666666667,
+  "status": "measured",
+  "source": "M07_20261023_145314_063987: absolute endpoint counts 5391+5392+5391 over 15 manually aligned output turns",
+  "legacy_q16_per_count": 396,
+  "legacy_per_physical": 1.0369589555145802,
+  "physical_per_legacy": 0.9643583236173127,
+  "coefficient_q24": 97763,
+  "rad_per_count": 0.005827116335334104,
+  "measured_range_cpr": [
+    1078.2,
+    1078.4
+  ],
+  "applicability": "Current J280 horizontal output/encoder configuration; manual test speed range; high-speed electrical integrity not newly proven",
+  "model_coordinate_policy": "Preserve legacy fitted behavior via explicit adapter; rod theta and actual PWM unchanged",
+  "input_sha256": {
+    "SHA256.json": "68b6fa5a649f9599f09d896104e0af0ef685ea7009ded5cc75e4dba8ef7616d5",
+    "events.jsonl": "ba7b277d9582ec9e6de576229f6c46e939d769174d3e17df854a1e827d899700",
+    "raw_RX.bin": "abe40dd67e431df76fe931f284ef9651d0d4d55b224995390183d8137e52cf50",
+    "run.csv": "dfbb651f51f9139a0e2fb86f94a799b04fe00a5bd02f6968e20b9c1cb57860c8",
+    "session.json": "55e61df364190cebac3627efd9dfa6d2701cf2eba86aa12dd5b914aff77678a6",
+    "测量摘要.md": "dd9db5edce86fca7e949a716bcc8acc7ea505eafa0ba8fc92e9ba878d186e32d"
+  },
+  "build": "4A070231",
+  "contract_token": 1245917489,
+  "wire_schema": 49409,
+  "physical_rpc_q24": 97763,
+  "target_legacy_per_physical_q24": 17397247,
+  "public_basis": "firmware_q24",
+  "legacy_builds": [
+    "4A07022F"
+  ],
+  "coordinate_policy": "Controller/observer/reference remain legacy internal coordinates; public fields physical; raw data retained.",
+  "board_target_opcode": 38,
+  "board_motion_config_opcode": 54,
+  "live_type": 5,
+  "descriptor_type": 6,
+  "cpr_num": 16174,
+  "cpr_den": 15
+}

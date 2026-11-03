@@ -1,0 +1,4 @@
+{"event": "simulation_disturbance", "ms": 1000.0, "rate_increment_rad_s": -3.0}
+{"event": "simulation_disturbance", "ms": 8000.0, "rate_increment_rad_s": 3.0}
+{"event": "simulation_disturbance", "ms": 16000.0, "rate_increment_rad_s": -3.0}
+{"event": "simulation_disturbance", "ms": 24000.0, "rate_increment_rad_s": 3.0}

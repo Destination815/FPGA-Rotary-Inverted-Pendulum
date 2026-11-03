@@ -1,0 +1,19 @@
+{
+  "build": "4A070246",
+  "source": "A39H1/A391 selected Extension2 only",
+  "config": 75082174,
+  "internal_amplitude_q16": 48620,
+  "public_units": "C101 physical rad/rad_s",
+  "observer_units": "legacy internal normalizedQ24",
+  "ext2_checkpoint_types": [
+    4,
+    9,
+    10
+  ],
+  "checkpoint_tag": 57913,
+  "recursive_correction_step": 8192,
+  "recursive_correction_bound": 167772,
+  "frame_ms": 1,
+  "source_basis": "static frozen parameters, not packet gain readback",
+  "physical_guarantee": false
+}
