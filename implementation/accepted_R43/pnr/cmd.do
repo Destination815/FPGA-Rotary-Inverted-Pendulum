@@ -1,0 +1,20 @@
+-d D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\impl\gwsynthesis\j280_draft.vg
+-p GW2A-55C-PBGA484-8
+-pn GW2A-LV55PG484C8/I7
+-cst D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\constraints\j280.cst
+-cfg D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\impl\pnr\device.cfg
+-sdc D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\constraints\j280.sdc
+-bit
+-tr
+-ph
+-posp
+-warning_all
+-tt
+-timing
+-cst_error
+-place_option 1
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 50.000

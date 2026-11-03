@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "real_legacy_analytic_exact",
+      "max_error_rad": 3.1086244689504383e-15
+    },
+    {
+      "name": "static_force_below_threshold_holds",
+      "samples": 1000
+    },
+    {
+      "name": "breakaway_above_threshold_moves"
+    },
+    {
+      "name": "zero_input_analytic_crossing_then_sticks",
+      "stop_time_s": 0.021972245773362195,
+      "stop_phi_rad": 0.009013877113318903
+    },
+    {
+      "name": "translation_invariant",
+      "max_error_rad": 1.5987211554602254e-14
+    }
+  ],
+  "source_sha256": {
+    "predict.cpp": "182e5afb40519831cea0bb8356215993ac61b4f10262eb59b03cbafa3c7aab1e",
+    "verify.py": "ab90f21b79fd255889684413aaed6b25e7df570c90b04b968f5c5983f60352dc"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "cycles": 47,
+  "multiplications": 8,
+  "tanh_reads": 1,
+  "coefficient_quantization": {
+    "kp": 3642453,
+    "kd": 165274,
+    "op": 515256,
+    "od": 167350,
+    "comp": 10532,
+    "band": 67,
+    "feed": 23729,
+    "ff": 3523
+  }
+}

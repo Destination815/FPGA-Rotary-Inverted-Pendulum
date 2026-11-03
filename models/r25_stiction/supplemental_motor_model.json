@@ -1,0 +1,28 @@
+{
+  "name": "r25_stiction_v2_quiet_S016",
+  "parameters": {
+    "gain_positive": 23.278052051927652,
+    "gain_negative": 23.302509644346834,
+    "tau_on": 0.2073976663433372,
+    "kinetic_pwm": 0.06676524770249152,
+    "static_pwm": 0.16,
+    "tau_off": 0.017785185
+  },
+  "source": "/Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/analysis/r25_trials_20261014/stiction_model/v2/result.json",
+  "usage": "Additional pressure plant only; old models retained. Arm/rod coupling and calibration bias not identified. Do not directly copy friction into FPGA compensation.",
+  "selection": "Lowest predeclared development objective among3cases, no R25 decision.",
+  "known_failure_details": "result.json plateau_scores and per_window_errors; no all-pass claim",
+  "plant_cpp": "/Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/analysis/r25_trials_20261014/stiction_model/v2/plant.cpp",
+  "plant_api": "stiction_effective_step(double* x4, double logical_pwm_fraction, const double* original_plant9, const double* motor6, double dt, int substeps)",
+  "parameter_order": [
+    "gain_positive",
+    "gain_negative",
+    "tau_on",
+    "kinetic_pwm",
+    "static_pwm",
+    "tau_off"
+  ],
+  "rod_parameters_source": "Choose unchanged original model-bank alpha,kappa,damping,rod_coulomb. Do not silently treat this as mass-matrix plant.",
+  "recommended_numerics": "dt=0.001,substeps=4; statex[2] andx[3] use exact analytic actuator step; rod RK4 inside250us.",
+  "qualification": "PRESSURE_MODEL_ONLY; not a uniquely identified full plant, not evidence that new control will improve physical machine."
+}

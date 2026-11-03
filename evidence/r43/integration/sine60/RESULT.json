@@ -1,0 +1,171 @@
+{
+  "settings": {
+    "amplitude_physical_deg": 90.0,
+    "period_s": 9.42,
+    "speed_physical_deg_s": 60.0
+  },
+  "status": "COMPLETED",
+  "model": "A original declared 7-state local plant with original deadzone/asymmetric gain/friction, C sensor map, Q4 ADC/quantized encoder",
+  "request_schedule": "Fixed wall times, no readiness/quiet gate in harness; ext2_active and reference must prove admission separately",
+  "scope": "Actual controller, estimator, observer, reference, guard and CPU RTL; manual capture then target20, continuous parameterized sine entry/two full periods/exit, target0, STOP. UART/top admission tested separately. Local plant is not an independently identified full-angle hardware model.",
+  "duration_ms": 38840,
+  "maximum_cycles": 5690,
+  "pwm_commit_events": 27902,
+  "commit_cycle_min": 592,
+  "commit_cycle_max": 5689,
+  "events": [
+    {
+      "ms": 3000,
+      "command": "target",
+      "physical_deg": 20
+    },
+    {
+      "ms": 8000,
+      "command": "ext2",
+      "value": 1
+    },
+    {
+      "ms": 30840,
+      "command": "ext2",
+      "value": 0
+    },
+    {
+      "ms": 34840,
+      "command": "target",
+      "physical_deg": 0
+    }
+  ],
+  "transitions": [
+    {
+      "ms": 0,
+      "state": 2,
+      "ext2": false,
+      "fault": 0
+    },
+    {
+      "ms": 1999,
+      "state": 3,
+      "ext2": false,
+      "fault": 0
+    },
+    {
+      "ms": 3000,
+      "state": 4,
+      "ext2": false,
+      "fault": 0
+    },
+    {
+      "ms": 5000,
+      "state": 3,
+      "ext2": false,
+      "fault": 0
+    },
+    {
+      "ms": 8000,
+      "state": 4,
+      "ext2": true,
+      "fault": 0
+    },
+    {
+      "ms": 32840,
+      "state": 3,
+      "ext2": false,
+      "fault": 0
+    },
+    {
+      "ms": 34840,
+      "state": 4,
+      "ext2": false,
+      "fault": 0
+    }
+  ],
+  "windows": {
+    "ordinary_before": {
+      "rows": 1000,
+      "theta_rms_deg": 0.06438755965337933,
+      "tracking_rms_deg": 0.16544584214125874,
+      "tracking_mean_deg": -0.13250508383233023,
+      "pwm_rms": 21.721625169402035
+    },
+    "position_before": {
+      "rows": 2000,
+      "theta_rms_deg": 0.055495576233629634,
+      "tracking_rms_deg": 0.44206430263314983,
+      "tracking_mean_deg": 0.3703416200028215,
+      "pwm_rms": 20.90715188637611
+    },
+    "sine": {
+      "rows": 18840,
+      "theta_rms_deg": 0.5509203688706824,
+      "tracking_rms_deg": 9.242723842813637,
+      "tracking_mean_deg": 0.21597924511018077,
+      "pwm_rms": 54.32826474606447
+    },
+    "exit": {
+      "rows": 4000,
+      "theta_rms_deg": 1.1648021687105412,
+      "tracking_rms_deg": 5.539171663660163,
+      "tracking_mean_deg": 2.03758165901585,
+      "pwm_rms": 45.561197855192525
+    },
+    "ordinary_after": {
+      "rows": 3000,
+      "theta_rms_deg": 0.13742646690703017,
+      "tracking_rms_deg": 1.1216493633861535,
+      "tracking_mean_deg": -0.15606393316855868,
+      "pwm_rms": 39.21884326018127
+    }
+  },
+  "fault": 0,
+  "stop_zero": true,
+  "ext2_seen": true,
+  "final_stage": 4,
+  "elapsed_s": 584.832075250044,
+  "clock_contract": "50000 clocks per 1ms; actual command changes integrated at commit_cycle/50MHz; matrix exponential integration, no PWM carrier model",
+  "binding": {
+    "source_sha256": {
+      "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+      "fpga/src/trajectory.v": "2bc472a65e01dbb40529be0027f9202880e12882d6dcb3d9559ad693f7733595",
+      "fpga/src/drive_guard.v": "7815cc8aaeb543f7abedc5308fd77c9ef6b709436d1ad181b9ccb38c82e3be8d",
+      "fpga/src/controller.v": "022312874663718bf3f2a678d5164c4999fbb9b3beb6872fe92037c0450a4672",
+      "fpga/src/j280_top.v": "d7092ed5b7060d3b20d1b54649c12e78647891087921fba2165154f8b1be7e30",
+      "fpga/src/passive_capture.v": "3d11d091a2072395e5b2228ac22bc90b488a7cd0739a5411c805fc6ca655f32d",
+      "fpga/src/s23_memory.v": "c25c828c82f01fe2955d0d4d04fe7cef9223193c7507e8a59edf7c1051cc6254",
+      "fpga/src/r01_swing_core.v": "a7ff49b861c24847d875c3eb673a8361616260954bc1f90d0de2dee9bfd50828",
+      "fpga/src/d02_capture.v": "236167cad95ddb9fcb752d986e9f1efc3808c46eb0a9a7dbd9b9a48d0c4b2f87",
+      "fpga/src/command_rx.v": "c76eff1ed67d70928d8051d573c887703e24bba3364d078a95aee3236f16a614",
+      "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+      "fpga/src/motion_link_watchdog.v": "6bb158ff49c1553187da81746e0b4a6e8506da6c5e6709f95d57cdf4ffdf3cea",
+      "fpga/src/telemetry.v": "2ba7d4a5aeab403057e69937d61ad600fc1b73d5a9b87916a35e93aa2f92dca4",
+      "fpga/src/state_estimator.v": "bbe1e9e1d96dc30d135630cd60824188a61352aa66696bb609aba2da043e398f",
+      "fpga/src/s23_alu.v": "2df3252fee35a5f665433da70ff460d23d6b656a07b58e1c668549fc5a8a33b3",
+      "fpga/src/calibrated_command.v": "456a5d5f83d0b10eb9f289d8fa80e538eff2390d1a4ce1c85f99389409e8012d",
+      "fpga/src/io_frontend.v": "4cde6ac3e438c3d0374bc13093f3e4293103fd7a9f94b9f7ed563b79091479e5",
+      "fpga/src/r01_reference.v": "efa745cba1d41ad500fc9d0b3ffef1f6e948245c4d34c15fccc390d906d3e41b",
+      "fpga/src/r01_gap_bridge.v": "e33103e702421baadfe8b0878063434770bf4ed68b5a25ed9ed3ac2422d053f5",
+      "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+      "fpga/src/r10_observer_core.v": "7d1f70c68e5d5cb71b720fc734268b4e8f8d89bc746f9cf0cfc5ed5096837729",
+      "fpga/src/r29_handoff_guard.v": "6a43dee0cd12087e02f3ce8af0836fe965c96934baa996ccafbc8975f7be9b6c",
+      "fpga/src/s23_compute.v": "1612c3b7bf95c1617901fcc077366f485601b51ee284cf21450ffc61c583156a",
+      "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79",
+      "fpga/src/r29_early_saturation.v": "3ac6ea5f30d794a183b18173c9390991f856690ca055642e094872539225701e",
+      "fpga/src/calibrated_position.v": "eee65e7a68e584110734ae7bb3db2cb6b367b7bf40e69f1febfdd5c3becffad5",
+      "fpga/src/uart.v": "87da5cefb1659469d2082cbb01d258d07a60d2177a4d5f69827a4050db96366e",
+      "sim/dpb_sim_model.v": "d1140f95a0376cdce969fa8e27b6368fcdf5259f770f824596c445b11e4f1273",
+      "fpga/src/cosine_function.vh": "cdfa460d417870dc47e257384db560d2129eb07530983931dc21d1fc401eac92",
+      "fpga/src/j280_config.vh": "9f4492d0ec957ed87c33c438195497b4fb5eed2ca6f8027d61323f79c91c692c",
+      "fpga/src/j280_coordinates.vh": "40200c44687a92e8ed9e14348c7c3ea85ff52488921566e317d361ce5a2f16f5",
+      "fpga/src/r10_observer_parameters.vh": "f77b7013dfe7ff081066002e672c2839f1fba12507cf8dea2e868d44a3630ba8",
+      "fpga/src/r29_returning_gate.vh": "b5d76370c732899a685a093a9afa1229104a039cef6f4785b61189f8bec23d44",
+      "fpga/src/r29_swing_io.vh": "653c527b2e12e4e13ed9b41e62eb6179e23165bd158e6a03f29aa56a64f98633",
+      "sim/control_api.cpp": "6e5062361c966a700e8c6d1133775f9248048b7ac69411e3b65394905b75bf83",
+      "sim/r01_control_harness.v": "ae005fbfa20d83c7534c89831a12b498f87c8d199f2e098c35718a8ba7f40a6a"
+    },
+    "library_sha256": "e91a63f367d7f84663a58b36fbee942163e86cf9120bd9d9876a741ea8904b49",
+    "lint": "PASS; warnings retained",
+    "hardware_STA": "PENDING"
+  },
+  "plant_sha256": "0db7cdffa2a9732d3b03dd003e4bd893bce94184d0a5398cf7bf959193a26475",
+  "runner_sha256": "f86e4fabfd34fd5e2ab58c21bc0a4c7453999ba6d6868d367a22a4a83dd3832b",
+  "trace_sha256": "77630f729f85e29632896b420980bac1d2b2586c8d0e4b89cc8e8614c05513b4"
+}

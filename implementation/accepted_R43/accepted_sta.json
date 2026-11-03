@@ -1,0 +1,263 @@
+{
+  "schema": "j280.sta-review.v1",
+  "accepted": true,
+  "build": "4A070257",
+  "source_manifest_sha256": "c2118bc418c52ca8159cf81f0004397d69ca1df8406da64222a5913195db3ec3",
+  "review": {
+    "status": "ROUTED_AND_STA_ACCEPTED",
+    "tool": "V1.9.12.03 (64-bit)",
+    "target": "GW2A-LV55PG484C8/I7",
+    "report_created": "Fri Oct 30 23:00:33 2026",
+    "frequency_MHz": 50,
+    "Fmax_MHz": 52.041,
+    "setup_WNS_ns": 0.785,
+    "adc_setup_WNS_ns": 39.943,
+    "hold_WNS_ns": 0.076,
+    "adc_hold_WNS_ns": 279.219,
+    "recovery_WNS_ns": 16.037,
+    "removal_WNS_ns": 2.302,
+    "pulse_WNS_ns": 7.315,
+    "setup_violated_endpoints": 0,
+    "hold_violated_endpoints": 0,
+    "all_clock_TNS_ns": 0,
+    "paths_analyzed": 51579,
+    "endpoints_analyzed": 50817,
+    "routing_completed": true,
+    "bitstream_generation_completed": true,
+    "source_files_in_release_verified": 1189,
+    "received_fpga_config_files_verified": 37,
+    "sources_received_match_published": {
+      "fpga/configure_project.tcl": "b24885872ec62129f43c613c8c89a2bbf7b57ca563fa76230f29a7b65c751510",
+      "fpga/constraints/j280.cst": "04ca2e238a13b83d980060a58e7940f5b9ef9efa7847d1fada9c2f0cb1474d9e",
+      "fpga/constraints/j280.sdc": "7f955d2a8ecc4905bccc49266d282731de2a38f87d57407a5803671d7cb93205",
+      "fpga/j280_draft.gprj": "eb4970f5cb7a5fd163f8d2aee72c966077f74b2383cde89fe5dd093a8dac7f56",
+      "fpga/src/calibrated_command.v": "456a5d5f83d0b10eb9f289d8fa80e538eff2390d1a4ce1c85f99389409e8012d",
+      "fpga/src/calibrated_position.v": "eee65e7a68e584110734ae7bb3db2cb6b367b7bf40e69f1febfdd5c3becffad5",
+      "fpga/src/command_rx.v": "c76eff1ed67d70928d8051d573c887703e24bba3364d078a95aee3236f16a614",
+      "fpga/src/controller.v": "278f8f414c601671462328cced566a7ce320e644e6c31c3805e63f54c329a659",
+      "fpga/src/cosine_function.vh": "cdfa460d417870dc47e257384db560d2129eb07530983931dc21d1fc401eac92",
+      "fpga/src/d02_capture.v": "236167cad95ddb9fcb752d986e9f1efc3808c46eb0a9a7dbd9b9a48d0c4b2f87",
+      "fpga/src/drive_guard.v": "7815cc8aaeb543f7abedc5308fd77c9ef6b709436d1ad181b9ccb38c82e3be8d",
+      "fpga/src/io_frontend.v": "4cde6ac3e438c3d0374bc13093f3e4293103fd7a9f94b9f7ed563b79091479e5",
+      "fpga/src/j280_config.vh": "9f4492d0ec957ed87c33c438195497b4fb5eed2ca6f8027d61323f79c91c692c",
+      "fpga/src/j280_coordinates.vh": "40200c44687a92e8ed9e14348c7c3ea85ff52488921566e317d361ce5a2f16f5",
+      "fpga/src/j280_top.v": "3f89f90f4b97697e44660fcf4b033a7d279ba4d0fc1cb0ffb1cdc5e295c977f0",
+      "fpga/src/motion_link_watchdog.v": "6bb158ff49c1553187da81746e0b4a6e8506da6c5e6709f95d57cdf4ffdf3cea",
+      "fpga/src/passive_capture.v": "3d11d091a2072395e5b2228ac22bc90b488a7cd0739a5411c805fc6ca655f32d",
+      "fpga/src/r01_gap_bridge.v": "e33103e702421baadfe8b0878063434770bf4ed68b5a25ed9ed3ac2422d053f5",
+      "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+      "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+      "fpga/src/r01_reference.v": "efa745cba1d41ad500fc9d0b3ffef1f6e948245c4d34c15fccc390d906d3e41b",
+      "fpga/src/r01_swing_core.v": "a7ff49b861c24847d875c3eb673a8361616260954bc1f90d0de2dee9bfd50828",
+      "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+      "fpga/src/r10_observer_core.v": "7d1f70c68e5d5cb71b720fc734268b4e8f8d89bc746f9cf0cfc5ed5096837729",
+      "fpga/src/r10_observer_parameters.vh": "f77b7013dfe7ff081066002e672c2839f1fba12507cf8dea2e868d44a3630ba8",
+      "fpga/src/r29_early_saturation.v": "3ac6ea5f30d794a183b18173c9390991f856690ca055642e094872539225701e",
+      "fpga/src/r29_handoff_guard.v": "6a43dee0cd12087e02f3ce8af0836fe965c96934baa996ccafbc8975f7be9b6c",
+      "fpga/src/r29_returning_gate.vh": "b5d76370c732899a685a093a9afa1229104a039cef6f4785b61189f8bec23d44",
+      "fpga/src/r29_swing_io.vh": "653c527b2e12e4e13ed9b41e62eb6179e23165bd158e6a03f29aa56a64f98633",
+      "fpga/src/s23_alu.v": "2df3252fee35a5f665433da70ff460d23d6b656a07b58e1c668549fc5a8a33b3",
+      "fpga/src/s23_compute.v": "1612c3b7bf95c1617901fcc077366f485601b51ee284cf21450ffc61c583156a",
+      "fpga/src/s23_memory.v": "c25c828c82f01fe2955d0d4d04fe7cef9223193c7507e8a59edf7c1051cc6254",
+      "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79",
+      "fpga/src/state_estimator.v": "bbe1e9e1d96dc30d135630cd60824188a61352aa66696bb609aba2da043e398f",
+      "fpga/src/telemetry.v": "2ba7d4a5aeab403057e69937d61ad600fc1b73d5a9b87916a35e93aa2f92dca4",
+      "fpga/src/trajectory.v": "2bc472a65e01dbb40529be0027f9202880e12882d6dcb3d9559ad693f7733595",
+      "fpga/src/uart.v": "87da5cefb1659469d2082cbb01d258d07a60d2177a4d5f69827a4050db96366e"
+    },
+    "report_hashes": {
+      "work/fpga/impl/gwsynthesis/j280_draft.log": "18ed7aa3b4e17edc4df5a93596d138db14b1ba7c1e255c9cb53bb3ce095c235d",
+      "work/fpga/impl/gwsynthesis/j280_draft.prj": "702fdd8ecc75d769532b07dc6bbb7f26e12dfe1fd01b9bf9c30131babced317e",
+      "work/fpga/impl/gwsynthesis/j280_draft.vg": "e7b6fa45bf721625f6783ef73ba037460436133895f6bdceb49133dd3e2749a1",
+      "work/fpga/impl/gwsynthesis/j280_draft_syn.rpt.html": "86a39135e152f80f20c1b50b9aee5ec2423daff4fcd83de408d62f162d1dfcb8",
+      "work/fpga/impl/gwsynthesis/j280_draft_syn_resource.html": "9b7d573832f1c94213fb04a2fadb78575bce53306d4ff823cc97f808b6606f46",
+      "work/fpga/impl/gwsynthesis/j280_draft_syn_rsc.xml": "7aef30ed48a12ed38708ab291b07c6f6d8eaa178b645335694f71832487c527c",
+      "work/fpga/impl/pnr/cmd.do": "70f0301c2c28dbb658c2f0cf937732e5a719e94e66c9a7543b1acb95e39d86b9",
+      "work/fpga/impl/pnr/device.cfg": "7339aadd1826a67e6ec943173b944fd7105dd5813ca21667aedcc87fb173b9cc",
+      "work/fpga/impl/pnr/j280_draft.bin": "c4a8b75f042738fc4a45e660e41f472b8dbb08fd69604b02a5a8a7c4f2ce1176",
+      "work/fpga/impl/pnr/j280_draft.binx": "53c1c325703a66eed01490cd47f296343968f29129bb0532b782d8e2146acf61",
+      "work/fpga/impl/pnr/j280_draft.db": "1eeea2da8d5c8a202ab563dce7e31d1e1f9b405edd081778b9843618990f79f6",
+      "work/fpga/impl/pnr/j280_draft.log": "6b1667dee340841952953944afc0cb4a49f1cbb0bfce4fe57fb455433119d8fb",
+      "work/fpga/impl/pnr/j280_draft.pin.html": "f9f2961f03ff3882b379af786ed305d27143ad70178942840be6ffefaa63c488",
+      "work/fpga/impl/pnr/j280_draft.posp": "0f87276495ae44a1af91be2d6d616fe1c936f33cdb8e5756c8dc30cae144fa23",
+      "work/fpga/impl/pnr/j280_draft.power.html": "6c2af0132d48b23227f8da617f8ba9cc3cec1e5166bc6d6136b01b0e66d11e72",
+      "work/fpga/impl/pnr/j280_draft.rpt.html": "d6853403743b06936bbb404fcde42a3f5a58174419cd7c1234a973ab42e2f1e9",
+      "work/fpga/impl/pnr/j280_draft.rpt.txt": "e999e3ec196b1d49b32da1514595f1ddd8cf560f28c67665b15df456f525a20a",
+      "work/fpga/impl/pnr/j280_draft.timing_paths": "efcc2d588a5f58ef63ff320cb47969ab73577a53046fb16b6ad3e05ae29180d1",
+      "work/fpga/impl/pnr/j280_draft.tr": "9f0876caa27c5db31bf289cdec0a971cd88a33b6dbe8dc67e935f44a70f37434",
+      "work/fpga/impl/pnr/j280_draft.tr.html": "6578b7feecdbf2aab9c0956f0888675e0f0ce086dabb84f1ab9baae1d251c0e8",
+      "work/fpga/impl/pnr/j280_draft_tr_cata.html": "5412aec4472a2b00376fd28053b2f5fe9a699bf9c32bc1f2f60200e46b9cd40d",
+      "work/fpga/impl/pnr/j280_draft_tr_content.html": "e4c2e3fcb0567415671c377c32a58b857fc35acffc9974ff8287336cb86f5341"
+    },
+    "archive_sha256": "65a0acba97151eb55d4776dbd2d35c37de1e7f50289fa067935faed12635e7fa",
+    "warning_codes": {
+      "synthesis": {
+        "EX3012": 983,
+        "EX3791": 38,
+        "CV0020": 1,
+        "CV0016": 2,
+        "NL0002": 1
+      },
+      "implementation": {
+        "PA1001": 5509
+      }
+    },
+    "resources": {
+      "Logic": {
+        "used": 42740,
+        "capacity": 54720,
+        "free": 11980
+      },
+      "Register": {
+        "used": 17547,
+        "capacity": 42000,
+        "free": 24453
+      },
+      "CLS": {
+        "used": 23682,
+        "capacity": 27360,
+        "free": 3678
+      },
+      "BSRAM": {
+        "used": 125,
+        "capacity": 140,
+        "free": 15
+      },
+      "DSP": {
+        "used": 14,
+        "capacity": 20,
+        "free": 6
+      },
+      "PRIMARY": {
+        "used": 3,
+        "capacity": 8,
+        "free": 5
+      },
+      "LW": {
+        "used": 8,
+        "capacity": 8,
+        "free": 0
+      }
+    },
+    "applied_constraints": [
+      [
+        "TC_CLOCK",
+        "Actived",
+        "create_clock -name clk50 -period 20.000 [get_ports {clk_50m}]"
+      ],
+      [
+        "TC_GENERATED_CLOCK",
+        "Actived",
+        "create_generated_clock -name adc25 -source [get_ports {clk_50m}] -divide_by 20 [get_ports {adc_clk}]"
+      ],
+      [
+        "TC_INPUT_DELAY",
+        "Actived",
+        "set_input_delay -clock adc25 -clock_fall -max 80.000 [get_ports {adc_data_in[*]}]"
+      ],
+      [
+        "TC_INPUT_DELAY",
+        "Actived",
+        "set_input_delay -clock adc25 -clock_fall -min 0.000 [get_ports {adc_data_in[*]}]"
+      ],
+      [
+        "TC_OUTPUT_DELAY",
+        "Actived",
+        "set_output_delay -clock clk50 -max 5.000 [get_ports {AN1 AN2 PWMA BN1 BN2 PWMB uart_tx led_n[*] adc_oe_n}]"
+      ],
+      [
+        "TC_OUTPUT_DELAY",
+        "Actived",
+        "set_output_delay -clock clk50 -min 0.000 [get_ports {AN1 AN2 PWMA BN1 BN2 PWMB uart_tx led_n[*] adc_oe_n}]"
+      ],
+      [
+        "TC_MAX_DELAY",
+        "Actived",
+        "set_max_delay -from [get_ports {adc_data_in[*]}] -to [get_regs {*adc_inst*sample_data*}] 120.000"
+      ],
+      [
+        "TC_MIN_DELAY",
+        "Actived",
+        "set_min_delay -from [get_ports {adc_data_in[*]}] -to [get_regs {*adc_inst*sample_data*}] -280.000"
+      ],
+      [
+        "TC_FALSE_PATH",
+        "Actived",
+        "set_false_path -from [get_ports {rst_n uart_rx key_sw[*] enc1_a enc1_b enc2_a enc2_b}]"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -setup -max_paths 200 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -hold -max_paths 200 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -recovery -max_paths 50 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -removal -max_paths 50 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -setup -from [get_ports {adc_data_in[*]}] -to [get_regs {*adc_inst*sample_data*}] -max_paths 20 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_TIMING",
+        "Actived",
+        "report_timing -hold -from [get_ports {adc_data_in[*]}] -to [get_regs {*adc_inst*sample_data*}] -max_paths 20 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_EXCEPTION",
+        "Actived",
+        "report_exceptions -setup -max_paths 100 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_EXCEPTION",
+        "Actived",
+        "report_exceptions -hold -max_paths 100 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_EXCEPTION",
+        "Actived",
+        "report_exceptions -recovery -max_paths 50 -max_common_paths 1"
+      ],
+      [
+        "TC_REPORT_EXCEPTION",
+        "Actived",
+        "report_exceptions -removal -max_paths 50 -max_common_paths 1"
+      ]
+    ],
+    "STA_frames": [
+      "work/fpga/impl/pnr/j280_draft_tr_cata.html",
+      "work/fpga/impl/pnr/j280_draft_tr_content.html"
+    ],
+    "PnR_seconds": 190,
+    "complete_compile_seconds": 305.781,
+    "optional_bitstream_metadata": {
+      "fpga/impl/pnr/j280_draft.fs": {
+        "bytes": 18588969,
+        "sha256": "0fdd61acd2909a82d433a8e980e3a1bff0c025ffd2afa33d29867a5f8b4ffe9b"
+      }
+    },
+    "bitstream_is_installation_gate": false,
+    "bitstream_registration_required": false,
+    "bitstream_body_received": false,
+    "other_programming_outputs_received": [
+      "j280_draft.bin",
+      "j280_draft.binx"
+    ],
+    "board_readback_performed": false,
+    "physical_six_function_acceptance": "PENDING_C_HARDWARE_TEST",
+    "accepted_run": "R43_compile_20261030_225529_185004",
+    "scope": "Returned isolated implementation225529. Acceptance and optional fs archival metadata refer only to this complete return. No new physical-control performance asserted."
+  }
+}

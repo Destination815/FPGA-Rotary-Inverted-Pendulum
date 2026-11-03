@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "New wrapper vs frozen model exact discrete 1ms equations; no fitted coefficients changed",
+  "cases": [
+    {
+      "model": "s16_v7",
+      "samples": 4000,
+      "max_state_error": 0.0
+    },
+    {
+      "model": "s20_joint",
+      "samples": 4000,
+      "max_state_error": 0.0
+    }
+  ]
+}

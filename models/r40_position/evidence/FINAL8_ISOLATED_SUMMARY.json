@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "False": {
+      "base": {
+        "cases": 4,
+        "survived": 4,
+        "arrival2_rms_mean": 3.5144329106746164,
+        "arrival2_rms_max": 7.4433112719749825,
+        "tail_position_rms_mean": 3.239509528878866,
+        "peak_theta_max": 10.455387313067973,
+        "active_ms": 0,
+        "paused_active_ms": 0,
+        "resume_below_trigger": 0
+      },
+      "candidate": {
+        "cases": 4,
+        "survived": 4,
+        "arrival2_rms_mean": 3.5144329106746164,
+        "arrival2_rms_max": 7.4433112719749825,
+        "tail_position_rms_mean": 3.239509528878866,
+        "peak_theta_max": 10.455387313067973,
+        "active_ms": 0,
+        "paused_active_ms": 0,
+        "resume_below_trigger": 0
+      }
+    },
+    "True": {
+      "base": {
+        "cases": 4,
+        "survived": 4,
+        "arrival2_rms_mean": 8.60915128533631,
+        "arrival2_rms_max": 21.20380425846164,
+        "tail_position_rms_mean": 4.162829768210702,
+        "peak_theta_max": 6.329336491175047,
+        "active_ms": 0,
+        "paused_active_ms": 0,
+        "resume_below_trigger": 0
+      },
+      "candidate": {
+        "cases": 4,
+        "survived": 4,
+        "arrival2_rms_mean": 3.47843752374426,
+        "arrival2_rms_max": 4.363432628758312,
+        "tail_position_rms_mean": 2.892217071159804,
+        "peak_theta_max": 6.202455496157352,
+        "active_ms": 16291,
+        "paused_active_ms": 301,
+        "resume_below_trigger": 2
+      }
+    }
+  },
+  "per_case_deltas": [
+    {
+      "case": 0,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": 1,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": 2,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": 3,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": 4,
+      "theta_peak_delta": -0.29993570683157156,
+      "arrival2_delta": [
+        0.0,
+        -12.776366485009929,
+        -1.93345668068255
+      ]
+    },
+    {
+      "case": 5,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        -18.19784075532207,
+        -2.8817546683700743
+      ]
+    },
+    {
+      "case": 6,
+      "theta_peak_delta": -0.1268809950176948,
+      "arrival2_delta": [
+        0.0,
+        -12.45142478371331,
+        -3.3065141289376605
+      ]
+    },
+    {
+      "case": 7,
+      "theta_peak_delta": 0.0,
+      "arrival2_delta": [
+        0.0,
+        -5.852610616536017,
+        -4.168597020532978
+      ]
+    }
+  ],
+  "normal_trace_exact_equal": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+  },
+  "frozen_plan_sha256": "79f2f8cd1566e3264bea9b4d8540f9a1da477df248777ca1971749c25d7d080b",
+  "scope": "New seed 2026102809 frozen after lifecycle fix; 8 paired conditions, 16 executed fast closed loops; not complete control RTL; no tuning after runs. Two candidates show active/same-LP pauses followed by reverse resume below trigger."
+}

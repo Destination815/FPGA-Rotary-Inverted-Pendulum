@@ -1,0 +1,9 @@
+{
+  "candidate": "final public v3b + no-position-permission-only narrow residual; ordinary native path, A not exercised",
+  "public_header_sha256": "98db66ad0bd7698242654b9e9af0cb5d6c35b1be25781dd8807c8523e17a461d",
+  "public_cpu_sha256": "0a773dd478012e924447f2ceb30d3117036cbd2fd7203347eac756208fee0be4",
+  "public_observer_rtl_sha256": "358b45e03d88cefaf81479d907b6db7a7a94699df0be7499b7fe680feb577c67",
+  "isolated_header_sha256": "95c07067a39f0893dffeb944e0471fef470178cb4795da3f840cd76edccd77a3",
+  "scope_run_header_matches_final": true,
+  "adaptation": "Observer headers add only const double *cfg=nullptr for the harness. Normal reference enters existing policy_tick; injected I and LP diagnostics are in probe.cpp. Public source files were only read."
+}

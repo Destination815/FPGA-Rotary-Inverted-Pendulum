@@ -18,8 +18,15 @@ def main():
     check=subprocess.run([str(python),'-c','import PySide6, pyqtgraph, numpy, serial; from PySide6 import QtWidgets'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
     if check.returncode or not stamp.exists() or stamp.read_text(encoding='utf-8')!=fingerprint:
         subprocess.run([str(python),'-m','ensurepip','--upgrade'],check=True)
-        print('Installing locked dependencies. First setup needs internet (about 250-450 MB).',flush=True)
-        subprocess.run([str(python),'-m','pip','install','--disable-pip-version-check','-r',str(requirement)],check=True)
+        platform='windows' if os.name=='nt' else sys.platform
+        cache=root.parent/'offline'/'wheels'/f'{platform}-py{sys.version_info.major}{sys.version_info.minor}'
+        install=[str(python),'-m','pip','install','--disable-pip-version-check']
+        if cache.exists() and any(cache.glob('*.whl')):
+            print('Installing from local dependency cache:',cache,flush=True)
+            install+=['--no-index','--find-links',str(cache)]
+        else:
+            print('Installing locked dependencies. First setup needs internet (about 250-450 MB).',flush=True)
+        subprocess.run(install+['-r',str(requirement)],check=True)
         subprocess.run([str(python),'-c','from PySide6 import QtWidgets; import pyqtgraph, serial'],check=True)
         stamp.write_text(fingerprint)
     print('GUI environment ready:',python,flush=True);return 0

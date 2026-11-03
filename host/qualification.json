@@ -2,9 +2,9 @@
   "schema": "r01.motion-release.v1",
   "build": "4A070257",
   "motion_release": true,
-  "source_manifest_sha256": "60f50d92819267404226882be1c9c98097c154aa97134bca5ce51d56c41e278e",
+  "source_manifest_sha256": "1577501ebb516eb07ffb5f889fb165d1327348d5ccc9d8a129631a06dceff9bb",
   "compiled_source_manifest_sha256": "c2118bc418c52ca8159cf81f0004397d69ca1df8406da64222a5913195db3ec3",
-  "sta_review_sha256": "aaf532fbf70ee6b3c42b5b750d8deca4544b18ca53e2d47a012dd2bd90c9128e",
+  "sta_review_sha256": "7352bf7a567897572053904766a1d0e9168b34a5f4f87fadcdadb0d2360bf474",
   "trial_scope": [
     "All six R43 functions",
     "Same four operator sequences at15/30/45/60: swing, CCW/CW disturbance, CCW/CW fall recovery, +90/-90/0 positioning and editable sine"
@@ -31,6 +31,7 @@
   "source_package": {
     "origin_runtime_source_manifest_sha256": "6ab92eefc0609d463768bb77a0d938d0a2e6a167d7aace28beaa10044273262a",
     "control_sources_unchanged": true,
-    "inventory_rebound": true
+    "inventory_rebound": true,
+    "onsite_auxiliary_tools_added": true
   }
 }

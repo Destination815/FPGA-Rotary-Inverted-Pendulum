@@ -1,0 +1,94 @@
+{
+  "status": "BASELINES_REUSED_NOT_RERUN",
+  "scope": "Three bounded complete controller RTL comparisons; no current parameter refit. Historical absolute paths in immutable result files are provenance only, never loaded.",
+  "measured_history": {
+    "original_file": "analysis/r27_trials_20261018/audit/B4_active_50hz.csv",
+    "original_sha256": "153776eadd7eedd18aece429893f2e64677c23fa22147e35f515894c92a85e41",
+    "local_file": "B4_first_brake_history.csv",
+    "local_sha256": "81ead542426ba86d775a4e597edaabc507d787dc59dabecb282b3de1a2fa8e7d",
+    "retained_rows": 149,
+    "last_relative_s": "2.96",
+    "warning": "Only pre-release 50Hz record through first BRAKE. Linear interpolation within this segment is not true 1kHz reconstruction; no measured future is available."
+  },
+  "baselines": {
+    "b4-brake": {
+      "original_directory": "analysis/r27_trials_20261018/model_audit/measured_brake_rtl_baseline",
+      "files": {
+        "result.json": "4ebe018d5ef00c6130522feb1a29ac4aab392710395ece557db05bb3111c66d5",
+        "trace.npz": "de5f7ebfa7ded6fc7c3a52952d8875ce05e16058122eacbd326910b84b0b1848",
+        "metrics.json": "df3e02b824c2373bce57d03318175afe5a0ed8dc9a598403b4380291c1a4aaf6"
+      },
+      "source_hashes_checked_against_frozen_r27": true,
+      "library_sha256": "86073221b673259c109edb00f543b2aa1937e99c4826aba5fb1cb7cc28b444ab",
+      "compiled_sources": {
+        "fpga/src/controller.v": "2aef31c76d253a99dcf8c69b270255be392c4a221a430eb8f14087e2a9f2f963",
+        "fpga/src/state_estimator.v": "cc6574bd474f5214c2b95ea5953e966a6fd71ccec1a0929137269457b2f1ac8b",
+        "sim/r01_control_harness.v": "ceaadc17b68fe83db4a168f57fa33760e1ac02e5917393e3a20509e029917195",
+        "sim/control_api.cpp": "bbcff6c663f919de49bcd0fdbcc4a6da5a501a633f50c485cbe664de62f325b2",
+        "fpga/src/r01_gap_bridge.v": "48704495f4fe785f12dbb838f724d60a7fe7cc341385e056bfdf0ce8cafd49f6",
+        "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+        "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+        "fpga/src/r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+        "fpga/src/r01_swing_core.v": "321589645fb862aa3ca2a47fe8563969118003e37029d602c5abefc9f8ec3b4c",
+        "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+        "fpga/src/r10_observer_core.v": "ff949a0374101a4139454adbf0b8f244fbcfd20b6f1004db1fee147da2b7d0ca",
+        "fpga/src/s23_alu.v": "ebe5a83f0edcce10ef3029cf1c24fc7578b17fb7619bee542c02dced1966c40f",
+        "fpga/src/s23_compute.v": "a4b2c066e64a1c562ea9e081b85e5cb75859405fd38c8aa2bed90927b55a7822",
+        "fpga/src/s23_memory.v": "3dc1c4576e33158d15d6ec060a778e1af0c0a5f33799f1166c8b401fcc20bc95",
+        "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79"
+      }
+    },
+    "s16-motion": {
+      "original_directory": "analysis/r27_trials_20261018/motion_audit/grey_capture_baseline_s16",
+      "files": {
+        "result.json": "f9934516ea6201958793dffab6f882c778fc8ea0180a7c8758cbd922e0a7878f",
+        "trace.npz": "76cd14550873cbb8020dd6c047eb42f1efa3ec77dd044edddc54d7d32ae347ea"
+      },
+      "source_hashes_checked_against_frozen_r27": true,
+      "library_sha256": "86073221b673259c109edb00f543b2aa1937e99c4826aba5fb1cb7cc28b444ab",
+      "compiled_sources": {
+        "fpga/src/controller.v": "2aef31c76d253a99dcf8c69b270255be392c4a221a430eb8f14087e2a9f2f963",
+        "fpga/src/state_estimator.v": "cc6574bd474f5214c2b95ea5953e966a6fd71ccec1a0929137269457b2f1ac8b",
+        "sim/r01_control_harness.v": "ceaadc17b68fe83db4a168f57fa33760e1ac02e5917393e3a20509e029917195",
+        "sim/control_api.cpp": "bbcff6c663f919de49bcd0fdbcc4a6da5a501a633f50c485cbe664de62f325b2",
+        "fpga/src/r01_gap_bridge.v": "48704495f4fe785f12dbb838f724d60a7fe7cc341385e056bfdf0ce8cafd49f6",
+        "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+        "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+        "fpga/src/r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+        "fpga/src/r01_swing_core.v": "321589645fb862aa3ca2a47fe8563969118003e37029d602c5abefc9f8ec3b4c",
+        "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+        "fpga/src/r10_observer_core.v": "ff949a0374101a4139454adbf0b8f244fbcfd20b6f1004db1fee147da2b7d0ca",
+        "fpga/src/s23_alu.v": "ebe5a83f0edcce10ef3029cf1c24fc7578b17fb7619bee542c02dced1966c40f",
+        "fpga/src/s23_compute.v": "a4b2c066e64a1c562ea9e081b85e5cb75859405fd38c8aa2bed90927b55a7822",
+        "fpga/src/s23_memory.v": "3dc1c4576e33158d15d6ec060a778e1af0c0a5f33799f1166c8b401fcc20bc95",
+        "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79"
+      }
+    },
+    "s20-motion": {
+      "original_directory": "analysis/r27_trials_20261018/motion_audit/grey_capture_baseline",
+      "files": {
+        "result.json": "823e843e559c700ea06ffaeb4ced7d65bd8df4a5923910771ef4c0a77bac4374",
+        "trace.npz": "952af8d6048ea8107c48d850113b0dfb38881d0b8096dc22206938dbf88f8d1a"
+      },
+      "source_hashes_checked_against_frozen_r27": true,
+      "library_sha256": "86073221b673259c109edb00f543b2aa1937e99c4826aba5fb1cb7cc28b444ab",
+      "compiled_sources": {
+        "fpga/src/controller.v": "2aef31c76d253a99dcf8c69b270255be392c4a221a430eb8f14087e2a9f2f963",
+        "fpga/src/state_estimator.v": "cc6574bd474f5214c2b95ea5953e966a6fd71ccec1a0929137269457b2f1ac8b",
+        "sim/r01_control_harness.v": "ceaadc17b68fe83db4a168f57fa33760e1ac02e5917393e3a20509e029917195",
+        "sim/control_api.cpp": "bbcff6c663f919de49bcd0fdbcc4a6da5a501a633f50c485cbe664de62f325b2",
+        "fpga/src/r01_gap_bridge.v": "48704495f4fe785f12dbb838f724d60a7fe7cc341385e056bfdf0ce8cafd49f6",
+        "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+        "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+        "fpga/src/r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+        "fpga/src/r01_swing_core.v": "321589645fb862aa3ca2a47fe8563969118003e37029d602c5abefc9f8ec3b4c",
+        "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+        "fpga/src/r10_observer_core.v": "ff949a0374101a4139454adbf0b8f244fbcfd20b6f1004db1fee147da2b7d0ca",
+        "fpga/src/s23_alu.v": "ebe5a83f0edcce10ef3029cf1c24fc7578b17fb7619bee542c02dced1966c40f",
+        "fpga/src/s23_compute.v": "a4b2c066e64a1c562ea9e081b85e5cb75859405fd38c8aa2bed90927b55a7822",
+        "fpga/src/s23_memory.v": "3dc1c4576e33158d15d6ec060a778e1af0c0a5f33799f1166c8b401fcc20bc95",
+        "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79"
+      }
+    }
+  }
+}

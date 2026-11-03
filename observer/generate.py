@@ -1,0 +1,1 @@
+raise SystemExit("Observer RTL is maintained in fpga/src/r10_observer_core.v; run observer/verify.py for integer/RTL verification. The historical generator predates timing repairs and is archived under evidence/r22_validation/ancestry.")

@@ -1,0 +1,155 @@
+{
+  "version": "M03_OFFLINE_20261021",
+  "frozen_before_R29_model_prediction": true,
+  "models": {
+    "free_offset": {
+      "p": [
+        94.69735658687758,
+        0.07717400111879874,
+        0.5361777257489238,
+        0.9515495175278383,
+        0.030856866245662192
+      ],
+      "library": "free",
+      "scope": "unpowered fixed-arm decay; 20ms measured coordinate, offset/scale ambiguity"
+    },
+    "free_scale": {
+      "p": [
+        94.77558543217712,
+        0.07528298449193492,
+        0.5366170009469063,
+        0.9704433526016057,
+        0.9901860103025343
+      ],
+      "library": "free",
+      "scope": "alternative sensor-scale explanation; no firmware calibration change"
+    },
+    "transmission_sensor": {
+      "name": "transmission_sensor",
+      "library": "transmission_sensor",
+      "p": [
+        94.69735658687758,
+        1.5980539326173924,
+        0.36853020679377674,
+        5.6967735370668535,
+        0.07717400111879874,
+        0.743863621638381,
+        976.9577522253907,
+        1.0191336164946945,
+        21.326660885662434,
+        62.549810716877666,
+        0.002,
+        1.9075242409757122e-07,
+        18120.490062741686,
+        86.31835740543391,
+        0.02144936376709398,
+        0.0,
+        0.9901860103025343
+      ],
+      "calls": 402,
+      "nfev": 39,
+      "train": 0.43781244745599357,
+      "development": 0.5012698663847437
+    },
+    "transmission_offset": {
+      "name": "transmission_causal",
+      "library": "transmission_causal",
+      "p": [
+        94.69735658687758,
+        1.6061376259739397,
+        0.13156281139729026,
+        7.620608805341379,
+        0.07717400111879874,
+        0.743863621638381,
+        1103.5272367611492,
+        1.146068408657061,
+        26.911527098820912,
+        78.19876316151026,
+        0.002,
+        0.00011848020597901854,
+        14430.464493035406,
+        82.10679007886391,
+        0.019866687009863274,
+        0.030856866245662192
+      ],
+      "calls": 212,
+      "nfev": 25,
+      "train": 0.5752397349425787,
+      "development": 0.6330946139755466
+    },
+    "transmission_zero_gap": {
+      "name": "transmission_zero_gap",
+      "library": "transmission_causal",
+      "p": [
+        94.69735658687758,
+        1.6336152077992105,
+        0.5349950644790915,
+        7.300532128673982,
+        0.07717400111879874,
+        0.743863621638381,
+        1083.8355150600337,
+        1.1706488961369144,
+        34.6284310779503,
+        54.39866851962872,
+        0.002,
+        7.421092083664972e-18,
+        6996.768125215109,
+        190.0775843560529,
+        0.0,
+        0.030856866245662192
+      ],
+      "calls": 245,
+      "nfev": 35,
+      "train": 0.6396807828075253,
+      "development": 0.6294314844551325
+    },
+    "local_conditioned": {
+      "q": [
+        122.25164844196763,
+        1.9758756451147166,
+        55.40313103572658,
+        4.999999980484844,
+        0.00020000000000000004,
+        0.041921821409367115,
+        0.06469093532078633,
+        94.5076,
+        0.9857315082569293,
+        0.007998425857474456,
+        0.0012981266843918582,
+        7.187037366712336
+      ],
+      "library": "local_core",
+      "scope": "|theta|<0.30rad measured-coordinate seven-state predictor; current observation conditioning"
+    },
+    "local_per_ms": {
+      "q": [
+        124.82467386217982,
+        2.073352194998625,
+        48.301487693647424,
+        4.626648829658006,
+        0.000919017382138485,
+        0.04094966497616943,
+        0.07891182759170196,
+        94.5076,
+        0.9891820876480957,
+        0.011962179159589446,
+        0.0012782279177129161,
+        6.865208530398114
+      ],
+      "library": "local_one_ms",
+      "scope": "current-observation conditioned local measured model; nonlinear PWM every1ms; frozen before R29 local prediction"
+    }
+  },
+  "source_results": {
+    "free_frozen.json": "a89bfbb4c45bfa5b053f0810dd2671f7d56334aaa0acd36cb0a510acba1e8af3",
+    "free_scale_frozen.json": "47756b933beac230fac854bcc97615299f0cb26470864bc8a0fa1c65246a4a2f",
+    "sensor_frozen.json": "bf7555778845b132aedabae2c2c80a0f97e382b1c10f1ad23f2f186e1069fc29",
+    "causal_frozen.json": "0e6b2252a64d7cd3b0552efed568b12163b9907c845a0b3fd600768af4c63dca",
+    "zero_gap_frozen.json": "3f0b380d63cddbe73fd9b809953e6d1069e7a2e098e4c751e6df638b23f19dfa",
+    "local_final_frozen.json": "4a6273f7ada12c058b670c69cdcea9a5646c511a9bc074d13bc0974715fea41e",
+    "local_ms_frozen.json": "2928f435fd1d73bdd3e20642e25c6047dadb874e50e3c388711de5cb57d07ccb"
+  },
+  "hardware_qualification": false,
+  "uncertainty": "Sensor scale/zero and output-side motion are not independently observed. Transmission is a supported effective hypothesis, not proof of measured gearbox backlash. No controller or hardware changes.",
+  "initial_bank_sha256": "85a6d00eb889a8653f48f6ecff99176236c1934504f5db16f449dd2895cc286f"
+}

@@ -1,0 +1,42 @@
+{
+  "False": {
+    "base": {
+      "cases": 8,
+      "survived": 8,
+      "arrival2_rms_mean": 3.2889034442419773,
+      "arrival2_rms_max": 4.591724791364479,
+      "tail_position_rms_mean": 2.9485271525914207,
+      "peak_theta_max": 7.270409455771745,
+      "active_ms": 0
+    },
+    "v3b": {
+      "cases": 8,
+      "survived": 8,
+      "arrival2_rms_mean": 3.2889034442419773,
+      "arrival2_rms_max": 4.591724791364479,
+      "tail_position_rms_mean": 2.9485271525914207,
+      "peak_theta_max": 7.270409455771745,
+      "active_ms": 0
+    }
+  },
+  "True": {
+    "base": {
+      "cases": 8,
+      "survived": 8,
+      "arrival2_rms_mean": 7.0338756071196045,
+      "arrival2_rms_max": 20.3374277033673,
+      "tail_position_rms_mean": 3.6682893708451303,
+      "peak_theta_max": 7.536090147839288,
+      "active_ms": 0
+    },
+    "v3b": {
+      "cases": 8,
+      "survived": 8,
+      "arrival2_rms_mean": 3.436068508151356,
+      "arrival2_rms_max": 8.074163935755193,
+      "tail_position_rms_mean": 2.816955386600465,
+      "peak_theta_max": 7.687857159070825,
+      "active_ms": 33408
+    }
+  }
+}

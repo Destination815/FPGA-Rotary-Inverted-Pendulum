@@ -1,0 +1,109 @@
+{
+  "source_result": "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r43_revision_20261030/integration/recovery/RESULT.json",
+  "source_trace_sha256": "a82fc353c779be66312899ea147e8090596d63828ed9aac7810d9650fd31240e",
+  "frames": 18000,
+  "fault": 0,
+  "max_compute_clocks": 23963,
+  "frame_budget_clocks": 50000,
+  "commit_events": 9365,
+  "commit_min": 0,
+  "commit_max": 0,
+  "model_scope": "Complete controller/estimator/reference/guard RTL, M05 domain-parameter stress extrapolation. These domain fits have short prediction windows and are not validated full-angle physical plants. No integer CPU substitute, no future truth in controller, no hardware/STA guarantee. Optional event is a declared instantaneous angular-velocity impulse at first capture+6000ms; no measured human force was identified. Disturbed falls do not count as pre-event spontaneous failures. First and recovered phases reported separately.",
+  "recovery": {
+    "intervention_ms": 8681,
+    "exit_ms": 8710,
+    "confirmed_ms": 12740,
+    "recapture_after_exit_s": 4.03,
+    "raw_hysteretic_velocity_reversals": 13,
+    "turns": [
+      {
+        "ms": 9643,
+        "theta_deg": 57.89639902793657,
+        "omega": 0.252777099609375,
+        "pwm": 0.112
+      },
+      {
+        "ms": 10121,
+        "theta_deg": -49.22806934848998,
+        "omega": -0.20355224609375,
+        "pwm": -0.35
+      },
+      {
+        "ms": 10627,
+        "theta_deg": 15.81806241958921,
+        "omega": 0.21868896484375,
+        "pwm": -0.329
+      },
+      {
+        "ms": 10749,
+        "theta_deg": 26.195578636939782,
+        "omega": -0.212066650390625,
+        "pwm": 0.35
+      },
+      {
+        "ms": 10831,
+        "theta_deg": 26.110775008204904,
+        "omega": 0.20098876953125,
+        "pwm": 0.35
+      },
+      {
+        "ms": 11413,
+        "theta_deg": -49.798089615862565,
+        "omega": -0.209503173828125,
+        "pwm": -0.35
+      },
+      {
+        "ms": 11939,
+        "theta_deg": 7.655931719910613,
+        "omega": 0.210113525390625,
+        "pwm": -0.35
+      },
+      {
+        "ms": 12031,
+        "theta_deg": 16.219349693705798,
+        "omega": -0.260528564453125,
+        "pwm": 0.35
+      },
+      {
+        "ms": 12125,
+        "theta_deg": 8.39381071632543,
+        "omega": 0.2917022705078125,
+        "pwm": -0.14
+      },
+      {
+        "ms": 12235,
+        "theta_deg": 15.248916416430388,
+        "omega": -0.2079010009765625,
+        "pwm": 0.35
+      },
+      {
+        "ms": 12485,
+        "theta_deg": -14.469072737755011,
+        "omega": 0.22149658203125,
+        "pwm": -0.217
+      },
+      {
+        "ms": 12628,
+        "theta_deg": -2.911299831826235,
+        "omega": -0.2014007568359375,
+        "pwm": 0.13
+      },
+      {
+        "ms": 12714,
+        "theta_deg": -4.999042774289013,
+        "omega": 0.2030181884765625,
+        "pwm": -0.059
+      }
+    ],
+    "upright_crossings_before_confirm": [
+      {
+        "ms": 9186,
+        "omega": -6.605865478515625,
+        "arm_v_deg_s": -107.2076457474688,
+        "pwm": -0.35,
+        "state": 1
+      }
+    ],
+    "count_scope": "Measured omega hysteresis +/-0.2 rad/s. Unfiltered physical turns, not a relabelled user-visible full-swing count; no guarantee of <=6 swings."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": [
+    "standstill subthreshold1000ms",
+    "full-state origin translation100ms"
+  ],
+  "interface": "extern C stiction_effective_step(x,u,plant9,motor6,dt,sub)",
+  "same_physics_scope": "effective motor approximation + original nonlinear rod equation, not mass_matrix",
+  "source_sha256": {
+    "predict.cpp": "182e5afb40519831cea0bb8356215993ac61b4f10262eb59b03cbafa3c7aab1e",
+    "plant.cpp": "d8256f3142e8faeade5e00e09628cb9a51077a7a22841d825b3153bcd420b7d9"
+  }
+}

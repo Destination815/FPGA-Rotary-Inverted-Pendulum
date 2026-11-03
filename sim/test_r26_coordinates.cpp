@@ -1,0 +1,16 @@
+#include "Vr10_observer_core.h"
+#include "Vr10_observer_core___024root.h"
+#include "verilated.h"
+#include "hold_observer.hpp"
+#include <iostream>
+#include <stdexcept>
+static void clk(Vr10_observer_core&t){t.clk=0;t.eval();t.clk=1;t.eval();}
+static void req(bool b,const char*s){if(!b)throw std::runtime_error(s);}
+static void seed(Vr10_observer_core&t,HoldObserver&m,int shift){t.rst_n=0;clk(t);t.rst_n=1;clk(t);m.clear();m.age=1000;m.samples=200;m.lp=2000000;m.z[1]=1677721;m.z[3]=1677721;m.z[2]=int64_t(shift)*256;auto*r=t.rootp;r->r10_observer_core__DOT__age=1000;r->r10_observer_core__DOT__samples=200;r->r10_observer_core__DOT__integral_lp=m.lp;r->r10_observer_core__DOT__z1=m.z[1];r->r10_observer_core__DOT__z2=m.z[2];r->r10_observer_core__DOT__z3=m.z[3];r->r10_observer_core__DOT__blend=16777216;}
+static int tick(Vr10_observer_core&t,HoldObserver&m,int k,int shift,int prev,bool automatic,int excursion=0){int theta=std::lround(180*std::sin(k*.037)),phi=shift+excursion+std::lround(160*std::sin(k*.019));int expected=m.tick(theta,phi,prev,350,automatic,shift,0,-.5,automatic);t.theta=theta;t.phi=phi;t.reference_offset=shift;t.reference_velocity=0;t.motion_assist_permission=0;t.automatic_policy=automatic;t.automatic_brake=0;t.automatic_hold=1;t.fallback_duty=prev;t.previous_duty=prev;t.prediction_duty=prev;t.limit_permille=350;t.start=1;clk(t);t.start=0;int n=0;while(!t.done&&n++<500)clk(t);req(t.done&&!t.fault,"RTL transaction failed");req(int32_t(t.duty)==expected,"RTL output differs from integer oracle");req(int32_t(t.debug_lp)==m.lp&&int32_t(t.debug_integral)==m.integral,"RTL integral differs from oracle");for(int j=0;j<7;j++)req(int32_t(t.debug_state[j])==m.z[j],"RTL observer differs from oracle");clk(t);return expected;}
+int main(){try{VerilatedContext c;Vr10_observer_core a{&c},b{&c};HoldObserver ma,mb;seed(a,ma,0);seed(b,mb,65536);int ua=0,ub=0,retained=0;for(int k=0;k<600;k++){auto before=ma.lp;ua=tick(a,ma,k,0,ua,true);ub=tick(b,mb,k,65536,ub,true);req(ua==ub,"automatic PWM depends on coordinate origin");req(ma.lp==mb.lp&&ma.integral==mb.integral,"automatic integral depends on origin");for(int j=0;j<7;j++)req(mb.z[j]-ma.z[j]==(j==2?16777216:0),"state translation mismatch");if(k==0)req(ma.lp==2000000,"small-error legacy high-speed LP must remain unchanged");retained+=ma.lp==before&&ma.lp!=0;}
+// Both sides of the5degree adaptation threshold, same actual RTL/integer comparison.
+for(int excursion:{5719,5720,-5719,-5720}){seed(a,ma,0);seed(b,mb,65536);ua=tick(a,ma,0,0,0,true,excursion);ub=tick(b,mb,0,65536,0,true,excursion);req(ua==ub&&ma.lp==mb.lp,"drift threshold coordinate invariance");req((ma.lp!=2000000)==(std::abs(excursion)>5719),"drift threshold update mismatch");}
+// Deliberately retain the original manual behavior, including its offset-sensitive LP rule.
+seed(a,ma,0);seed(b,mb,65536);tick(a,ma,0,0,0,false);tick(b,mb,0,65536,0,false);req(ma.lp==0&&mb.lp==2000000,"manual legacy rule changed");std::cout<<"PASS paired_automatic_transactions=1200 manual_transactions=2 retained_high_speed_samples="<<retained<<" exact_translation=1rad RTL_integer_outputs_and_states_match\n";
+}catch(const std::exception&e){std::cerr<<"FAIL "<<e.what()<<'\n';return 1;}}

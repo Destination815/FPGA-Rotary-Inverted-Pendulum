@@ -1,0 +1,21 @@
+{
+  "source_result": "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r43_revision_20261030/integration/auto_sine/RESULT.json",
+  "source_trace_sha256": "cf7f9535e2c84afc38cb5ce620085d21a6c84a83ce8516b2a6b1ac817ff14183",
+  "frames": 16000,
+  "fault": 0,
+  "max_compute_clocks": 24283,
+  "frame_budget_clocks": 50000,
+  "commit_events": 11337,
+  "commit_min": 0,
+  "commit_max": 0,
+  "model_scope": "Complete controller/estimator/reference/guard RTL, M05 domain-parameter stress extrapolation. These domain fits have short prediction windows and are not validated full-angle physical plants. No integer CPU substitute, no future truth in controller, no hardware/STA guarantee. Optional event is a declared instantaneous angular-velocity impulse at first capture+6000ms; no measured human force was identified. Disturbed falls do not count as pre-event spontaneous failures. First and recovered phases reported separately. Automatic down-start, fixed 6000ms sine-on / 12000ms sine-off / configured zero time; no quiet/readiness wait in test harness. This is a mode/commit contract stress test, not a validated nonlinear sine-performance prediction.",
+  "position": [
+    {
+      "command_ms": 14010,
+      "next_command_ms": 16000,
+      "goal_deg": 0.0,
+      "reference_endpoint_ms": null,
+      "reference_reached": false
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schema": "j280.sta-review.v1",
   "accepted": true,
   "build": "4A070257",
-  "source_manifest_sha256": "60f50d92819267404226882be1c9c98097c154aa97134bca5ce51d56c41e278e",
+  "source_manifest_sha256": "1577501ebb516eb07ffb5f889fb165d1327348d5ccc9d8a129631a06dceff9bb",
   "review": {
     "status": "ROUTED_AND_STA_ACCEPTED",
     "tool": "V1.9.12.03 (64-bit)",
@@ -275,7 +275,7 @@
     "scope": "No controller change or recompilation. Remove duplicate host comparison of telemetry reference as retained sine center; board exact Q18 center, mechanical range, version, flags and STOP unchanged."
   },
   "source_package": {
-    "operation": "Remove historical development files; preserve all final FPGA inputs and runtime code. Rebind source inventory only.",
+    "operation": "Expand source, simulation, onsite tools, accepted bitstream, reports and examples; final FPGA sources unchanged.",
     "origin_runtime_source_manifest_sha256": "6ab92eefc0609d463768bb77a0d938d0a2e6a167d7aace28beaa10044273262a",
     "new_vendor_implementation": false
   }

@@ -1,0 +1,37 @@
+{
+  "rtl": {
+    "samples": 10443,
+    "clear_clocks": 4123,
+    "max_clocks": 4122,
+    "matched": true
+  },
+  "max_float_error_rad_units": [
+    0.00024594082891260527,
+    5.54173287265888e-05,
+    9.022458176083381e-05,
+    0.0004261059479580985
+  ],
+  "max_position_velocity_rad_s": 0.050510406494140625,
+  "max_position_acceleration_rad_s2": 0.080810546875,
+  "duration_bins_tested_ms": [
+    4000,
+    6000,
+    12000,
+    24000,
+    96000
+  ],
+  "sine_entry_peak_v_a_j_rad_units": {
+    "+0.000": [
+      0.043270111083984375,
+      0.35800933837890625,
+      1.6685600280761719
+    ]
+  },
+  "steady_sine_peak_velocity_rad_s": 0.0,
+  "sha256": {
+    "fpga/src/r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+    "reference/reference_model.py": "e5f4b7498f06b470815de77d8a104f9d779dce154fa276e82d690e15f3513d43",
+    "reference/verify_timing_reference.py": "0937547bef985e77c27d101c9d0fee1a8bbfc40be0e31030d4537ec97a0396be"
+  },
+  "provenance_note": "Test algorithm unchanged after execution; corrected recorded script filename to bounded timing runner."
+}

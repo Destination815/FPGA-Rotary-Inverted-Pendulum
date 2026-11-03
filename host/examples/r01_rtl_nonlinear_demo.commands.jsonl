@@ -1,0 +1,16 @@
+{"event": "simulation_event", "ms": 0, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 0.0, "event": "STATE_1"}}
+{"event": "simulation_event", "ms": 8719, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 8.719, "event": "STATE_6"}}
+{"event": "simulation_event", "ms": 8882, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 8.882, "event": "STATE_2"}}
+{"event": "simulation_event", "ms": 10882, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 10.882, "event": "STATE_3"}}
+{"event": "simulation_event", "ms": 10882, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 10.882, "event": "TARGET", "goal": 0.0}}
+{"event": "simulation_event", "ms": 10883, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 10.883000000000001, "event": "STATE_4"}}
+{"event": "simulation_event", "ms": 12883, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 12.883000000000001, "event": "STATE_3"}}
+{"event": "simulation_event", "ms": 14882, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 14.882, "event": "KICK_0.3rad_s"}}
+{"event": "simulation_event", "ms": 14883, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 14.883000000000001, "event": "TARGET", "goal": 5.0}}
+{"event": "simulation_event", "ms": 14884, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 14.884, "event": "STATE_4"}}
+{"event": "simulation_event", "ms": 16884, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 16.884, "event": "STATE_3"}}
+{"event": "simulation_event", "ms": 18884, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 18.884, "event": "TARGET", "goal": -5.0}}
+{"event": "simulation_event", "ms": 18885, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 18.885, "event": "STATE_4"}}
+{"event": "simulation_event", "ms": 20885, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 20.885, "event": "STATE_3"}}
+{"event": "simulation_event", "ms": 22885, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 22.885, "event": "TRAJECTORY_ON"}}
+{"event": "simulation_event", "ms": 22886, "source_label": "RTL 非线性仿真，非实物", "detail": {"time": 22.886, "event": "STATE_4"}}

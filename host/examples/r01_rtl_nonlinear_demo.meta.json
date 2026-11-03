@@ -1,0 +1,197 @@
+{
+  "kind": "rtl_nonlinear_simulation",
+  "is_simulation": true,
+  "source_label": "RTL 非线性仿真，非实物",
+  "hardware_test": false,
+  "serial_capture": false,
+  "firmware_verified": false,
+  "build": "4A070205",
+  "description": "独立mass_matrix非线性对象与实际RTL闭环，初始摆杆负向，自然下垂起摆。曲线位置/速度是模型真值；参考/输出/模式为RTL运算结果。",
+  "mapping": {
+    "theta": "model theta_rad wrapped to [-pi,pi), upright=0; radians",
+    "dtheta": "model omega_rad_s, rad/s",
+    "phi": "model phi_rad, radians",
+    "dphi": "model v_rad_s, rad/s",
+    "reference": "RTL ref_rad",
+    "ref_velocity": "RTL ref_v",
+    "u": "RTL duty ×1000, rounded integer",
+    "limit": "RTL limit ×1000, rounded integer",
+    "state": "RTL supervisor state",
+    "target": "last scripted TARGET event, held during sine",
+    "zero": "simulation zero parameter",
+    "flags": "synthetic 3: testbench armed/calibrated; sensor gap flags not saved per sample"
+  },
+  "unrecorded_placeholder_fields": [
+    "adc",
+    "encoder",
+    "ack_seq",
+    "ack_status",
+    "bad_commands",
+    "encoder_illegal",
+    "dropped",
+    "fault"
+  ],
+  "sampling": {
+    "source_interval_ms": 5,
+    "replay_nominal_interval_ms": 20,
+    "last_sample_preserved": true
+  },
+  "source": {
+    "csv": "results/fractional12/nominal/mass_matrix_-1_swing.csv",
+    "sha256": "796c08e682e1830eb48d224221bb75aade098b5df5596e8b911d4a23dd99fd28",
+    "metrics": "results/fractional12/nominal/mass_matrix_-1_swing.json",
+    "metrics_sha256": "cc33ed0e22b6e1c27d281f48fd541f5604577ed67b72a5d0cf2593949dff9346"
+  },
+  "simulation_metrics": {
+    "model": "mass_matrix",
+    "sign": -1,
+    "manual": false,
+    "duration": 70.0,
+    "capture_s": 8.882,
+    "tracking_s": 10.882,
+    "stop_reason": "completed",
+    "max_compute_cycles": 377,
+    "raw_adc": true,
+    "gap_behavior": "zero",
+    "zero": 746.5,
+    "gap_max_ms": 115,
+    "gap_samples": 748,
+    "trajectory_s": 47.11399999999999,
+    "theta_tail_rms_deg": 0.35220922830888207,
+    "tracking_tail_rms_deg": 0.5919192238222444,
+    "events": [
+      {
+        "time": 0.0,
+        "event": "STATE_1"
+      },
+      {
+        "time": 8.719,
+        "event": "STATE_6"
+      },
+      {
+        "time": 8.882,
+        "event": "STATE_2"
+      },
+      {
+        "time": 10.882,
+        "event": "STATE_3"
+      },
+      {
+        "time": 10.882,
+        "event": "TARGET",
+        "goal": 0.0
+      },
+      {
+        "time": 10.883000000000001,
+        "event": "STATE_4"
+      },
+      {
+        "time": 12.883000000000001,
+        "event": "STATE_3"
+      },
+      {
+        "time": 14.882,
+        "event": "KICK_0.3rad_s"
+      },
+      {
+        "time": 14.883000000000001,
+        "event": "TARGET",
+        "goal": 5.0
+      },
+      {
+        "time": 14.884,
+        "event": "STATE_4"
+      },
+      {
+        "time": 16.884,
+        "event": "STATE_3"
+      },
+      {
+        "time": 18.884,
+        "event": "TARGET",
+        "goal": -5.0
+      },
+      {
+        "time": 18.885,
+        "event": "STATE_4"
+      },
+      {
+        "time": 20.885,
+        "event": "STATE_3"
+      },
+      {
+        "time": 22.885,
+        "event": "TRAJECTORY_ON"
+      },
+      {
+        "time": 22.886,
+        "event": "STATE_4"
+      }
+    ],
+    "passed": true,
+    "disturbance": {
+      "peak_deg": 1.2339329940852668,
+      "late_rms_deg": 0.3409582634045095,
+      "passed": true
+    },
+    "position_checks": [
+      {
+        "goal": 0.0,
+        "position_rms_deg": 0.489309087761916,
+        "theta_rms_deg": 0.38377111911407075,
+        "passed": true
+      },
+      {
+        "goal": 5.0,
+        "position_rms_deg": 0.28550770407882187,
+        "theta_rms_deg": 0.3455683868083551,
+        "passed": true
+      },
+      {
+        "goal": -5.0,
+        "position_rms_deg": 0.346627898568516,
+        "theta_rms_deg": 0.3232812040934447,
+        "passed": true
+      }
+    ],
+    "position_stationary_dwell_s": 2.0,
+    "source_sha256": {
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/command_rx.v": "c76eff1ed67d70928d8051d573c887703e24bba3364d078a95aee3236f16a614",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/controller.v": "9add6448d315213176068a0ebddb0ce3ceac4cbcc1179cdb8abbe01b5490bb14",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/d02_capture.v": "2cfd7e0983e0806b390aeeb862f46c03c030ff0a2fd236fa69ccd9c5c5123b3d",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/drive_guard.v": "c4d753e7d74b9711ef37c2e68d02721858e6078c6bce0c51c7009d796043bb6f",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/io_frontend.v": "fcc84f7fa0f924bc4df84b06a60ccc8eb21a52e245df3b905b137aca342e062e",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/j280_top.v": "260b99fb4d2bcb938d3ae2e835b8adf37ae38d2d1750400e06ecdba01e80f34f",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/r01_gap_bridge.v": "8a0e01a4bef01e7dd2922bf78a855476422fe603ebb6ffe8ba5b992e3f1d05ae",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/r01_reference.v": "cdc43bf369bda80c32da8680a954e9c6d756ccc6e21a448dd5c5c4b238958f46",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/r01_swing_core.v": "3b2dfc1f82754a054a87fb055555b0b3908b80420a31bcc0d73f3f68caa2239a",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/r01_tracking_core.v": "4d5ce76efbc21dd8339785b851e9844935752e93f9f8416042ba5f6cb49303d1",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/state_estimator.v": "f21f1e9056b4ac3e7e9bc9b1dc147d0d8dd2c2dbfd01887a08f2ce17fe5ca23d",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/telemetry.v": "90bab51420f9c19d8aa9999dcccabdffeefef8069c1d3ce653af0dfb316549cd",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/trajectory.v": "2bc472a65e01dbb40529be0027f9202880e12882d6dcb3d9559ad693f7733595",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/uart.v": "87da5cefb1659469d2082cbb01d258d07a60d2177a4d5f69827a4050db96366e",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/cosine_function.vh": "cdfa460d417870dc47e257384db560d2129eb07530983931dc21d1fc401eac92",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/fpga/src/j280_config.vh": "662f35bcb589bee1a1a137778a237de5cf0e097b730fc036b96af8ffff99a037",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/sim/run_sampled_loop.py": "6aa56214734a02576779efc9302bc1349dca351b661e7747de2db829c2c65d24",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/sim/rtl_controller.py": "969401d66bd0dcd1ca890c8d367a5af5b033ab75b806edc893dca4679175f4b6",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/sim/control_api.cpp": "e833f51a5c18d584eb1ef7a82e16b843519303f4710d33804bd4018b4f90799d",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/sim/r01_control_harness.v": "ad2a58c15c337b3824878dd9cef8d46fccb8b64658a871cc5d0e5be495542488",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/models/plant.py": "62da776bf5cb64dd4f375e5b165c564ee3d410436d2e5882e464667487c53f60",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/models/torque_crosscheck.py": "640419fe42076cd4b744c672de6a9cf82a756cfa22ee179f40a40b7def999ba3",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/models/model_config.json": "617d2ad127d4d909d3078e4190e67c4615c5eb0c5f7afcc86de148e59846c32b",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/build/r01/rtl_library_provenance.json": "e6242926bc71c06cdf95e8040720232c9234b9b4a0401a6b637e4def0d127894",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/experiments/r04_control_revision_20261003/build/r01/libr01_control.dylib": "83c019e5f6594d73e8c130770b639b8ca15717de183ed465e5e05595b0cb4069"
+    },
+    "sensor_test": {
+      "mode": "fractional",
+      "noise": "white",
+      "sample_hz": 2500000,
+      "control_hz": 1000,
+      "fractional_block_conversions": 512,
+      "fractional_bits": 4,
+      "source": "digital golden block sums verified separately; synthetic ADC conversion noise"
+    },
+    "initial_sign_scope": "initial pendulum side; controller kick fixedpositive"
+  },
+  "converter_sha256": "9f024140ca3d7e0cf8da5dcdeb6dc1dea9bb939da282a1a839d9789c4ea95bcb"
+}

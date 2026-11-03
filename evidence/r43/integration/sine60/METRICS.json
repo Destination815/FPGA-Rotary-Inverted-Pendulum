@@ -1,0 +1,42 @@
+{
+  "source_result": "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r43_revision_20261030/integration/sine60/RESULT.json",
+  "source_trace_sha256": "77630f729f85e29632896b420980bac1d2b2586c8d0e4b89cc8e8614c05513b4",
+  "frames": 38840,
+  "fault": 0,
+  "max_compute_clocks": 5690,
+  "frame_budget_clocks": 50000,
+  "commit_events": 27902,
+  "commit_min": 592,
+  "commit_max": 5689,
+  "model_scope": "Actual controller, estimator, observer, reference, guard and CPU RTL; manual capture then target20, continuous parameterized sine entry/two full periods/exit, target0, STOP. UART/top admission tested separately. Local plant is not an independently identified full-angle hardware model.",
+  "sine": {
+    "active_rows": 24840,
+    "first_active_ms": 8000,
+    "last_active_ms": 32839,
+    "window_ms": [
+      12000,
+      30840
+    ],
+    "position_rms_error_deg": 9.242723842813637,
+    "actual_positive_amplitude_deg": 84.46621099913685,
+    "actual_negative_amplitude_deg": 84.34775159415366,
+    "amplitude_asymmetry_deg": 0.11845940498319862,
+    "velocity_tracking_rms_deg_s": 6.094679512760827,
+    "velocity_2_to_8Hz_rms_deg_s": 0.1305753788717317,
+    "velocity_2_to_30Hz_rms_deg_s": 0.1552812745852053,
+    "theta_rms_deg": 0.5509203688706824,
+    "startup": {
+      "window_ms": [
+        8000,
+        12000
+      ],
+      "positive_amplitude_deg": 89.66290645511839,
+      "negative_amplitude_deg": 0.7707428010449107,
+      "absolute_amplitude_peak_deg": 89.66290645511839,
+      "requested_amplitude_deg": 90.0,
+      "velocity_peak_deg_s": 96.40935705156343,
+      "theta_peak_deg": 3.2694987542921563,
+      "position_error_rms_deg": 10.933264767189694
+    }
+  }
+}

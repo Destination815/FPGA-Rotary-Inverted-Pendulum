@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "results": {
+    "supervisor": "PASS supervisor checks=28 latency=420 every-clock STOP/disarm/reset\n- /Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r22r2_timing_20261012/tracking/integration_tests/tb_supervisor.sv:87: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.048 2026-04-26\n- Verilator: $finish at 84ms; walltime 1.535 s; speed 55.105 ms/s\n- Verilator: cpu 1.520 s on 1 threads; allocated 2 MB",
+    "drive": "PASS drive checks=1311 all701duties, \u00b1350 limits, guard transition/latch, INT32_MIN, physical STOP/reset\n- /Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r22r2_timing_20261012/tracking/integration_tests/tb_drive.sv:45: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.048 2026-04-26\n- Verilator: $finish at 70ms; walltime 0.826 s; speed 89.557 ms/s\n- Verilator: cpu 0.787 s on 1 threads; allocated 2 MB",
+    "top": "PASS R01 top: checks=41 UART CRC/calibration/version/oldgainrejection/bounded-position/shuttle-and-auto-rejection/SW4/XH1/outputguard/telemetry bytes=5614\n- /Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r22r2_timing_20261012/tracking/integration_tests/tb_top.sv:92: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.048 2026-04-26\n- Verilator: $finish at 924ms; walltime 29.328 s; speed 31.744 ms/s\n- Verilator: cpu 29.109 s on 1 threads; allocated 3 MB",
+    "observer_UART": {
+      "count": 24,
+      "CRC": "PASS",
+      "post_commit_state": true
+    },
+    "recovery_UART": {
+      "boost_frames": 5,
+      "spent_base_frames": 1
+    },
+    "passive_actual_UART": {
+      "samples": 12,
+      "CRC": "PASS",
+      "sequence": "PASS",
+      "interval_ms": 1,
+      "filtered_q18_extension": "PASS"
+    },
+    "wire_protocol": {
+      "telemetry_frames": 45,
+      "capability_frames": 6,
+      "CRC": "PASS",
+      "build_id": "4A070222"
+    }
+  },
+  "source_sha256": {
+    "r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+    "trajectory.v": "2bc472a65e01dbb40529be0027f9202880e12882d6dcb3d9559ad693f7733595",
+    "drive_guard.v": "e3f37b03d4a99bf24fc025ec9847df918f98937aabfc8893d3b498c2c8610a77",
+    "controller.v": "82cea26e84a3ae64d5c09eb3f9cb1de3dc795366bac0eec20108f912dcc18a2c",
+    "j280_top.v": "49333618ee81c65bb51a5cc6cce894646740baa3da47f258468836762ac46580",
+    "passive_capture.v": "7d0657847843c6955e1937b701519811fabd1150f5f5379f24a9b3d3e828b0b9",
+    "s23_memory.v": "774772d2322d50fc7cade4e366620dd9fd4ec7f8983093ed41547be195202655",
+    "r01_swing_core.v": "17feb4f50aa830827c5e7b0f1a6e9e7e55ab517d33e0bf3ca24c1ab172f6037e",
+    "d02_capture.v": "236167cad95ddb9fcb752d986e9f1efc3808c46eb0a9a7dbd9b9a48d0c4b2f87",
+    "command_rx.v": "c76eff1ed67d70928d8051d573c887703e24bba3364d078a95aee3236f16a614",
+    "r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+    "telemetry.v": "90bab51420f9c19d8aa9999dcccabdffeefef8069c1d3ce653af0dfb316549cd",
+    "state_estimator.v": "824a971f86c09b80402338201a19bee5b3a3cacdd43bad1c71b374ab5076b04e",
+    "s23_alu.v": "aa5a55379409edc802d9dcfd15e3c0b6c3139bd8243269e92cdba2f747bb10da",
+    "io_frontend.v": "4cde6ac3e438c3d0374bc13093f3e4293103fd7a9f94b9f7ed563b79091479e5",
+    "r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+    "r01_gap_bridge.v": "48704495f4fe785f12dbb838f724d60a7fe7cc341385e056bfdf0ce8cafd49f6",
+    "r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+    "r10_observer_core.v": "abceea669c6e2e0eb9279f4ef611d6a2666c8e5e3744bc61a2de68c21ba9650d",
+    "s23_compute.v": "a8cb7756951b5e14bf29c952e1807bbbe220c9e66a9f6de5d97f44bc204f2e7f",
+    "s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79",
+    "uart.v": "87da5cefb1659469d2082cbb01d258d07a60d2177a4d5f69827a4050db96366e"
+  }
+}

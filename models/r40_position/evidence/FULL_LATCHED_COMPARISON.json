@@ -1,0 +1,81 @@
+{
+  "historical_r38": {
+    "theta_tail10_rms_deg": 2.459676898722223,
+    "position_tail10_rms_deg": 3.2660573458739584,
+    "theta_tail1_rms_deg": 2.482656974401466,
+    "position_tail1_rms_deg": 3.2977754002732595,
+    "motion_theta_peak_deg": 6.7251599291701885,
+    "arrivals": [
+      {
+        "target_deg": 90.0,
+        "reference_stop_ms": 22000,
+        "error_at_stop_deg": -7.680578363213769,
+        "available_post_arrival_samples": 1,
+        "available_post_arrival_rms_deg": 7.680578363213769
+      },
+      {
+        "target_deg": -90.0,
+        "reference_stop_ms": 42001,
+        "error_at_stop_deg": -5.036127562445003,
+        "available_post_arrival_samples": 1,
+        "available_post_arrival_rms_deg": 5.036127562445003
+      },
+      {
+        "target_deg": 0.0,
+        "reference_stop_ms": 53972,
+        "error_at_stop_deg": 2.0470054516665814,
+        "available_post_arrival_samples": 2000,
+        "available_post_arrival_rms_deg": 4.003947572592395
+      }
+    ]
+  },
+  "current_t7_unwind": {
+    "theta_tail10_rms_deg": 2.459676898722223,
+    "position_tail10_rms_deg": 3.2660573458739584,
+    "theta_tail1_rms_deg": 2.482656974401466,
+    "position_tail1_rms_deg": 3.2977754002732595,
+    "motion_theta_peak_deg": 6.7251599291701885,
+    "arrivals": [
+      {
+        "target_deg": 90.0,
+        "reference_stop_ms": 22000,
+        "error_at_stop_deg": -7.680578363213769,
+        "available_post_arrival_samples": 1,
+        "available_post_arrival_rms_deg": 7.680578363213769
+      },
+      {
+        "target_deg": -90.0,
+        "reference_stop_ms": 42001,
+        "error_at_stop_deg": -5.036127562445003,
+        "available_post_arrival_samples": 1,
+        "available_post_arrival_rms_deg": 5.036127562445003
+      },
+      {
+        "target_deg": 0.0,
+        "reference_stop_ms": 53972,
+        "error_at_stop_deg": 2.0470054516665814,
+        "available_post_arrival_samples": 2000,
+        "available_post_arrival_rms_deg": 4.003947572592395
+      }
+    ]
+  },
+  "first_pwm_difference_ms": null,
+  "all_references_equal": true,
+  "all_states_equal": true,
+  "hardware_relevant": {
+    "captures_ms": [
+      2553
+    ],
+    "falls_ms": [],
+    "fault": 0,
+    "stop_zero": true,
+    "maximum_cycles": 24016,
+    "duration_ms": 72000
+  },
+  "scope": "Baseline is preserved historical R38 complete RTL, not a new or relabeled R39T7 baseline run. Ordinary-path equivalence inherited from T7 lineage; check exact prefixes/references here. Each current frame is exactly50000 clocks. No identified plant or hardware performance claim.",
+  "files": {
+    "analysis/r38_revision_20261026/motion/postmove_rate_replace_position90/case/trace.npz": "7243499a922cbad9bd46a2157e300a28a5176c357943b9603c00447651ea0e7a",
+    "analysis/r40_revision_20261028/motion_v3/full_latched_monitored/case/trace.npz": "f571a9453fa02ef4951e52d5e6f5af088f946ee54974167eb3a01881026978bb",
+    "analysis/r40_revision_20261028/motion_v3/full_latched_monitored/RESULT.json": "7a2cf243ea3b1488bfa5b22e82d6b3ecfe463b1c06b58b95f2dcfae20f997e2b"
+  }
+}

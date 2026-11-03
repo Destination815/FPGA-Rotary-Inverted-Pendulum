@@ -1,0 +1,82 @@
+{
+  "schema": "r28.local-grey-pressure.v1",
+  "models": {
+    "s16_v7": [
+      84.09091789902548,
+      1.2345635108165314,
+      9.049488242579741,
+      1.906748653347697,
+      0.0006626156714358054,
+      0.0029656022064837363,
+      0.19298995622162599,
+      94.5076,
+      1.2460994621152977,
+      0.017767898479005756,
+      0.0014799970196169626,
+      2.6127569092556304
+    ],
+    "s20_joint": [
+      119.08707590466442,
+      3.832194463456908,
+      29.999999999536204,
+      3.823227533494109,
+      0.00020000000000008826,
+      0.030293242545545974,
+      0.2051261638299854,
+      94.5076,
+      1.1054464087285027,
+      0.023997645001535586,
+      0.0009735948516152599,
+      2.504958337794957
+    ]
+  },
+  "status": "RESTORED_UNCHANGED_HISTORICAL_MODELS",
+  "scope": "Local upright only; original S16 and S20 parameters are unchanged. Not a global swing model. Used as additional paired pressure, never replacing S22 nonlinear models.",
+  "training": {
+    "s16_v7": [
+      "R04_1",
+      "R04_2",
+      "R06_1",
+      "R06_2",
+      "D2_1",
+      "D2_2",
+      "R07_1",
+      "R07_2",
+      "R08_1",
+      "R08_2"
+    ],
+    "s20_joint": [
+      "A",
+      "D2_1",
+      "D2_2",
+      "R04_1",
+      "R04_2",
+      "R04_3",
+      "R06_1",
+      "R06_2",
+      "R06_3",
+      "R07_1",
+      "R07_2",
+      "R08_1",
+      "R08_2"
+    ]
+  },
+  "historical_holdouts": [
+    "R09_1",
+    "R09_2",
+    "R10_B",
+    "R10_C"
+  ],
+  "current_check": "R20–R27 retained1kHz small-angle windows; no current-data fitting. R24_B1 remains a regression for S20 relative to S16.",
+  "parameter_sources": {
+    "10_team_workspace/experiments/r10_recovery_r2_20261005/models/measured_grey.py": {
+      "sha256": "2b43f469ec38d5a159cc2d7684dd6608dc11460fe70724bb944c207f2ff6da88"
+    },
+    "10_team_workspace/experiments/r10_recovery_r2_20261005/models/measured_grey_parameters.json": {
+      "sha256": "5c7e4c13ffa0c1af1b1f1b3257680fc115a7c7124e09c7898987ecf513d21247"
+    },
+    "10_team_workspace/experiments/s20_r10_measured_revision_20261006/joint_fit.json": {
+      "sha256": "1189d42c156580575352f45ea392a80ca17ea4f3692f3e5549f872502dcfc88f"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frames": 72041,
+  "columns": [
+    "active",
+    "integral_Q24",
+    "lp_Q24"
+  ],
+  "active_frames": 0,
+  "max_integral_abs": 188275,
+  "source_sha256": "6f681ffce0b700259abe9d599c2b42e3fd80331997d1c30fb14da33cf145a059",
+  "scope": "Read-only existing controller debug ports after each complete 50000-clock frame; no control feedback mutation."
+}

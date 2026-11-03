@@ -1,0 +1,11 @@
+{
+  "predict.cpp": "182e5afb40519831cea0bb8356215993ac61b4f10262eb59b03cbafa3c7aab1e",
+  "plant.cpp": "d8256f3142e8faeade5e00e09628cb9a51077a7a22841d825b3153bcd420b7d9",
+  "fit.py": "d6a761542fa6b94e4fbf8a9220e5ad5b200f030767a20fbd6a79c7f7dc47a0ee",
+  "verify.py": "ab90f21b79fd255889684413aaed6b25e7df570c90b04b968f5c5983f60352dc",
+  "result.json": "7c334910b603f0495820c920c5c0ee5c9a473d04238a457c21e7751368ef8a90",
+  "supplemental_motor_model.json": "813cc008f1a007bfef62291d49235cf07f20f89d20b78056ca0bfbb12e202c16",
+  "verification.json": "d4af795beba08d5e7bdda1b3aaba9d08c281ee79fcd58170da4b41eabb6ef790",
+  "plant_verification.json": "40b6d3567d292da0b01a8a541d351a6747a0221916e9026d53c58c87540794f0",
+  "REPORT.txt": "a4b89080c4cad993666ce826926bec28abd1814b25266df5820d5d77ca5df94f"
+}

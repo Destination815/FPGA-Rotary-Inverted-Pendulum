@@ -1,0 +1,64 @@
+{
+  "project": "/Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r27_capture_integral_20261016",
+  "mode": "auto",
+  "model": "s16_v7",
+  "capture_ms": 6553,
+  "switch_ms": 6553,
+  "switch_snapshot": {
+    "old_x4": [
+      -0.07863083853013794,
+      0.08284217352799363,
+      -0.2806045071369971,
+      0.6461346627998924
+    ],
+    "new_x7": [
+      -0.07981898937825553,
+      0.08284217352799363,
+      -0.2806045071369971,
+      0.6461346627998924,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "measurement": [
+      -0.07863083853013794,
+      -0.2806045071369971
+    ]
+  },
+  "ms": 15000,
+  "fault": 0,
+  "state": 3,
+  "local_model_exit": false,
+  "stop_zero": true,
+  "target_commanded": true,
+  "target_position": -0.018805119337847676,
+  "theta_rms_deg": 3.0057131312178798,
+  "phi_reference_rms_deg": 9.911195122384182,
+  "maxcycles": 23660,
+  "seconds": 50.17605150002055,
+  "rtl_binding": {
+    "library": "/Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r27_capture_integral_20261016/build/r01/libr01_control.dylib",
+    "library_sha256": "86073221b673259c109edb00f543b2aa1937e99c4826aba5fb1cb7cc28b444ab",
+    "compiled_sources": {
+      "fpga/src/controller.v": "2aef31c76d253a99dcf8c69b270255be392c4a221a430eb8f14087e2a9f2f963",
+      "fpga/src/state_estimator.v": "cc6574bd474f5214c2b95ea5953e966a6fd71ccec1a0929137269457b2f1ac8b",
+      "sim/r01_control_harness.v": "ceaadc17b68fe83db4a168f57fa33760e1ac02e5917393e3a20509e029917195",
+      "sim/control_api.cpp": "bbcff6c663f919de49bcd0fdbcc4a6da5a501a633f50c485cbe664de62f325b2",
+      "fpga/src/r01_gap_bridge.v": "48704495f4fe785f12dbb838f724d60a7fe7cc341385e056bfdf0ce8cafd49f6",
+      "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+      "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+      "fpga/src/r01_reference.v": "afca34824c46aaab9d7a438658d4c3718ca9fe2e44578a829599f97aac32ea06",
+      "fpga/src/r01_swing_core.v": "321589645fb862aa3ca2a47fe8563969118003e37029d602c5abefc9f8ec3b4c",
+      "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+      "fpga/src/r10_observer_core.v": "ff949a0374101a4139454adbf0b8f244fbcfd20b6f1004db1fee147da2b7d0ca",
+      "fpga/src/s23_alu.v": "ebe5a83f0edcce10ef3029cf1c24fc7578b17fb7619bee542c02dced1966c40f",
+      "fpga/src/s23_compute.v": "a4b2c066e64a1c562ea9e081b85e5cb75859405fd38c8aa2bed90927b55a7822",
+      "fpga/src/s23_memory.v": "3dc1c4576e33158d15d6ec060a778e1af0c0a5f33799f1166c8b401fcc20bc95",
+      "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79"
+    },
+    "provenance": "/Users/zhangfan/Downloads/\u5d4c\u8d5b/10_team_workspace/experiments/r27_capture_integral_20261016/build/r01/rtl_library_provenance.json",
+    "provenance_sha256": "1266185fc1e3a84f01e2b7e87634853e013c343159888f4ae875f68ad1ace4cc",
+    "scope": "Complete controller/estimator/reference/swing/observer/microcode harness. Uninstantiated top/drive/UART excluded."
+  },
+  "scope": "Bounded complete-controller RTL with causal sensor quantization and optional local S16/S20 pressure.\n--mode manual starts small-angle manual capture; --mode auto starts old mass model\nfrom below, then switches ONCE at first confirmed capture to a local grey model with observation\ncontinuity. Target is capture position plus --target degrees. This cross-regime switch is declared synthetic stress, NOT a globally\nidentified plant or R27 real-trajectory reproduction. No hardware access.\n"
+}

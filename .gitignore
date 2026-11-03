@@ -9,5 +9,5 @@ r20_ui/logs/
 *_startup.log
 fpga/impl/
 R43_vendor_runs/
-*.zip
 *.rar
+offline/wheels/

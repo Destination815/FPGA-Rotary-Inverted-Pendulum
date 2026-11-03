@@ -1,0 +1,8 @@
+{
+  "schema": "j280.r39.ext2.frozen-plant-source.v1",
+  "source": "A39H1/A39M1_core/project/reports/lowgain/plant_prior.json",
+  "sha256": "0db7cdffa2a9732d3b03dd003e4bd893bce94184d0a5398cf7bf959193a26475",
+  "fitted_here": false,
+  "purpose": "Only bounded ext2 local integration checks, no refit, no all-angle guarantee",
+  "coordinate": "model native legacy arm coordinates; public output multiply 97763/101376 once"
+}

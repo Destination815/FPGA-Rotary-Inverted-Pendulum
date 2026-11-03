@@ -1,0 +1,152 @@
+{
+  "source_result": "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r43_revision_20261030/integration/coupled257_r1/RESULT.json",
+  "source_trace_sha256": "0dabf908f4c280bd3d474a65cc2d78dab17e2aa9f295370cfa3f46a461e9c5d3",
+  "frames": 64000,
+  "fault": 0,
+  "max_compute_clocks": 23951,
+  "frame_budget_clocks": 50000,
+  "commit_events": 59716,
+  "commit_min": 0,
+  "commit_max": 0,
+  "model_scope": "Complete controller/estimator/reference/guard RTL, M05 domain-parameter stress extrapolation. These domain fits have short prediction windows and are not validated full-angle physical plants. No integer CPU substitute, no future truth in controller, no hardware/STA guarantee. Optional event is a declared instantaneous angular-velocity impulse at first capture+6000ms; no measured human force was identified. Disturbed falls do not count as pre-event spontaneous failures. First and recovered phases reported separately. NEW extrapolation: selected groups1/2 limited HOLD feature parameters p9*.5 and A7 derivative/motor measurement coupling*.3, fixed common tare+.389923deg. Full-angle/startup behavior not physically identified. Old M03 failed5degree windows remain as independent counterexamples, regardless of this result.",
+  "position": [
+    {
+      "command_ms": 6000,
+      "next_command_ms": 22000,
+      "goal_deg": 90.0,
+      "reference_endpoint_ms": 12000,
+      "reference_reached": true,
+      "cruise": {
+        "window_ms": [
+          8123,
+          9878
+        ],
+        "rows": 1755,
+        "selection": "Longest contiguous reference speed >=80% requested and reference >5deg from endpoint",
+        "velocity_tracking_rms_deg_s": 43.08080705385703,
+        "velocity_2_to_8Hz_rms_deg_s": null,
+        "velocity_2_to_30Hz_rms_deg_s": null,
+        "low_velocity_fraction": 0.3190883190883191,
+        "reverse_velocity_fraction": 0.15612535612535614,
+        "theta_rms_deg": 1.882682486238164,
+        "pwm_step_rms_permille": 8.331740630770167
+      },
+      "three_to_four_seconds": {
+        "start_ms": 15000,
+        "end_ms": 16000,
+        "rows": 1000,
+        "position_error_mean_deg": -1.955683862857538,
+        "position_error_rms_deg": 2.0800589914084355,
+        "position_error_peak_deg": 3.1079521950358213,
+        "position_error_percentile95_deg": 2.97055681128625,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.7434009751559905,
+        "theta_peak_deg": 2.7201052053364374,
+        "arm_velocity_rms_deg_s": 31.720629093403524,
+        "pwm_rms_permille": 163.0013742273359
+      },
+      "first_continuous_1s_within5_after_endpoint_s": 0.0,
+      "tail_1s": {
+        "start_ms": 21000,
+        "end_ms": 22000,
+        "rows": 1000,
+        "position_error_mean_deg": -0.7601628166938529,
+        "position_error_rms_deg": 1.0249932983808667,
+        "position_error_peak_deg": 1.7967421664267675,
+        "position_error_percentile95_deg": 1.7365044452178566,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.717915728283196,
+        "theta_peak_deg": 2.712466746710454,
+        "arm_velocity_rms_deg_s": 31.813620474225953,
+        "pwm_rms_permille": 159.9131952028975
+      }
+    },
+    {
+      "command_ms": 22000,
+      "next_command_ms": 42000,
+      "goal_deg": -90.0,
+      "reference_endpoint_ms": 30000,
+      "reference_reached": true,
+      "cruise": {
+        "window_ms": [
+          24919,
+          27083
+        ],
+        "rows": 2164,
+        "selection": "Longest contiguous reference speed >=80% requested and reference >5deg from endpoint",
+        "velocity_tracking_rms_deg_s": 38.11862259428826,
+        "velocity_2_to_8Hz_rms_deg_s": 22.102540127751272,
+        "velocity_2_to_30Hz_rms_deg_s": 37.60098442545867,
+        "low_velocity_fraction": 0.24630314232902034,
+        "reverse_velocity_fraction": 0.13585951940850277,
+        "theta_rms_deg": 1.9136494410361773,
+        "pwm_step_rms_permille": 8.534556228833228
+      },
+      "three_to_four_seconds": {
+        "start_ms": 33000,
+        "end_ms": 34000,
+        "rows": 1000,
+        "position_error_mean_deg": 1.4200578706751854,
+        "position_error_rms_deg": 1.5816359685883958,
+        "position_error_peak_deg": 2.429085765111168,
+        "position_error_percentile95_deg": 2.362987206887847,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.7239413000736206,
+        "theta_peak_deg": 2.6991321457202186,
+        "arm_velocity_rms_deg_s": 32.01715763112314,
+        "pwm_rms_permille": 160.52557428646688
+      },
+      "first_continuous_1s_within5_after_endpoint_s": 0.0,
+      "tail_1s": {
+        "start_ms": 41000,
+        "end_ms": 42000,
+        "rows": 1000,
+        "position_error_mean_deg": 0.4999762494170979,
+        "position_error_rms_deg": 0.8491169163567347,
+        "position_error_peak_deg": 1.4099471101757075,
+        "position_error_percentile95_deg": 1.382816996328866,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.7365284412644717,
+        "theta_peak_deg": 2.706936940885166,
+        "arm_velocity_rms_deg_s": 30.835669251070694,
+        "pwm_rms_permille": 161.51769252933252
+      }
+    },
+    {
+      "command_ms": 42000,
+      "next_command_ms": 64000,
+      "goal_deg": 0.0,
+      "reference_endpoint_ms": 48000,
+      "reference_reached": true,
+      "three_to_four_seconds": {
+        "start_ms": 51000,
+        "end_ms": 52000,
+        "rows": 1000,
+        "position_error_mean_deg": 0.21190306580500445,
+        "position_error_rms_deg": 0.7243808493362162,
+        "position_error_peak_deg": 1.207673567162274,
+        "position_error_percentile95_deg": 1.122293359090483,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.726621810880942,
+        "theta_peak_deg": 2.7413680041580393,
+        "arm_velocity_rms_deg_s": 32.27376928277533,
+        "pwm_rms_permille": 161.9756463175869
+      },
+      "first_continuous_1s_within5_after_endpoint_s": 0.0,
+      "tail_1s": {
+        "start_ms": 63000,
+        "end_ms": 64000,
+        "rows": 1000,
+        "position_error_mean_deg": 0.031329727612392805,
+        "position_error_rms_deg": 0.6907921397315095,
+        "position_error_peak_deg": 1.0147913934765145,
+        "position_error_percentile95_deg": 0.9661771695507266,
+        "within5_fraction": 1.0,
+        "theta_rms_deg": 1.6981587199450738,
+        "theta_peak_deg": 2.7062495624163145,
+        "arm_velocity_rms_deg_s": 30.730113707523422,
+        "pwm_rms_permille": 157.39662003994877
+      }
+    }
+  ]
+}

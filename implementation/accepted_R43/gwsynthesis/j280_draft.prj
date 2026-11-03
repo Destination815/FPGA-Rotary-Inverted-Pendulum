@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-55C" package="PBGA484" speed="8" partNumber="GW2A-LV55PG484C8/I7"/>
+    <FileList>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\calibrated_position.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\calibrated_command.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_recovery_budget.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_motion_readiness.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\passive_capture.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_gap_bridge.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_swing_core.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_tracking_core.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r01_reference.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\drive_guard.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\motion_link_watchdog.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\d02_capture.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\command_rx.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r10_observer_core.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r29_handoff_guard.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\r29_early_saturation.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\controller.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\io_frontend.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\j280_top.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\state_estimator.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\telemetry.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\trajectory.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\uart.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\s23_compute.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\s23_memory.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\s23_alu.v" type="verilog"/>
+        <File path="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\src\s23_soft_mul24.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_style" value="auto"/>
+        <Option type="global_freq" value="50.000"/>
+        <Option type="include_path" value="D:/qiansai/R43_vendor_runs/R43_compile_20261030_225529_185004/work/fpga/src"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="map_option" value="1"/>
+        <Option type="max_fanout" value="1000"/>
+        <Option type="netlist_hierarchy" value="1"/>
+        <Option type="opt_goal" value="auto"/>
+        <Option type="output_file" value="D:\qiansai\R43_vendor_runs\R43_compile_20261030_225529_185004\work\fpga\impl\gwsynthesis\j280_draft.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="ram_style" value="auto"/>
+        <Option type="rom_style" value="auto"/>
+        <Option type="shift_reg" value="auto"/>
+        <Option type="top_module" value="j280_top"/>
+        <Option type="vcc" value="1.0"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

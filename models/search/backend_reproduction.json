@@ -1,0 +1,22 @@
+[
+  {
+    "campaign": "search",
+    "max_metric_difference": 0.0,
+    "same_strict": true
+  },
+  {
+    "campaign": "refine",
+    "max_metric_difference": 0.0,
+    "same_strict": true
+  },
+  {
+    "campaign": "refine_sensor",
+    "max_metric_difference": 0.0,
+    "same_strict": true
+  },
+  {
+    "campaign": "damping",
+    "max_metric_difference": 0.0,
+    "same_strict": true
+  }
+]

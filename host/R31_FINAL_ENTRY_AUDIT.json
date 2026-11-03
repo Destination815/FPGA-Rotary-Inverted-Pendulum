@@ -1,0 +1,32 @@
+{
+  "build": "4A07022F",
+  "motion_release": false,
+  "sta_accepted": false,
+  "listed_project_inputs": 25,
+  "missing_project_inputs": 0,
+  "old_checked_files_unchanged": 26,
+  "old_checked_files_total": 28,
+  "reused_suites": {
+    "entry": 29,
+    "portable": 50,
+    "identity": 6,
+    "trial_review": 15
+  },
+  "note": "collector six cases overlap between entry and portable; unchanged Python/host logic reuses previous checks. Current work is static entry/document audit only, no new full regression, no Windows desktop or hardware execution.",
+  "checked_inputs": {
+    "README.md": "a1f5c2af3249e46b2a9798d4230a460ea5beaf7d2595426b096572e3a111f453",
+    "README_R31_C.md": "a6519b658621e6e9e23aa63ead0e101baec385499348abe4d673019ae03f9627",
+    "README_R30_C.md": "c69c9965835059a6aa280fe74e6b898a24fb68858b2891c24b3479acbc943cab",
+    "tools/RELEASE_CHECKS.md": "fe233b44bb92cf01e7645c1e2f424d92e782e124dc07b7c257e19650e52fa509",
+    "collect_reports_windows.cmd": "e1e30330e3cb3c379923d490cff401d64ebd1477829f2d193315ebda7dd1a7ce",
+    "start_R31_mac.command": "47c836990002c5ebd851a451c041eaaff7d5e54aee1cf03a862353769f937a02",
+    "start_R27_mac.command": "1eb7ea8d50a468231432e886747e10bd76a064ed01eb51de23b9f0d73d588c2f",
+    "host/qualification.json": "91b2c14e399f55ebaa9ca74f610b7450dfd937f4365c82a14759675f3c9fddb2",
+    "host/sta_review.json": "4377551924e29eb70d4371ce8a15d2641008ea0bfcc7c2aa59dcf998ef2e0840",
+    "host/protocol.py": "f86779f3f95611d3e8825074a395df25d8bfa84f694f934288096c019d77e6e9",
+    "host/studio_data.py": "f8d010009e4c162d92c0a61451d1c899b54e291f538f0ab040aff34aa8526fc8",
+    "host/r01_gate.py": "6bd35632784f3ecb3723e6bfbbffe18d4a78afda81b7591b5e703c61b08c1c5c",
+    "tools/collect_r01_reports.py": "8ccc932d194d12a62b908c8142014d7e4715856900133980cdda40a69c15cb7e",
+    "tools/review_r29_trial.py": "386a7cb20ded0215047737348c46ee57b5d586ef8f471ab37f70ae5d37338915"
+  }
+}

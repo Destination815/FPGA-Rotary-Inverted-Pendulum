@@ -1,0 +1,568 @@
+{
+  "status": "PASS_EXACT_FROZEN_API_EQUIVALENCE_HIGH_MOMENTUM_MODEL_ACCURACY_FAILED",
+  "cases": 20,
+  "max_circular_theta_or_phi_difference_rad": 2.555178291174798e-13,
+  "reference_source_sha256": "270d30107d8d4c3aa67d7295db778d45d3f0be15497eb5fa64b0fc482634fe2e",
+  "rows": [
+    {
+      "round": "R33P1_B1_1",
+      "start_ms": 1600,
+      "exact_frozen_api_max_rad": 3.3306690738754696e-14,
+      "theta_start_deg": 89.59721941893336,
+      "initial_model_measured_omega": 9.9020906063227,
+      "causal_theta_derivative": 12.6241411481588,
+      "initial_model_physical_phi_velocity": -4.204561195031374,
+      "causal_phi_derivative": -4.245479617800019,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 7.792973650828647,
+          "phi200_endpoint_error_deg": -1.772869219503437
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 23.110990244449237,
+          "phi200_endpoint_error_deg": -2.988648731464655
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 7.730924398635793,
+          "phi200_endpoint_error_deg": -2.140041581154034
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 7.8540328473376375,
+          "phi200_endpoint_error_deg": -1.40407470396387
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_1",
+      "start_ms": 1750,
+      "exact_frozen_api_max_rad": 1.591504705800162e-13,
+      "theta_start_deg": -133.27808233110576,
+      "initial_model_measured_omega": 17.673421949372592,
+      "causal_theta_derivative": 18.072291782924278,
+      "initial_model_physical_phi_velocity": 0.01109167500392494,
+      "causal_phi_derivative": -0.4994681903293752,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -25.318685910061294,
+          "phi200_endpoint_error_deg": 8.853731521140675
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -20.63530112558449,
+          "phi200_endpoint_error_deg": 8.027452467107047
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -25.41756341976939,
+          "phi200_endpoint_error_deg": 8.965516407702964
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -25.4766957333515,
+          "phi200_endpoint_error_deg": 8.70707893663241
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_1",
+      "start_ms": 1800,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -86.20157721268316,
+      "initial_model_measured_omega": 14.319692733511058,
+      "causal_theta_derivative": 13.531385149274659,
+      "initial_model_physical_phi_velocity": -0.6401519453660343,
+      "causal_phi_derivative": -0.7075799362999584,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -22.85742426021421,
+          "phi200_endpoint_error_deg": 6.480716049670517
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -37.01731874168972,
+          "phi200_endpoint_error_deg": 7.346475777625951
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -22.500464980050516,
+          "phi200_endpoint_error_deg": 6.618852016573608
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -23.219355348786696,
+          "phi200_endpoint_error_deg": 6.339729990880638
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_1",
+      "start_ms": 1900,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -21.21839246799481,
+      "initial_model_measured_omega": 7.729471571183726,
+      "causal_theta_derivative": 9.644971575055854,
+      "initial_model_physical_phi_velocity": -1.3147583228374131,
+      "causal_phi_derivative": -1.5816492693764084,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -39.27902913396375,
+          "phi200_endpoint_error_deg": 0.3841426177564763
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -2.195032076135548,
+          "phi200_endpoint_error_deg": 0.17132559427610788
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -39.00396713652934,
+          "phi200_endpoint_error_deg": 0.29434922407855957
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -39.55632533934677,
+          "phi200_endpoint_error_deg": 0.4796779965822596
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_1",
+      "start_ms": 2000,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": 20.922891163743376,
+      "initial_model_measured_omega": 6.356071437677772,
+      "causal_theta_derivative": 6.539372035435259,
+      "initial_model_physical_phi_velocity": 0.22053055506795974,
+      "causal_phi_derivative": 0.4578458411353543,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 10.049670314404729,
+          "phi200_endpoint_error_deg": -2.2222077346533378
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 12.030524111560501,
+          "phi200_endpoint_error_deg": -1.642221673030303
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 10.05447491165495,
+          "phi200_endpoint_error_deg": -2.0788720436437846
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 10.04744400575536,
+          "phi200_endpoint_error_deg": -2.3739542717990303
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_2",
+      "start_ms": 1600,
+      "exact_frozen_api_max_rad": 8.881784197001252e-15,
+      "theta_start_deg": 89.8079170944499,
+      "initial_model_measured_omega": 9.839583804573428,
+      "causal_theta_derivative": 11.887359619140945,
+      "initial_model_physical_phi_velocity": -4.114817597918527,
+      "causal_phi_derivative": -5.494150093623547,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 7.047496368516881,
+          "phi200_endpoint_error_deg": -1.7162352526606361
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 19.359690140084428,
+          "phi200_endpoint_error_deg": -3.2449977457512618
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 6.976529054537367,
+          "phi200_endpoint_error_deg": -2.0846849234772655
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 7.114269436592069,
+          "phi200_endpoint_error_deg": -1.349658926141775
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_2",
+      "start_ms": 1750,
+      "exact_frozen_api_max_rad": 2.555178291174798e-13,
+      "theta_start_deg": -133.00443763219837,
+      "initial_model_measured_omega": 17.58230149485017,
+      "causal_theta_derivative": 18.589673723493437,
+      "initial_model_physical_phi_velocity": 0.01011171698102734,
+      "causal_phi_derivative": -1.7897610153470334,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -26.600712787008586,
+          "phi200_endpoint_error_deg": 6.050541658550876
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -15.938885076888193,
+          "phi200_endpoint_error_deg": 2.888988660305649
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -26.72020064368364,
+          "phi200_endpoint_error_deg": 6.122499942550411
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -26.529007830066334,
+          "phi200_endpoint_error_deg": 5.923101671398984
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_2",
+      "start_ms": 1800,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -86.0756831659015,
+      "initial_model_measured_omega": 14.313846664258351,
+      "causal_theta_derivative": 13.837432861328267,
+      "initial_model_physical_phi_velocity": -0.6383457752897269,
+      "causal_phi_derivative": -0.6243352379117125,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -21.978229755226977,
+          "phi200_endpoint_error_deg": 2.8304531709117233
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -30.534628375524296,
+          "phi200_endpoint_error_deg": 3.3743990489590634
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -21.62303513938193,
+          "phi200_endpoint_error_deg": 2.9687260865608187
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -22.339219453527203,
+          "phi200_endpoint_error_deg": 2.689669448067911
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_2",
+      "start_ms": 1900,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -21.070641815869095,
+      "initial_model_measured_omega": 7.756817860340795,
+      "causal_theta_derivative": 9.498051234654058,
+      "initial_model_physical_phi_velocity": -1.1334985596570537,
+      "causal_phi_derivative": -1.1654257774352663,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -32.800171934259374,
+          "phi200_endpoint_error_deg": -2.5972160379667204
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 0.3462071253000183,
+          "phi200_endpoint_error_deg": -2.6158877287775977
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -32.55983667671043,
+          "phi200_endpoint_error_deg": -2.6601560273960954
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -33.04399045046425,
+          "phi200_endpoint_error_deg": -2.53094093969358
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_2",
+      "start_ms": 2000,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": 20.28992387297996,
+      "initial_model_measured_omega": 6.793584423759678,
+      "causal_theta_derivative": 6.420462472098205,
+      "initial_model_physical_phi_velocity": 0.26251557087938476,
+      "causal_phi_derivative": 0.6659575871059145,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 16.08371582195617,
+          "phi200_endpoint_error_deg": -2.962809721055951
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 11.572932909252962,
+          "phi200_endpoint_error_deg": -3.874672287754497
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 16.068615960814157,
+          "phi200_endpoint_error_deg": -2.8581750899579794
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 16.100544592902164,
+          "phi200_endpoint_error_deg": -3.062190381078193
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_3",
+      "start_ms": 1600,
+      "exact_frozen_api_max_rad": 2.298161660974074e-14,
+      "theta_start_deg": 85.4628239520546,
+      "initial_model_measured_omega": 8.964264051036885,
+      "causal_theta_derivative": 10.998426164899913,
+      "initial_model_physical_phi_velocity": -4.240924091370244,
+      "causal_phi_derivative": -4.6617031097411585,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 6.313947981079073,
+          "phi200_endpoint_error_deg": -1.3200659079480437
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 18.75664275876429,
+          "phi200_endpoint_error_deg": -1.5873491929737473
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 6.342774501482766,
+          "phi200_endpoint_error_deg": -1.6146121567695595
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 6.2692541596938,
+          "phi200_endpoint_error_deg": -1.0328834776240108
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_3",
+      "start_ms": 1750,
+      "exact_frozen_api_max_rad": 5.012656956182582e-14,
+      "theta_start_deg": -140.3438857067273,
+      "initial_model_measured_omega": 18.544886975466273,
+      "causal_theta_derivative": 19.147600446428726,
+      "initial_model_physical_phi_velocity": 0.13524919581797926,
+      "causal_phi_derivative": -0.998936380658793,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -23.619135147415527,
+          "phi200_endpoint_error_deg": 7.700031571047474
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -16.617580590119676,
+          "phi200_endpoint_error_deg": 6.238575952963374
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -23.545971573311416,
+          "phi200_endpoint_error_deg": 7.890384427486723
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -23.703750634132014,
+          "phi200_endpoint_error_deg": 7.509216992436525
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_3",
+      "start_ms": 1800,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -91.74878364900073,
+      "initial_model_measured_omega": 13.211419939189488,
+      "causal_theta_derivative": 13.024248395647476,
+      "initial_model_physical_phi_velocity": -0.2986787801868014,
+      "causal_phi_derivative": -0.4162234919411377,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -47.02327956660316,
+          "phi200_endpoint_error_deg": 10.288677020701874
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -50.193109080001534,
+          "phi200_endpoint_error_deg": 10.44443627085359
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -46.93108122733864,
+          "phi200_endpoint_error_deg": 10.526342346570523
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -47.19334649536567,
+          "phi200_endpoint_error_deg": 10.071328374747049
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_3",
+      "start_ms": 1900,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -24.825606613975303,
+      "initial_model_measured_omega": 7.962009035569297,
+      "causal_theta_derivative": 9.76551600864959,
+      "initial_model_physical_phi_velocity": -1.3232244755331275,
+      "causal_phi_derivative": -1.623271618570536,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -31.850955435822254,
+          "phi200_endpoint_error_deg": -0.3380774011316414
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 4.82727408367579,
+          "phi200_endpoint_error_deg": -0.9307620816381885
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -31.50414134433155,
+          "phi200_endpoint_error_deg": -0.4264286540013113
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -32.1966175845743,
+          "phi200_endpoint_error_deg": -0.25504863934654853
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_3",
+      "start_ms": 2000,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": 15.059201082044114,
+      "initial_model_measured_omega": 5.087774483414048,
+      "causal_theta_derivative": 5.53861345563616,
+      "initial_model_physical_phi_velocity": 0.1791129572211379,
+      "causal_phi_derivative": 0.5410905395235805,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 11.307975922437716,
+          "phi200_endpoint_error_deg": -2.0977807408431515
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 16.93715031067881,
+          "phi200_endpoint_error_deg": -0.7120737275212522
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 11.372895339243792,
+          "phi200_endpoint_error_deg": -1.973481256068267
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 11.242247264642419,
+          "phi200_endpoint_error_deg": -2.2218837287557665
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_4",
+      "start_ms": 1600,
+      "exact_frozen_api_max_rad": 7.327471962526033e-15,
+      "theta_start_deg": 86.49620425272084,
+      "initial_model_measured_omega": 9.360711629763314,
+      "causal_theta_derivative": 11.645507812500476,
+      "initial_model_physical_phi_velocity": -4.276369710413521,
+      "causal_phi_derivative": -4.661703109741176,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 6.859915605467603,
+          "phi200_endpoint_error_deg": -0.8989264250854817
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 20.107743082044014,
+          "phi200_endpoint_error_deg": -1.809106244734272
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 6.841893462888627,
+          "phi200_endpoint_error_deg": -1.2263792931437238
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 6.861459696423959,
+          "phi200_endpoint_error_deg": -0.5831909882614621
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_4",
+      "start_ms": 1750,
+      "exact_frozen_api_max_rad": 7.93809462606987e-15,
+      "theta_start_deg": -137.64415781463137,
+      "initial_model_measured_omega": 18.29109826804502,
+      "causal_theta_derivative": 18.263680594308173,
+      "initial_model_physical_phi_velocity": 0.0728475424375584,
+      "causal_phi_derivative": -0.1248670475822955,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -24.089673682673986,
+          "phi200_endpoint_error_deg": 9.466869397227732
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -24.524785492305863,
+          "phi200_endpoint_error_deg": 9.487049604945787
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -24.035540751926362,
+          "phi200_endpoint_error_deg": 9.65836014637667
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -24.16044149092727,
+          "phi200_endpoint_error_deg": 9.277996972688896
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_4",
+      "start_ms": 1800,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -89.23877109129107,
+      "initial_model_measured_omega": 13.192364312269184,
+      "causal_theta_derivative": 13.699449811663065,
+      "initial_model_physical_phi_velocity": -0.140604390589691,
+      "causal_phi_derivative": -0.7492022854940972,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -44.280485275585306,
+          "phi200_endpoint_error_deg": 10.892166416712508
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": -35.81951830044322,
+          "phi200_endpoint_error_deg": 10.048019728362883
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -43.71940683428533,
+          "phi200_endpoint_error_deg": 10.905057657905418
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -44.45556057229697,
+          "phi200_endpoint_error_deg": 10.708671749774936
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_4",
+      "start_ms": 1900,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": -22.884740059424484,
+      "initial_model_measured_omega": 7.982492481226412,
+      "causal_theta_derivative": 9.557342529296925,
+      "initial_model_physical_phi_velocity": -1.4303200563782772,
+      "causal_phi_derivative": -1.5816492693764472,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": -30.52649058548763,
+          "phi200_endpoint_error_deg": -0.46905890670722256
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 0.9871090559687379,
+          "phi200_endpoint_error_deg": -0.6473253102317037
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": -30.137734344814078,
+          "phi200_endpoint_error_deg": -0.5592615830090388
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": -30.914145982024902,
+          "phi200_endpoint_error_deg": -0.3734008960004827
+        }
+      }
+    },
+    {
+      "round": "R33P1_B1_4",
+      "start_ms": 2000,
+      "exact_frozen_api_max_rad": 0.0,
+      "theta_start_deg": 17.400480646497765,
+      "initial_model_measured_omega": 5.5179766057862745,
+      "causal_theta_derivative": 6.129673549107144,
+      "initial_model_physical_phi_velocity": 0.1897141647888306,
+      "causal_phi_derivative": 0.7075799363000448,
+      "alternatives": {
+        "exact_chart": {
+          "theta200_endpoint_error_deg": 14.459011041840807,
+          "phi200_endpoint_error_deg": -3.168086803779317
+        },
+        "theta_omega_phi_velocity_anchor": {
+          "theta200_endpoint_error_deg": 21.232025597710436,
+          "phi200_endpoint_error_deg": -1.195132877036747
+        },
+        "previous_1ms_input": {
+          "theta200_endpoint_error_deg": 14.556663520501612,
+          "phi200_endpoint_error_deg": -3.17253934825677
+        },
+        "next_1ms_input": {
+          "theta200_endpoint_error_deg": 14.36148483242664,
+          "phi200_endpoint_error_deg": -3.147123036828259
+        }
+      }
+    }
+  ]
+}

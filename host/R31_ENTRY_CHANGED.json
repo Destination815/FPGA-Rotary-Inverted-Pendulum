@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-22",
+  "scope": "R31 host/onsite tool changes only; hashes before final root freeze",
+  "files": {
+    "host/studio.py": "0b71948364e406bb6e089570135e27912a3a4834a91739ce7da747077037474d",
+    "host/start_gui_windows.cmd": "1986f475f2219f7fd9242bf4e3379bd96d0e5e4a23a3d8dde443b8bd3d23c1c6",
+    "host/download_passive.py": "8b5570c02854c03f3e24ff9b1e085c16436071f87ee007a00cb1cfc108ac4c51",
+    "host/session_preparation.py": "06aabcddcb62ab6c6f6bcc37703316274808cf36d565d1f59461dc3ad833187d",
+    "host/r01_gate.py": "6bd35632784f3ecb3723e6bfbbffe18d4a78afda81b7591b5e703c61b08c1c5c",
+    "host/prepare_gui.py": "4cf157667038329319173b46ee5952a4f898709b57bb60f11e405e49144e2726",
+    "tools/collect_r01_reports.py": "8ccc932d194d12a62b908c8142014d7e4715856900133980cdda40a69c15cb7e",
+    "tools/bundle_round.py": "6dcdf45a43fef91efee4ef48a2954b04c0db269acad932352dcd6824ae61eb3b",
+    "tools/review_r29_trial.py": "386a7cb20ded0215047737348c46ee57b5d586ef8f471ab37f70ae5d37338915",
+    "tools/review_r31_trial.py": "f18ab244e0b397bda17b14d3a720e923d511fdd4c0a4dce7526a13ec10e7a9a9",
+    "tools/check_project.py": "7b01cb0ec9060b98203d19093e4e606d1c3db1bd37479572b6a5d07936380625",
+    "tools/test_r31_host_entry.py": "457bcd5dfd81ea5afe1a509bc82260860e138206ad5a8d6753eae6c13bbf490d",
+    "bundle_round_windows.cmd": "5eadae2043690bdb0a4386a5787e945899bfd6b978745c399ca27f79c6a548a7",
+    "review_trial_windows.cmd": "ffcb17015f9a46df3c609e87c53a35007655a106527b52bc20704f5f0200ada2",
+    "review_R31_trial_windows.cmd": "ffcb17015f9a46df3c609e87c53a35007655a106527b52bc20704f5f0200ada2",
+    "download_passive_windows.cmd": "e9c3c6c919388a0b9c6b508344a709298d40696668e0cd8d7ab4419b51cb01c6",
+    "check_project_windows.cmd": "0cc3ebe2947936e9c3da42e1cc8faf074b0c7ef46bdfe60a0346b8c21af22dd7",
+    "collect_reports_windows.cmd": "e00b46f99c75335cd43e0d7009f785039744001e3f445698f23b3bf8ef275142",
+    "start_R31_windows.cmd": "2c4e3fd4a6194adb42a023478c996f7333dd10b6f9a5c4f63906d49e4b76d2df",
+    "collect_R31_reports_windows.cmd": "c7ddc05f2ef97e1bf62624d525ded80b2745371225f9ec28b701b6ede994ff33",
+    "start_R30_windows.cmd": "2b72cb37828f8b9c2167394c14d19a89f02e6deedc4d2561a4a7bd23f157e2f9",
+    "collect_R30_reports_windows.cmd": "a314cb66295c836a962ffd4aca878ee05a775ad509a64581b06f96675fee5ed2",
+    "review_R30_trial_windows.cmd": "8c49d120e027e9e879aae3de268a6afa112f0055a2ace088cf3f0391a57b5f5e",
+    "README_R31_C.md": "5068354f9a6f5c8fbf1aafab2c08c517ac0106c69759ce4c5f564f555ce442b7",
+    "host/R31_ENTRY_REVIEW.md": "0f2a41f7d1112c02b9e83f243cd5348ae88234196da29d35ac27204b62c29a2d",
+    "tools/test_r01_collector.py": "143e2c7bb314a2a826834a8c871c2d71629d20891ed3458e25106d6e41fa9b3b",
+    "tools/test_r29_host_identity.py": "08d0d12c92bd420cf4dc64e30ef7a2ee32fa5a981da92d2c33ee649231f4cd8d",
+    "tools/test_r28_trial_review.py": "c23de5bbb185d4810800586c1cc0c10ea368bcca3300fe8e71508e61eeec5204"
+  },
+  "checks": {
+    "r31_entry_bundle_collector": 29,
+    "host_portable": 50,
+    "host_identity": 6,
+    "duplicate_collector_cases_across_suites": 6,
+    "trial_review": 15
+  },
+  "hardware_access": false,
+  "note": "Test suite counts listed individually; collector six cases overlap between entry and portable. Synthetic/read-only checks, no physical device."
+}

@@ -1,0 +1,50 @@
+{
+  "R33P1_B1_1": {
+    "partition": "fit",
+    "input_prefix_exactly_equal": true,
+    "metrics": {
+      "theta_rms_deg": 0.403729324447047,
+      "phi_rms_deg": 0.7617281005559096
+    },
+    "endpoint_theta_deg": 20.59591634779653,
+    "actual_endpoint_theta_deg": 20.92289116374338,
+    "endpoint_phi_deg": -54.42079238197846,
+    "actual_endpoint_phi_deg": -57.091751517290284
+  },
+  "R33P1_B1_2": {
+    "partition": "fit",
+    "input_prefix_exactly_equal": true,
+    "metrics": {
+      "theta_rms_deg": 0.36567361859033376,
+      "phi_rms_deg": 0.7626152974025603
+    },
+    "endpoint_theta_deg": 20.61689868892681,
+    "actual_endpoint_theta_deg": 20.28992387297996,
+    "endpoint_phi_deg": -54.42079238197846,
+    "actual_endpoint_phi_deg": -51.74983324666663
+  },
+  "R33P1_B1_3": {
+    "partition": "whole_round_holdout",
+    "input_prefix_exactly_equal": true,
+    "metrics": {
+      "theta_rms_deg": 4.177341189802336,
+      "phi_rms_deg": 5.214291053034836
+    },
+    "endpoint_theta_deg": 20.63875529427085,
+    "actual_endpoint_theta_deg": 15.059201082044114,
+    "endpoint_phi_deg": -54.42079238197846,
+    "actual_endpoint_phi_deg": -63.76914935556985
+  },
+  "R33P1_B1_4": {
+    "partition": "whole_round_holdout",
+    "input_prefix_exactly_equal": true,
+    "metrics": {
+      "theta_rms_deg": 2.446400344643888,
+      "phi_rms_deg": 4.472009899881473
+    },
+    "endpoint_theta_deg": 20.59591634779653,
+    "actual_endpoint_theta_deg": 17.400480646497765,
+    "endpoint_phi_deg": -54.42079238197846,
+    "actual_endpoint_phi_deg": -64.4368891393978
+  }
+}

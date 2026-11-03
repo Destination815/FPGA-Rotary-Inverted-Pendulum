@@ -1,0 +1,38 @@
+[
+  {
+    "period": 37.7,
+    "step": 113925,
+    "begin": 3000,
+    "steady": 6000,
+    "exit": 78400,
+    "N": 84400,
+    "reference_gain_q18": 2259
+  },
+  {
+    "period": 18.85,
+    "step": 227850,
+    "begin": 3000,
+    "steady": 6000,
+    "exit": 40700,
+    "N": 46700,
+    "reference_gain_q18": 9037
+  },
+  {
+    "period": 12.57,
+    "step": 341684,
+    "begin": 3000,
+    "steady": 6000,
+    "exit": 28140,
+    "N": 34140,
+    "reference_gain_q18": 20323
+  },
+  {
+    "period": 9.42,
+    "step": 455941,
+    "begin": 3000,
+    "steady": 6000,
+    "exit": 21840,
+    "N": 27840,
+    "reference_gain_q18": 36188
+  }
+]

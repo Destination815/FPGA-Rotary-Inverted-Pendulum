@@ -1,0 +1,193 @@
+{
+  "status": "PASS_R40_V3B_SCOPED_HOLD_RESIDUAL",
+  "old_fixture_transactions": 87200,
+  "old_recomputed_changed_rows": 0,
+  "new_transactions": 48400,
+  "coverage": [
+    {
+      "direction": -1,
+      "mode": "move",
+      "transactions": 2200,
+      "integral_updates": 719,
+      "large_opposed_rows": 2200,
+      "final_integral": -1844598
+    },
+    {
+      "direction": -1,
+      "mode": "endpoint",
+      "transactions": 2200,
+      "integral_updates": 1200,
+      "large_opposed_rows": 2200,
+      "final_integral": -714673
+    },
+    {
+      "direction": -1,
+      "mode": "current_gap",
+      "transactions": 2200,
+      "integral_updates": 625,
+      "large_opposed_rows": 2200,
+      "final_integral": -1950121
+    },
+    {
+      "direction": -1,
+      "mode": "permission_drop",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": -2939360
+    },
+    {
+      "direction": -1,
+      "mode": "manual",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 4,
+      "final_integral": -2939360
+    },
+    {
+      "direction": -1,
+      "mode": "brake",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": -2939360
+    },
+    {
+      "direction": -1,
+      "mode": "moving_large",
+      "transactions": 2200,
+      "integral_updates": 801,
+      "large_opposed_rows": 2200,
+      "final_integral": -1480000
+    },
+    {
+      "direction": -1,
+      "mode": "moving_small",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 658,
+      "final_integral": -2939360
+    },
+    {
+      "direction": -1,
+      "mode": "threshold_below",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": -838860
+    },
+    {
+      "direction": -1,
+      "mode": "threshold_exact",
+      "transactions": 2200,
+      "integral_updates": 83,
+      "large_opposed_rows": 2200,
+      "final_integral": -732192
+    },
+    {
+      "direction": -1,
+      "mode": "opposed_release",
+      "transactions": 2200,
+      "integral_updates": 736,
+      "large_opposed_rows": 114,
+      "final_integral": -3139454
+    },
+    {
+      "direction": 1,
+      "mode": "move",
+      "transactions": 2200,
+      "integral_updates": 989,
+      "large_opposed_rows": 2200,
+      "final_integral": 1237630
+    },
+    {
+      "direction": 1,
+      "mode": "endpoint",
+      "transactions": 2200,
+      "integral_updates": 1200,
+      "large_opposed_rows": 2200,
+      "final_integral": 713392
+    },
+    {
+      "direction": 1,
+      "mode": "current_gap",
+      "transactions": 2200,
+      "integral_updates": 852,
+      "large_opposed_rows": 2200,
+      "final_integral": 1426797
+    },
+    {
+      "direction": 1,
+      "mode": "permission_drop",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": 2939360
+    },
+    {
+      "direction": 1,
+      "mode": "manual",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 4,
+      "final_integral": 2939360
+    },
+    {
+      "direction": 1,
+      "mode": "brake",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": 2939360
+    },
+    {
+      "direction": 1,
+      "mode": "moving_large",
+      "transactions": 2200,
+      "integral_updates": 967,
+      "large_opposed_rows": 2200,
+      "final_integral": 1134867
+    },
+    {
+      "direction": 1,
+      "mode": "moving_small",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 605,
+      "final_integral": 2939360
+    },
+    {
+      "direction": 1,
+      "mode": "threshold_below",
+      "transactions": 2200,
+      "integral_updates": 0,
+      "large_opposed_rows": 2200,
+      "final_integral": 838860
+    },
+    {
+      "direction": 1,
+      "mode": "threshold_exact",
+      "transactions": 2200,
+      "integral_updates": 285,
+      "large_opposed_rows": 2200,
+      "final_integral": 443251
+    },
+    {
+      "direction": 1,
+      "mode": "opposed_release",
+      "transactions": 2200,
+      "integral_updates": 799,
+      "large_opposed_rows": 114,
+      "final_integral": 3149401
+    }
+  ],
+  "rtl": "PASS scope_revocations=6 transactions=135600 active_residual=7830 maxcycles=417 clear_cuts=418\n",
+  "cpp": "PASS C++ transactions=135600\n",
+  "elapsed_s": 18.532391832995927,
+  "source_sha256": {
+    "fpga/src/r10_observer_core.v": "358b45e03d88cefaf81479d907b6db7a7a94699df0be7499b7fe680feb577c67",
+    "observer/fixed_model.py": "728d37369fdd7169fa7f0abe1c9721f3a2aef41d6b911e2fbf7719a7b04b333c",
+    "hybrid/hold_observer.hpp": "98db66ad0bd7698242654b9e9af0cb5d6c35b1be25781dd8807c8523e17a461d"
+  },
+  "scope": "Old ordinary fixtures plus new threshold-edge and latched large-integral sign reversal, validity/permission/manual/brake exclusions. Integer Python/CPP/RTL component agreement, not closed-loop physical result. Initial seeded state is declared stress, not reconstructed hardware checkpoint."
+}

@@ -1,0 +1,137 @@
+{
+  "source_result": "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r43_revision_20261030/integration/position45/RESULT.json",
+  "source_trace_sha256": "e735243fdbe605694089d490edfc4cafc2f5fe76827a96b15003fc059c2f475c",
+  "frames": 64000,
+  "fault": 0,
+  "max_compute_clocks": 24283,
+  "frame_budget_clocks": 50000,
+  "commit_events": 57177,
+  "commit_min": 0,
+  "commit_max": 0,
+  "model_scope": "Complete controller/estimator/reference/guard RTL, M05 domain-parameter stress extrapolation. These domain fits have short prediction windows and are not validated full-angle physical plants. No integer CPU substitute, no future truth in controller, no hardware/STA guarantee. Optional event is a declared instantaneous angular-velocity impulse at first capture+6000ms; no measured human force was identified. Disturbed falls do not count as pre-event spontaneous failures. First and recovered phases reported separately.",
+  "position": [
+    {
+      "command_ms": 6000,
+      "next_command_ms": 22000,
+      "goal_deg": 90.0,
+      "reference_endpoint_ms": 14000,
+      "reference_reached": true,
+      "three_to_four_seconds": {
+        "start_ms": 17000,
+        "end_ms": 18000,
+        "rows": 1000,
+        "position_error_mean_deg": -0.26100030090379095,
+        "position_error_rms_deg": 3.8970048090885445,
+        "position_error_peak_deg": 6.086252969786514,
+        "position_error_percentile95_deg": 6.023841292191985,
+        "within5_fraction": 0.844,
+        "theta_rms_deg": 2.6150369892670295,
+        "theta_peak_deg": 5.362309350208007,
+        "arm_velocity_rms_deg_s": 34.24223718294207,
+        "pwm_rms_permille": 154.2626331941731
+      },
+      "first_continuous_1s_within5_after_endpoint_s": null,
+      "tail_1s": {
+        "start_ms": 21000,
+        "end_ms": 22000,
+        "rows": 1000,
+        "position_error_mean_deg": -0.9158907698298422,
+        "position_error_rms_deg": 3.841827792067132,
+        "position_error_peak_deg": 6.418067332400227,
+        "position_error_percentile95_deg": 6.356429854274624,
+        "within5_fraction": 0.805,
+        "theta_rms_deg": 2.68746718196234,
+        "theta_peak_deg": 5.299972593359733,
+        "arm_velocity_rms_deg_s": 34.634358210952634,
+        "pwm_rms_permille": 153.01625403858245
+      }
+    },
+    {
+      "command_ms": 22000,
+      "next_command_ms": 42000,
+      "goal_deg": -90.0,
+      "reference_endpoint_ms": 30000,
+      "reference_reached": true,
+      "cruise": {
+        "window_ms": [
+          24823,
+          27178
+        ],
+        "rows": 2355,
+        "selection": "Longest contiguous reference speed >=80% requested and reference >5deg from endpoint",
+        "velocity_tracking_rms_deg_s": 34.83349569285152,
+        "velocity_2_to_8Hz_rms_deg_s": 22.750042580232353,
+        "velocity_2_to_30Hz_rms_deg_s": 35.151373826632074,
+        "low_velocity_fraction": 0.3422505307855626,
+        "reverse_velocity_fraction": 0.030573248407643312,
+        "theta_rms_deg": 2.3466990526577236,
+        "pwm_step_rms_permille": 17.864090892498925
+      },
+      "three_to_four_seconds": {
+        "start_ms": 33000,
+        "end_ms": 34000,
+        "rows": 1000,
+        "position_error_mean_deg": 0.1390164928233811,
+        "position_error_rms_deg": 4.398606222974616,
+        "position_error_peak_deg": 6.939024198965257,
+        "position_error_percentile95_deg": 6.3641931330053225,
+        "within5_fraction": 0.609,
+        "theta_rms_deg": 2.894965748207746,
+        "theta_peak_deg": 5.645457559776448,
+        "arm_velocity_rms_deg_s": 37.73450396383844,
+        "pwm_rms_permille": 145.73670436784278
+      },
+      "first_continuous_1s_within5_after_endpoint_s": null,
+      "tail_1s": {
+        "start_ms": 41000,
+        "end_ms": 42000,
+        "rows": 1000,
+        "position_error_mean_deg": -0.8560016732466585,
+        "position_error_rms_deg": 3.7836050918670856,
+        "position_error_peak_deg": 6.175380497784531,
+        "position_error_percentile95_deg": 6.1193086649353035,
+        "within5_fraction": 0.811,
+        "theta_rms_deg": 2.6379017427451927,
+        "theta_peak_deg": 5.220691196065069,
+        "arm_velocity_rms_deg_s": 34.191013778908534,
+        "pwm_rms_permille": 153.82266738033118
+      }
+    },
+    {
+      "command_ms": 42000,
+      "next_command_ms": 64000,
+      "goal_deg": 0.0,
+      "reference_endpoint_ms": 48000,
+      "reference_reached": true,
+      "three_to_four_seconds": {
+        "start_ms": 51000,
+        "end_ms": 52000,
+        "rows": 1000,
+        "position_error_mean_deg": -0.7038640466889282,
+        "position_error_rms_deg": 3.363643140173967,
+        "position_error_peak_deg": 7.315919850080995,
+        "position_error_percentile95_deg": 5.982728769277956,
+        "within5_fraction": 0.893,
+        "theta_rms_deg": 2.354331109085899,
+        "theta_peak_deg": 5.06522589731262,
+        "arm_velocity_rms_deg_s": 32.64753682120377,
+        "pwm_rms_permille": 152.5658775742466
+      },
+      "first_continuous_1s_within5_after_endpoint_s": null,
+      "tail_1s": {
+        "start_ms": 63000,
+        "end_ms": 64000,
+        "rows": 1000,
+        "position_error_mean_deg": -1.252729430287331,
+        "position_error_rms_deg": 3.981059408439181,
+        "position_error_peak_deg": 6.806329460692542,
+        "position_error_percentile95_deg": 6.746010514932151,
+        "within5_fraction": 0.791,
+        "theta_rms_deg": 2.6511062625376156,
+        "theta_peak_deg": 5.284355228985419,
+        "arm_velocity_rms_deg_s": 32.83140583379279,
+        "pwm_rms_permille": 154.6488667918391
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "r28-local-inputs-v1",
+  "files": {
+    "B4_first_brake_history.csv": "81ead542426ba86d775a4e597edaabc507d787dc59dabecb282b3de1a2fa8e7d",
+    "baseline_reuse_receipt.json": "2d38cee9ba073fc999f55f8c0d632eac45ffcb32f8ade502ee506c564a14b4b6",
+    "baselines/b4-brake/metrics.json": "df3e02b824c2373bce57d03318175afe5a0ed8dc9a598403b4380291c1a4aaf6",
+    "baselines/b4-brake/result.json": "4ebe018d5ef00c6130522feb1a29ac4aab392710395ece557db05bb3111c66d5",
+    "baselines/b4-brake/trace.npz": "de5f7ebfa7ded6fc7c3a52952d8875ce05e16058122eacbd326910b84b0b1848",
+    "baselines/s16-motion/result.json": "f9934516ea6201958793dffab6f882c778fc8ea0180a7c8758cbd922e0a7878f",
+    "baselines/s16-motion/trace.npz": "76cd14550873cbb8020dd6c047eb42f1efa3ec77dd044edddc54d7d32ae347ea",
+    "baselines/s20-motion/result.json": "823e843e559c700ea06ffaeb4ced7d65bd8df4a5923910771ef4c0a77bac4374",
+    "baselines/s20-motion/trace.npz": "952af8d6048ea8107c48d850113b0dfb38881d0b8096dc22206938dbf88f8d1a",
+    "grey_history_check.json": "61f203af00b4d3b1af541a669e648bd6e794432eed7852d87d5de365b288d334",
+    "grey_local_plant.py": "b15738561e9c38eafeab5c0e9d871a0b27c97f5feb527ae98b035bc5f82b50ed",
+    "grey_model_bank.json": "c71ba1ab350895cc1f3c6def7687bc0cdefa2cd486618c8ed84e800f5f954d64",
+    "grey_plant_equivalence.json": "01c39aa313411e3b15030939e4483b06eba11f991ef391fbc09aefe4253509aa",
+    "historical_measured_grey.py": "2b43f469ec38d5a159cc2d7684dd6608dc11460fe70724bb944c207f2ff6da88",
+    "measured_predictions.json": "b89caa04f910a6e49110d68094e389d832c7d48bcc58273dc22afac45573b166",
+    "s16_parameters.json": "5c7e4c13ffa0c1af1b1f1b3257680fc115a7c7124e09c7898987ecf513d21247",
+    "s20_joint_fit.json": "1189d42c156580575352f45ea392a80ca17ea4f3692f3e5549f872502dcfc88f",
+    "README.md": "f2443d5bbd64217e92fad101c23d52842a51b2cf2be90691ac5d911dea530876"
+  }
+}

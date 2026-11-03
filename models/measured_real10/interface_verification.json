@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "local_actual_seed_windows": 168,
+  "variants": 2,
+  "python_step_to_batch_prediction_max_rad": 5.773159728050814e-15,
+  "cpp_export_actual_seed_cases": 16,
+  "cpp_steps": 3200,
+  "cpp_python_max_rad": 3.774758283725532e-15,
+  "full_header_exact_equations": true,
+  "no_device_access": true,
+  "source_hashes": {
+    "model_api.py": "678052b991d8af5416bb9d1c14ca30b1e4d964ec35b4f394029441d1fe33c6e5",
+    "local_api.py": "370c7a5424a5548e335635abf6d5a4c29ca1983679cf360762dd3ebbddef821a",
+    "local_update.py": "5cfad11fc8d639a71423298e3ae493ef7762746900904b150adf3f805644eb3b",
+    "fullplant.cpp": "e733fe99bc21f137b762cda4ae9fb8bf27c30a6292f63a580f9c4cdb2d2ee3b8",
+    "measured_fullplant.hpp": "872a56f5a9a8b09d34d3641c86a5f21db0b56f1e43620efc2114945ec6b5cdd3",
+    "measured_local.hpp": "96b777f2a5276fdc46f59be8b6ae6d91051028b7acb31e9721c40e1cc7cc8f3c",
+    "local_frozen.json": "242137e7989cf0a7faec1562a4b162f81d3b5a286e8935225b6432eff1173edd",
+    "local_configs.json": "910df964e6e419552f5dd145b3446f7771a4ee6196c4dc3329613deafd8a94f1"
+  }
+}

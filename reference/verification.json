@@ -1,0 +1,36 @@
+{
+  "rtl": {
+    "samples": 194143,
+    "clear_clocks": 4099,
+    "max_clocks": 4098,
+    "matched": true
+  },
+  "max_float_error_rad_units": [
+    0.0003571470834651258,
+    8.180162423410131e-05,
+    0.00012088262394460703,
+    0.0006632560206227822
+  ],
+  "max_position_velocity_rad_s": 0.4909210205078125,
+  "max_position_acceleration_rad_s2": 0.083984375,
+  "duration_bins_tested_ms": [
+    4000,
+    6000,
+    12000,
+    24000,
+    96000
+  ],
+  "sine_entry_peak_v_a_j_rad_units": {
+    "+0.000": [
+      0.6409111022949219,
+      0.8379554748535156,
+      5.331104278564453
+    ]
+  },
+  "steady_sine_peak_velocity_rad_s": 0.3476448059082031,
+  "sha256": {
+    "fpga/src/r01_reference.v": "abf8ddae9d92c890fb113055f094a4cddb303b4306c2e6a00adbc7b15f0129a4",
+    "reference/reference_model.py": "e5f4b7498f06b470815de77d8a104f9d779dce154fa276e82d690e15f3513d43",
+    "reference/verify_reference.py": "0072d54b5e4d545e7835701bd0c282f1a9767c13ef6e22043150897e7291554b"
+  }
+}

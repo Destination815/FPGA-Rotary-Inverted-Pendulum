@@ -1,0 +1,275 @@
+{
+  "case": "full_latched_monitored",
+  "build": "4A070250",
+  "horizon_ms": 72000,
+  "duration_ms": 72000,
+  "captures_ms": [
+    2553
+  ],
+  "first_capture_s": 2.553,
+  "first_brake_s": 1.94,
+  "failed_brakes_before_capture": 0,
+  "falls_ms": [],
+  "fault": 0,
+  "final_state": 3,
+  "strict3": true,
+  "first_second_theta_rms_deg": 2.086113665907324,
+  "first_second_theta_peak_deg": 4.877784812780499,
+  "theta_tail_rms_deg": 2.482656974401466,
+  "arm_tail_reference_rms_deg": 3.2977754002732595,
+  "arm_tail_first_origin_rms_deg": 61.78847116080764,
+  "first_origin_physical_rad": -1.078018844127655,
+  "last_origin_physical_rad": -1.078018844127655,
+  "arm_peak_before_capture_deg": 61.61112605954994,
+  "arm_travel_before_capture_deg": 216.73326268557523,
+  "arm_peak_all_deg": 97.00112790453234,
+  "arm_travel_all_deg": 1678.6171679742497,
+  "first_second_arm_peak_from_origin_deg": 11.963689559173357,
+  "maximum_cycles": 24016,
+  "pwm_commit_events": 63712,
+  "commit_cycle_min": 0,
+  "commit_cycle_max": 0,
+  "maximum_pwm": 0.35,
+  "stop_zero": true,
+  "stop_guard_clear": true,
+  "elapsed_s": 1010.6962451659783,
+  "transitions": [
+    {
+      "tick": 1940,
+      "from_state": 1,
+      "to_state": 6,
+      "fault": 0
+    },
+    {
+      "tick": 2553,
+      "from_state": 6,
+      "to_state": 2,
+      "fault": 0
+    },
+    {
+      "tick": 4553,
+      "from_state": 2,
+      "to_state": 3,
+      "fault": 0
+    },
+    {
+      "tick": 6000,
+      "from_state": 3,
+      "to_state": 4,
+      "fault": 0
+    },
+    {
+      "tick": 22000,
+      "from_state": 4,
+      "to_state": 3,
+      "fault": 0
+    },
+    {
+      "tick": 22001,
+      "from_state": 3,
+      "to_state": 4,
+      "fault": 0
+    },
+    {
+      "tick": 42001,
+      "from_state": 4,
+      "to_state": 3,
+      "fault": 0
+    },
+    {
+      "tick": 42002,
+      "from_state": 3,
+      "to_state": 4,
+      "fault": 0
+    },
+    {
+      "tick": 54002,
+      "from_state": 4,
+      "to_state": 3,
+      "fault": 0
+    }
+  ],
+  "configuration": {
+    "harness_pin_readback": [
+      411840,
+      17160,
+      2,
+      20,
+      1
+    ],
+    "configuration_readback_available": true,
+    "wire_word": 848336488,
+    "wire_hex": "0x32909668",
+    "workspace_internal_code_deg": 360,
+    "amplitude_internal_code_tenths_deg": 150,
+    "speed_code": 2,
+    "period_s": 20,
+    "full_turn_recovery": true,
+    "workspace_internal_q16": 411840,
+    "amplitude_internal_q16": 17160,
+    "workspace_physical_rad": 6.060214042663574,
+    "amplitude_physical_rad": 0.25250891844431556,
+    "source_j280_top_sha256": "0424836e3c723676478d932ed7117a22e6656dd00d7443f77c4aeb1bd2e193b6",
+    "source_note": "Exact packed config from all four R32 B runs:310941374; board integer LUT and range shift arithmetic, no double physical conversion."
+  },
+  "clock_contract": "50MHz; each 1ms frame: tick consumes cycles_to_done+1 clocks then r20_idle fills exactly50000; PWM integrated at recorded zero-based commit_cycle/50MHz; begin command adds three setup clocks before first frame; no PWM carrier/electrical model.",
+  "fill_idle": true,
+  "coordinate_contract": "M05 plant keeps legacy encoder/load phi coordinates; raw encoder=round(phi/(396/65536)); RTL FFI phi/v/ref/config are INTERNAL; checked internal phi=clamp(encoder*396). Public physical phi computed by host.coordinates.physical_q16 (not an extra instantiated calibrated_position RTL); legacy velocity/reference/plant phi converted exactly once with host.coordinates.SCALE; theta/PWM unchanged.",
+  "plant_binding": {
+    "header_sha256": "0599764fb9cd47d926731079867cdd166ecbc13d67ab38ed346ac8d7771bbad9",
+    "source_sha256": "9bbe3af70479e0809b7de5fc72c29a884484933d6baea336d9b031613aa5e42d",
+    "library_sha256": "61fda7bde90eba9bad6b9862bea8154c36009f604e3cdd562cd03c6a322ec6c5",
+    "compile_command": [
+      "c++",
+      "-O3",
+      "-shared",
+      "-fPIC",
+      "-std=c++17",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r40_revision_20261028/motion_v3/full_latched_monitored/plant.cpp",
+      "-o",
+      "/Users/zhangfan/Downloads/嵌赛/10_team_workspace/analysis/r40_revision_20261028/motion_v3/full_latched_monitored/plant.dylib"
+    ]
+  },
+  "case_parameters": {
+    "name": "M05_swing_domain_constrained_1",
+    "plant": [
+      94.55127371781077,
+      1.602440506894551,
+      0.7879984875603752,
+      6.057314553381538,
+      0.07393892690280818,
+      0.870780207943937,
+      1012.110789101967,
+      1.0249104908387834,
+      7.881692782295197,
+      115.57779499392562,
+      0.001213799806723643,
+      1.2084401839396252e-06,
+      20119.01477819776,
+      31.405084960139444,
+      0.024879109577951843,
+      0.0,
+      0.9901860103025343,
+      0.6734075261438277
+    ],
+    "mass": 2,
+    "sign": 1,
+    "bounce": 0,
+    "event": 0,
+    "horizon_ms": 18000,
+    "scope": "M05_uncertain",
+    "case": "full_latched_monitored",
+    "wire_config": 848336488,
+    "numeric_speed_deg_s": 20,
+    "targets_wait_ready": true,
+    "target_schedule": [
+      {
+        "ms": 6000,
+        "physical_deg": 90.0
+      },
+      {
+        "ms": 18000,
+        "physical_deg": -90.0
+      },
+      {
+        "ms": 35000,
+        "physical_deg": 0.0
+      }
+    ]
+  },
+  "initial_legacy_state": [
+    3.116592653589793,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "m05_backend_sha256": "cf2e4bfb42dbd642a0840f3378009d51fbf4eaebf328c4548d732dcde954e0b6",
+  "model_manifest_sha256": "2c111c97164cf3eb5cdeeaa5bfb3167b01e59c2a09062eca736112c4d5588c35",
+  "rtl_binding": {
+    "rtl_library_sha256": "7c95c27237b8f1fd8580dd4950afa7f36e3d52c5c2bb7c70445cbbb098876b34",
+    "rtl_source_sha256": {
+      "fpga/src/r01_motion_readiness.v": "d93d6185458115aeb674e0f910de4c7be59c3cfc93c7a8e0248ecdee16c61ae7",
+      "fpga/src/trajectory.v": "2bc472a65e01dbb40529be0027f9202880e12882d6dcb3d9559ad693f7733595",
+      "fpga/src/drive_guard.v": "7815cc8aaeb543f7abedc5308fd77c9ef6b709436d1ad181b9ccb38c82e3be8d",
+      "fpga/src/controller.v": "2559dcd3a7c7ac1aa160ae963eae805ced2514a3bfad11ec779783158f12fbd0",
+      "fpga/src/j280_top.v": "0424836e3c723676478d932ed7117a22e6656dd00d7443f77c4aeb1bd2e193b6",
+      "fpga/src/passive_capture.v": "3d11d091a2072395e5b2228ac22bc90b488a7cd0739a5411c805fc6ca655f32d",
+      "fpga/src/s23_memory.v": "fb4a5245d4e335d3a3964202634aeb0dcbce2287c37186a66e7e541c08c328cd",
+      "fpga/src/r01_swing_core.v": "a7ff49b861c24847d875c3eb673a8361616260954bc1f90d0de2dee9bfd50828",
+      "fpga/src/d02_capture.v": "236167cad95ddb9fcb752d986e9f1efc3808c46eb0a9a7dbd9b9a48d0c4b2f87",
+      "fpga/src/command_rx.v": "c76eff1ed67d70928d8051d573c887703e24bba3364d078a95aee3236f16a614",
+      "fpga/src/r01_recovery_budget.v": "29ff787dcbffabba76555db27c8b67aeedf9e651170b4f91e7e6f333b249a2cb",
+      "fpga/src/motion_link_watchdog.v": "6bb158ff49c1553187da81746e0b4a6e8506da6c5e6709f95d57cdf4ffdf3cea",
+      "fpga/src/telemetry.v": "2ba7d4a5aeab403057e69937d61ad600fc1b73d5a9b87916a35e93aa2f92dca4",
+      "fpga/src/state_estimator.v": "bbe1e9e1d96dc30d135630cd60824188a61352aa66696bb609aba2da043e398f",
+      "fpga/src/s23_alu.v": "34fc713b878c9b391f81edd41353c28ab84f191d3045435a3daab3d0d2f914b2",
+      "fpga/src/calibrated_command.v": "1a1c2e846094a425606777e12ee7b4043f6837ceebbeb1a680d72bd84e98ba5e",
+      "fpga/src/io_frontend.v": "4cde6ac3e438c3d0374bc13093f3e4293103fd7a9f94b9f7ed563b79091479e5",
+      "fpga/src/r01_reference.v": "5fac778683af2e103bcc8611ab5f91fdd012ccb093fc86cc731f5564faa425f4",
+      "fpga/src/r01_gap_bridge.v": "e33103e702421baadfe8b0878063434770bf4ed68b5a25ed9ed3ac2422d053f5",
+      "fpga/src/r01_tracking_core.v": "72410b2debc76e6d4764c07f6f5316cbb1bc449952db11984e0948f35c7b0572",
+      "fpga/src/r10_observer_core.v": "6f681ffce0b700259abe9d599c2b42e3fd80331997d1c30fb14da33cf145a059",
+      "fpga/src/r29_handoff_guard.v": "8b2d4daff08a4b8cd0c4ffac81da1ded00f36066fc32afc3679bc0d6172fa0c5",
+      "fpga/src/s23_compute.v": "6bede14c73285afcf38421ca3af6184d507ea4fc8857057672fe8c5485bc5718",
+      "fpga/src/s23_soft_mul24.v": "1be9e7acd713563452aefff9f084cf6810a5955810b3478618e5854c22146a79",
+      "fpga/src/r29_early_saturation.v": "3ac6ea5f30d794a183b18173c9390991f856690ca055642e094872539225701e",
+      "fpga/src/calibrated_position.v": "eee65e7a68e584110734ae7bb3db2cb6b367b7bf40e69f1febfdd5c3becffad5",
+      "fpga/src/uart.v": "87da5cefb1659469d2082cbb01d258d07a60d2177a4d5f69827a4050db96366e",
+      "sim/dpb_sim_model.v": "d1140f95a0376cdce969fa8e27b6368fcdf5259f770f824596c445b11e4f1273",
+      "fpga/src/cosine_function.vh": "cdfa460d417870dc47e257384db560d2129eb07530983931dc21d1fc401eac92",
+      "fpga/src/j280_config.vh": "9f4492d0ec957ed87c33c438195497b4fb5eed2ca6f8027d61323f79c91c692c",
+      "fpga/src/j280_coordinates.vh": "d080754adde2c651c57b29a9653d60afe94aa9d79a00b122008a05b1b62c8496",
+      "fpga/src/r10_observer_parameters.vh": "f77b7013dfe7ff081066002e672c2839f1fba12507cf8dea2e868d44a3630ba8",
+      "fpga/src/r29_returning_gate.vh": "b5d76370c732899a685a093a9afa1229104a039cef6f4785b61189f8bec23d44",
+      "fpga/src/r29_swing_io.vh": "653c527b2e12e4e13ed9b41e62eb6179e23165bd158e6a03f29aa56a64f98633",
+      "sim/control_api.cpp": "29ac812ece2c86f690f66c8c3a87e07504929a0419ebf3e8fff83f20e415c0d1",
+      "sim/r01_control_harness.v": "576af29b1778510948e4423a22de52be824094c350d207699b88575b8d312c13"
+    },
+    "provenance_sha256": "a7699dde2b1141953111b80fc91284073478aedbcd5aed30f7e987a31e0ac70f",
+    "ffi_sha256": "8e83391903cecc5758b090066f980d306c75a39e829444b6ed16bf0187be8f2c",
+    "coordinates_sha256": "69b9751b7567a37386d6250ee85eaef919f4528bb37ec0200831aa86517eb594",
+    "calibration_sha256": "1d938c1dd1ffb1e0cdec4c9f2da922917936a907bf4291850a251d4c288669d5"
+  },
+  "runner_sha256": "c4d95ca63d4963ca76a66dec8ba9eff50a5684735ef5079ab4d2b6b9cbf95952",
+  "trace_sha256": "f571a9453fa02ef4951e52d5e6f5af088f946ee54974167eb3a01881026978bb",
+  "scope": "Complete controller/estimator/reference/guard RTL, M05 domain-parameter stress extrapolation. These domain fits have short prediction windows and are not validated full-angle physical plants. No integer CPU substitute, no future truth in controller, no hardware/STA guarantee. Optional event is a declared instantaneous angular-velocity impulse at first capture+6s; no measured human force was identified. Disturbed falls do not count as pre-event spontaneous failures. First and recovered phases reported separately.",
+  "bindings_unchanged_after_run": true,
+  "intervention_ms": null,
+  "target_events": [
+    {
+      "ms": 6000,
+      "physical_deg": 90.0,
+      "actual_ms": 6000,
+      "internal_rad": 1.6288478097558323
+    },
+    {
+      "ms": 18000,
+      "physical_deg": -90.0,
+      "actual_ms": 22001,
+      "internal_rad": -1.6288478097558323
+    },
+    {
+      "ms": 35000,
+      "physical_deg": 0.0,
+      "actual_ms": 42002,
+      "internal_rad": 0.0
+    }
+  ],
+  "target_schedule_completed": true,
+  "numeric_speed_deg_s": 20,
+  "final_position_goal_physical_deg": 0.0,
+  "final_position_actual_mean_physical_deg": -0.06549131106585537,
+  "final_position_reference_mean_physical_deg": 0.0,
+  "final_position_error_rms_deg": 3.2977754002732595,
+  "peak_reference_speed_physical_deg_s": 17.785316590720637,
+  "motion_theta_peak_deg": 6.7251599291701885,
+  "intervention_omega_rad_s": 0,
+  "strict_first_capture3": true,
+  "unforced_falls_before_intervention": [],
+  "post_intervention_recapture_s": null,
+  "post_exit_recapture_s": null,
+  "local_recenter_reference_changes": 0
+}

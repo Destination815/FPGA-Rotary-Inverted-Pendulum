@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "False": {
+      "base": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 3.5144329106746164,
+        "arrival2_max": 7.4433112719749825,
+        "tail_position_mean": 3.239509528878866,
+        "theta_peak": 10.455387313067973
+      },
+      "isolated": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 3.5144329106746164,
+        "arrival2_max": 7.4433112719749825,
+        "tail_position_mean": 3.239509528878866,
+        "theta_peak": 10.455387313067973
+      },
+      "scoped": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 3.5144329106746164,
+        "arrival2_max": 7.4433112719749825,
+        "tail_position_mean": 3.239509528878866,
+        "theta_peak": 10.455387313067973
+      }
+    },
+    "True": {
+      "base": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 8.60915128533631,
+        "arrival2_max": 21.20380425846164,
+        "tail_position_mean": 4.162829768210702,
+        "theta_peak": 6.329336491175047
+      },
+      "isolated": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 3.47843752374426,
+        "arrival2_max": 4.363432628758312,
+        "tail_position_mean": 2.892217071159804,
+        "theta_peak": 6.202455496157352
+      },
+      "scoped": {
+        "count": 4,
+        "faults": 0,
+        "arrival2_mean": 3.47843752374426,
+        "arrival2_max": 4.363432628758312,
+        "tail_position_mean": 2.892217071159804,
+        "theta_peak": 6.202455496157352
+      }
+    }
+  },
+  "all_columns_vs_isolated_equal": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true
+  },
+  "scope": "Same viewed final8 inputs, 8 new final-scope integration runs. Explicit position permission excludes narrow residual. No tuning."
+}

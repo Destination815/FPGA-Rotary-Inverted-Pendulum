@@ -1,0 +1,10 @@
+from pathlib import Path
+import ctypes as C,json,numpy as np,time,hashlib
+P=Path(__file__).resolve().parents[1];A=P/'build/reproduce';A.mkdir(parents=True,exist_ok=True);D=P/'hybrid';b=json.loads((D/'model_bank.json').read_text());bank=np.array([[m['p'][k]for k in b['keys']]for m in b['models']]);ptr=C.POINTER(C.c_double);lib=C.CDLL(str(P/('build/reproduce/hybrid/hybrid_fixed.dylib' if __import__('sys').platform=='darwin' else 'build/reproduce/hybrid/hybrid_fixed.so')));lib.simulate.argtypes=[ptr,ptr,C.c_int,ptr,C.c_int,C.c_int,C.c_int,ptr,ptr];rows=[];st=time.monotonic()
+cases=[('common',0,m,s,e,0) for m in range(4)for s in [-1,1]for e in [-1,0,1]]+[('sensor',d,m,s,0,0)for d in [8,16,24]for m in range(4)for s in [-1,1]]+[('fresh',12,m,s,0,s*.07) for m in range(4)for s in [-1,1]]
+for group,delay,mi,sign,event,variation in cases:
+ cfg=np.zeros(16);cfg[1]=delay;cfg[2]=2;p=bank[mi].copy();p[4:6]*=1+variation;p[6:8]*=1-variation;o=np.zeros(11);lib.simulate(bank.ctypes.data_as(ptr),p.ctypes.data_as(ptr),mi>=2,cfg.ctypes.data_as(ptr),sign,22000 if event else 20000,event,o.ctypes.data_as(ptr),None)
+ rows.append(dict(group=group,delay=delay,model=mi,sign=sign,event=event,variation=variation,result=o.tolist(),passed=bool(o[0]==0 and o[1]==2 and o[4]<3 and o[5]<5)))
+ if not rows[-1]['passed']:print('FAIL',rows[-1],flush=True)
+summary={g:dict(passed=sum(r['passed']for r in rows if r['group']==g),total=sum(r['group']==g for r in rows))for g in ['common','sensor','fresh']}
+(A/'final_cases.json').write_text(json.dumps(dict(summary=summary,cases=rows,elapsed_s=time.monotonic()-st,scope='Integer hybrid, integer observer (A gains) and actual estimator RTL, 1ms committed output delay. Not full controller RTL. Historical bank unchanged; fresh is same predefined12ms/7% fixture fromR21, not statistically unknown holdout.',source_sha256={str(f.relative_to(P)):hashlib.sha256(f.read_bytes()).hexdigest()for f in [D/'build.py',D/'hybrid_fixed.cpp',D/'hybrid_fixed.hpp',D/'hold_observer.hpp',D/'model_bank.json',P/'fpga/src/r01_gap_bridge.v']}),indent=2));print(summary,flush=True)
